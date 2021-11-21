@@ -32,4 +32,4 @@ _**OpenMaps mapsforge.xml**_ - For other mapsforge compatible programs.  **dpi=4
 
 Screenshots:
 
-[![Screenshot 1](http://images.vfl.ru/ii/1615117911/f1a5a0a3/33587923_s.jpg)](screenshots\1-Screenshot_20210307.jpg) [![Screenshot 2](http://images.vfl.ru/ii/1615117935/07d53a87/33587927_s.jpg)](screenshots\2-Screenshot_20210307.jpg)
+[![Screenshot 1](http://images.vfl.ru/ii/1615117911/f1a5a0a3/33587923_s.jpg)](screenshots/1-Screenshot_20210307.jpg) [![Screenshot 2](http://images.vfl.ru/ii/1615117935/07d53a87/33587927_s.jpg)](screenshots/2-Screenshot_20210307.jpg)
