@@ -34,6 +34,7 @@ Magellan changes:
 добавил tower=observation|communication
 21/11/2021
 Правильные ссылки на лицензию и xsi:schemaLocation
+Исправление ошибок согласно xsi:schemaLocation с помощью XML Language Support by Red Hat
 
 -->
 
@@ -1774,9 +1775,8 @@ Magellan changes:
 
 	<!-- turning circles -->
 	<rule e="node" k="highway" v="turning_circle">
-		<circle r="1.50" scale-radius="true" fill="#707070" />
+		<circle radius="1.50" scale-radius="true" fill="#707070" />
 	</rule>
-
 
 	<!-- Normál utak kontur-->
 	<rule e="way" k="highway" v="*">
@@ -2509,7 +2509,7 @@ Magellan changes:
 		</rule>
 	</rule>
 
-	<!-- Power areas and lines hilo-->
+	<!-- Power areas and lines -->
 	<rule e="way" k="power" v="*" zoom-min="13">
 		<!-- power generator -->
 		<rule e="way" k="power" v="generator|station|sub_station|substation">
@@ -3899,7 +3899,6 @@ Magellan changes:
 			</rule>
 		</rule>
 
-
 		<!-- amenity -->
 		<rule e="node" k="amenity" v="*">
 			<rule e="node" k="amenity" v="atm" zoom-min="17">
@@ -4048,7 +4047,7 @@ Magellan changes:
 
 		<!-- barrier -->
 		<rule e="node" k="barrier" v="bollard">
-			<circle r="1.50" fill="#707070" />
+			<circle radius="1.50" fill="#707070" />
 		</rule>
 		<rule e="node" k="barrier" v="entrance" zoom-min="16">
 			<symbol id="entrance" src="file:/symbols/entrance.svg" />
@@ -4072,7 +4071,7 @@ Magellan changes:
 				<symbol id="traffic_signals" src="file:/symbols/traffic_signal.svg" />
 			</rule>
 			<rule e="node" k="highway" v="turning_circle">
-				<circle r="1.40" scale-radius="true" fill="#ffffff" />
+				<circle radius="1.40" scale-radius="true" fill="#ffffff" />
 			</rule>
 		</rule>
 
@@ -4126,11 +4125,11 @@ Magellan changes:
 			<caption k="name" symbol-id="fishing" position="auto" font-style="bold" font-size="9" fill="#000000" stroke="#ffffff" stroke-width="2.0" />
 		</rule>
 		<rule e="node" k="leisure" v="pitch" zoom-min="16">
-			<symbol id="soccer" src="file:/symbols/soccer.svg" symbol-scaling="size" symbol-height="16" symbol-width="16" />
+			<symbol id="soccer" src="file:/symbols/soccer.svg" symbol-width="16" />
 			<caption k="name" symbol-id="soccer" position="auto" font-style="bold" font-size="9" fill="#000000" stroke="#ffffff" stroke-width="2.0" />
 		</rule>
 		<rule e="node" k="office" v="government" zoom-min="16">
-			<symbol id="goverment" src="file:/symbols/office.svg" symbol-scaling="size" symbol-height="16" symbol-width="16" />
+			<symbol id="goverment" src="file:/symbols/office.svg" symbol-width="16" />
 			<caption k="name" symbol-id="goverment" position="auto" font-style="bold" font-size="9" fill="#000000" stroke="#ffffff" stroke-width="2.0" />
 		</rule>
 
@@ -4140,12 +4139,12 @@ Magellan changes:
 		</rule>
 
 		<rule e="node" k="tower" v="observation" zoom-min="15">
-			<symbol id="observation" src="file:/symbols/observation.svg" symbol-scaling="size" symbol-height="16" />
+			<symbol id="observation" src="file:/symbols/observation.svg" symbol-height="16" />
 			<caption k="name" symbol-id="observation" dy="-14" font-style="bold" font-size="9" fill="#000000" stroke="#ffffff" stroke-width="2.00" />
 		</rule>
 
 		<rule e="node" k="tower" v="communication" zoom-min="15">
-			<symbol id="communication" src="file:/symbols/tower.svg" symbol-scaling="size" symbol-height="18" />
+			<symbol id="communication" src="file:/symbols/tower.svg" symbol-height="18" />
 			<caption k="name" symbol-id="communication" dy="-14" font-style="bold" font-size="9" fill="#000000" stroke="#ffffff" stroke-width="2.00" />
 		</rule>
 
@@ -4218,7 +4217,7 @@ Magellan changes:
 				<caption k="name" position="auto" font-style="bold_italic" font-size="9" fill="#1A8DFF" stroke="#ffffff" stroke-width="2.00" />
 			</rule>
 			<rule e="node" k="natural" v="water" zoom-min="12">
-				<circle r="4.00" fill="#b5d6f1" stroke="#1A8DFF" stroke-width="1.00" />
+				<circle radius="4.00" fill="#b5d6f1" stroke="#1A8DFF" stroke-width="1.00" />
 				<caption k="name" dy="13" font-style="bold_italic" font-size="9" fill="#1A8DFF" stroke="#ffffff" stroke-width="2.00" />
 			</rule>
 			<rule e="node" k="natural" v="wetland" zoom-min="16">
@@ -4324,11 +4323,11 @@ Magellan changes:
 				<caption k="name" symbol-id="crossing" position="auto" font-style="bold" font-size="9" fill="#000000" stroke="#ffffff" stroke-width="2.00" />
 			</rule>
 			<rule cat="pub_transp" e="node" k="railway" v="station" zoom-min="14">
-				<circle r="6.00" fill="#ec2d2d" stroke="#ffffff" stroke-width="1.20" />
+				<circle radius="6.00" fill="#ec2d2d" stroke="#ffffff" stroke-width="1.20" />
 				<caption k="name" dy="15" font-style="bold" font-size="11" fill="#ec2d2d" stroke="#ffffff" stroke-width="2.00" />
 			</rule>
 			<rule cat="pub_transp" e="node" k="railway" v="halt|tram_stop" zoom-min="17">
-				<circle r="4.00" fill="#ec2d2d" stroke="#ffffff" stroke-width="1.20" />
+				<circle radius="4.00" fill="#ec2d2d" stroke="#ffffff" stroke-width="1.20" />
 				<caption k="name" dy="15" font-style="bold" font-size="10" fill="#ec2d2d" stroke="#ffffff" stroke-width="2.00" />
 			</rule>
 		</rule>
@@ -4393,7 +4392,7 @@ Magellan changes:
 				<caption k="name" symbol-id="chalet" position="auto" priority="50" font-style="bold" font-size="9" fill="#000000" stroke="#ffffff" stroke-width="2.00" />
 			</rule>
 			<rule e="node" k="tourism" v="camp_site" zoom-min="15">
-				<symbol id="campSite" src="file:/symbols/campSite.svg" priority="100" symbol-scaling="size" symbol-height="16" />
+				<symbol id="campSite" src="file:/symbols/campSite.svg" priority="100" symbol-height="16" />
 				<caption k="name" symbol-id="campSite" position="auto" priority="50" font-style="bold" font-size="9" fill="#000000" stroke="#ffffff" stroke-width="2.00" />
 			</rule>
 			<rule e="node" k="tourism" v="museum" zoom-min="16">
