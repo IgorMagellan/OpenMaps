@@ -2,7 +2,9 @@
  Rendertheme for Locus, OruxMaps, Cruiser and other mapsforge compatible programs
  
 Based on: Mapsforge rendertheme for Openmaps by Davidovits
+
 Contact: http://www.openmaps.eu
+
 Source: https://openmaps.eu/mapsforgedownload 
 
 Licence: [CC BY-NC-SA 3.0 (Creative Commons Attribution-NonCommercial-ShareAlike 3.0 Unported)](http://creativecommons.org/licenses/by-nc-sa/3.0/) 
