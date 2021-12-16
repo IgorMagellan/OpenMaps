@@ -20,6 +20,7 @@ Licence: CC BY-NC-SA 3.0 (Creative Commons Attribution-NonCommercial-ShareAlike 
 Отсутствующие иконки sport - soccer, tennis
 
 Изменено:
+Изменено:
 заливка landuse=construction более вменяемый цвет
 waterway=stream - уменьшена толщина, цвет более насыщенный
 tower:type=observation zoom-min="16"  Было 15
@@ -227,35 +228,35 @@ contour pathtext rotate_up=false (всегда "в гору")
 				<area src="file:/patterns/wood-mixed.svg" scale="2" />
 			</rule>
 			<rule e="way" k="*" v="*" zoom-min="14">
-				<caption k="name" font-style="italic" font-family="serif" font-size="20" fill="#609348" />
+				<caption k="name" font-style="italic" font-family="sans_serif" font-size="20" fill="#609348" />
 			</rule>
 		</rule>
 
 			<rule e="way" k="natural" v="fell">
 				<area src="file:/patterns/fell.svg" scale="2" />
 				<rule e="way" k="*" v="*" zoom-min="14">
-				<caption k="name" font-style="bold_italic" font-family="serif" font-size="20" fill="#6E6E6E" stroke="#ffffff"
+				<caption k="name" font-style="bold_italic" font-family="sans_serif" font-size="20" fill="#6E6E6E" stroke="#ffffff"
 					stroke-width="4.00" />
 				</rule>
 			</rule>
 			<rule e="way" k="natural" v="scrub">
 				<area src="file:/patterns/scrub.svg" scale="2" />
 				<rule e="way" k="*" v="*" zoom-min="14">
-				<caption k="name" font-style="bold_italic" font-family="serif" font-size="20" fill="#6E6E6E" stroke="#ffffff"
+				<caption k="name" font-style="bold_italic" font-family="sans_serif" font-size="20" fill="#6E6E6E" stroke="#ffffff"
 					stroke-width="4.00" />
 				</rule>
 			</rule>
 			<rule e="way" k="natural" v="rock|stone|bare_rock|bedrock">
 				<area src="file:/patterns/rock.svg" scale="2" />
 				<rule e="way" k="*" v="*" zoom-min="14">
-				<caption k="name" font-style="bold_italic" font-family="serif" font-size="20" fill="#6E6E6E" stroke="#ffffff"
+				<caption k="name" font-style="bold_italic" font-family="sans_serif" font-size="20" fill="#6E6E6E" stroke="#ffffff"
 					stroke-width="4.00" />
 				</rule>
 			</rule>
 			<rule e="way" k="natural" v="scree">
 				<area src="file:/patterns/scree.svg" scale="2" />
 				<rule e="way" k="*" v="*" zoom-min="14">
-				<caption k="name" font-style="bold_italic" font-family="serif" font-size="20" fill="#6E6E6E" stroke="#ffffff"
+				<caption k="name" font-style="bold_italic" font-family="sans_serif" font-size="20" fill="#6E6E6E" stroke="#ffffff"
 					stroke-width="4.00" />
 				</rule>
 			</rule>
@@ -263,7 +264,7 @@ contour pathtext rotate_up=false (всегда "в гору")
 			<rule e="way" k="landuse" v="orchard">
 			<area src="file:/patterns/orchard.svg" scale="2" />
 			<rule e="way" k="*" v="*" zoom-min="14">
-				<caption k="name" font-style="bold_italic" font-family="serif" font-size="20" fill="#6E6E6E" stroke="#ffffff"
+				<caption k="name" font-style="bold_italic" font-family="sans_serif" font-size="20" fill="#6E6E6E" stroke="#ffffff"
 					stroke-width="4.00" />
 			</rule>
 			</rule>
@@ -271,7 +272,7 @@ contour pathtext rotate_up=false (всегда "в гору")
 			<rule e="way" k="landuse" v="vineyard">
 			<area src="file:/patterns/vineyard.svg" scale="2" />
 			<rule e="way" k="*" v="*" zoom-min="14">
-				<caption k="name" font-style="bold_italic" font-family="serif" font-size="20" fill="#6E6E6E" stroke="#ffffff"
+				<caption k="name" font-style="bold_italic" font-family="sans_serif" font-size="20" fill="#6E6E6E" stroke="#ffffff"
 					stroke-width="4.00" />
 			</rule>
 			</rule>
@@ -691,7 +692,7 @@ contour pathtext rotate_up=false (всегда "в гору")
 			</rule>
 			<rule e="way" k="natural" v="grassland" zoom-min="14">
 				<area fill="#eeffbb" stroke="#77dd66" stroke-width="0.1" />
-				<rule e="way" k="*" v="*" zoom-min="15"> <caption k="name" font-style="italic" font-family="serif" font-size="20" fill="#609348" />	</rule>
+				<rule e="way" k="*" v="*" zoom-min="15"> <caption k="name" font-style="italic" font-family="sans_serif" font-size="20" fill="#609348" />	</rule>
 			</rule>					
 			<rule e="way" k="natural" v="beach">
 				<area fill="#eecc55" />
@@ -714,21 +715,21 @@ contour pathtext rotate_up=false (всегда "в гору")
 		<rule e="way" k="*" v="cliff|earth_bank" zoom-min="15">  
 			<line stroke="#555555" stroke-width="1.80" dy="0.32dp" stroke-dasharray="1.0,8" stroke-linecap="butt" />
 			<line stroke="#555555" stroke-width="0.6" stroke-linecap="butt" />
-			<rule e="way" k="*" v="*" zoom-min="15"> <caption k="name" font-style="italic" font-family="serif" font-size="20" fill="#20202F" stroke="#ffffff" stroke-width="4.00"  /> </rule>
+			<rule e="way" k="*" v="*" zoom-min="15"> <caption k="name" font-style="italic" font-family="sans_serif" font-size="20" fill="#20202F" stroke="#ffffff" stroke-width="4.00"  /> </rule>
 		</rule>
 	<!-- Малые овраги LM -->
 	<rule e="way" k="barrier|natural" v="ditch|gully"  zoom-min="15">
 		<line stroke="#80555555" stroke-width="0.25dp" curve="cubic" />
-		<rule cat="tms_land-names" e="way" k="*" v="*" > <caption k="name" dy="-15" font-style="italic" font-family="serif" font-size="10dp" fill="#BF111111" stroke="#ffffff" stroke-width="2dp"  />	</rule>				
+		<rule cat="tms_land-names" e="way" k="*" v="*" > <caption k="name" dy="-15" font-style="italic" font-family="sans_serif" font-size="10dp" fill="#BF111111" stroke="#ffffff" stroke-width="2dp"  />	</rule>				
 	</rule>		  
 
 			<rule e="way" k="natural" v="valley" zoom-min="15">
-				<pathText k="name" font-style="bold_italic" font-family="serif" font-size="18" fill="#6E6E6E" stroke="#ffffff" stroke-width="4.00"/>
+				<pathText k="name" font-style="bold_italic" font-family="sans_serif" font-size="18" fill="#6E6E6E" stroke="#ffffff" stroke-width="4.00"/>
 			</rule>
 
 			<rule e="way" k="natural" v="ridge|arete">
 				<line stroke="#90444444" stroke-width="0.4" stroke-dasharray="6,8" stroke-linecap="round" />
-				<pathText k="name" dy="2" font-style="italic" font-family="serif" font-size="18" fill="#666666" stroke="#666666" stroke-width="0.1" display="always" priority="-20" />
+				<pathText k="name" dy="2" font-style="italic" font-family="sans_serif" font-size="18" fill="#666666" stroke="#666666" stroke-width="0.1" display="always" priority="-20" />
 				<lineSymbol src="file:symbols/s_ridge.svg" align-center="true" repeat="true" repeat-gap="75" repeat-start="0" display="always" priority="-20" symbol-scaling="size" symbol-height="16" symbol-width="16" />
 			</rule>
 		
@@ -829,7 +830,7 @@ contour pathtext rotate_up=false (всегда "в гору")
 				<line stroke="#b5d6f1" stroke-width="0.80" stroke-dasharray="20.0,10.0" stroke-linecap="butt"/>
 				<lineSymbol src="file:/symbols/bluearrow.svg" scale="2" align-center="true" repeat="true" />
 				<rule e="way" k="*" v="*" zoom-min="14">
-				<pathText k="name" font-style="bold_italic" font-family="serif" font-size="20" fill="#1A8DFF" stroke="#ffffff" stroke-width="4.00" />
+				<pathText k="name" font-style="bold_italic" font-family="sans_serif" font-size="20" fill="#1A8DFF" stroke="#ffffff" stroke-width="4.00" />
 				</rule>
 			</rule>
 			<rule e="way" k="waterway" v="drain">
@@ -841,7 +842,7 @@ contour pathtext rotate_up=false (всегда "в гору")
 				<line stroke="#b5d6f1" stroke-width="1.60" />
 				<lineSymbol src="file:/symbols/bluearrow.svg" scale="2" align-center="true" repeat="true" />
 				<rule e="way" k="*" v="*" zoom-min="14">
-				<pathText k="name" font-style="bold_italic" font-family="serif" font-size="20" fill="#1A8DFF" stroke="#ffffff" stroke-width="4.00" />
+				<pathText k="name" font-style="bold_italic" font-family="sans_serif" font-size="20" fill="#1A8DFF" stroke="#ffffff" stroke-width="4.00" />
 				</rule>
 			</rule>
 			
@@ -851,7 +852,7 @@ contour pathtext rotate_up=false (всегда "в гору")
 		<!-- 		<line stroke="#b5d6f1" stroke-width="0.60"  align-center="true" /> -->				
 				<lineSymbol src="file:/symbols/bluearrow.svg" scale="2" position="above" repeat="true" />
 				<rule e="way" k="*" v="*" zoom-min="14">
-				<pathText k="name" font-style="bold_italic" font-family="serif" font-size="20" fill="#1A8DFF" stroke="#ffffff" stroke-width="4.00" />
+				<pathText k="name" font-style="bold_italic" font-family="sans_serif" font-size="20" fill="#1A8DFF" stroke="#ffffff" stroke-width="4.00" />
 				</rule>
 			</rule>
 			<rule e="way" k="waterway" v="river">
@@ -859,7 +860,7 @@ contour pathtext rotate_up=false (всегда "в гору")
 				<line stroke="#b5d6f1" stroke-width="2.00" />
 				<lineSymbol src="file:/symbols/bluearrow.svg" scale="2" align-center="true" repeat="true" />
 				<rule e="way" k="*" v="*" zoom-min="12">
-				<pathText k="name" font-style="bold_italic" font-family="serif" font-size="26" fill="#1A8DFF" stroke="#ffffff" stroke-width="4.00" />
+				<pathText k="name" font-style="bold_italic" font-family="sans_serif" font-size="26" fill="#1A8DFF" stroke="#ffffff" stroke-width="4.00" />
 				</rule>
 			</rule>
 			<rule e="way" k="waterway" v="dock">
@@ -3053,7 +3054,7 @@ contour pathtext rotate_up=false (всегда "в гору")
 					stroke-width="4.00" />
 			</rule>			
 			<rule e="node" k="place" v="locality" zoom-min="14">
-				<caption k="name" font-style="bold_italic" font-family="serif" font-size="18" fill="#6E6E6E" stroke="#ffffff"
+				<caption k="name" font-style="bold_italic" font-family="sans_serif" font-size="18" fill="#6E6E6E" stroke="#ffffff"
 					stroke-width="4.00" />
 			</rule>
 			<rule e="node" k="place" v="country" zoom-max="6">
