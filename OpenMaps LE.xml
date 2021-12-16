@@ -715,7 +715,7 @@ contour pathtext rotate_up=false (всегда "в гору")
 		<rule e="way" k="*" v="cliff|earth_bank" zoom-min="15">  
 			<line stroke="#555555" stroke-width="1.80" dy="0.32dp" stroke-dasharray="1.0,8" stroke-linecap="butt" />
 			<line stroke="#555555" stroke-width="0.6" stroke-linecap="butt" />
-			<rule e="way" k="*" v="*" zoom-min="15"> <caption k="name" font-style="italic" font-family="sans_serif" font-size="16dp" fill="#20202F" stroke="#ffffff" stroke-width="4.00"  /> </rule>
+			<rule e="way" k="*" v="*" zoom-min="15"> <caption k="name" font-style="italic" font-family="sans_serif" font-size="10dp" fill="#20202F" stroke="#ffffff" stroke-width="4.00"  /> </rule>
 		</rule>
 	<!-- Малые овраги LM -->
 	<rule e="way" k="barrier|natural" v="ditch|gully"  zoom-min="15">
