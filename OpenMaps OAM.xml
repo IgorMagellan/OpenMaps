@@ -35,15 +35,18 @@ Magellan changes:
 21/11/2021
 Правильные ссылки на лицензию и xsi:schemaLocation
 Исправление ошибок согласно xsi:schemaLocation с помощью XML Language Support by Red Hat
+02/04/2022
+ремонт всех маршрутов - добавление "|grade4|grade5|~" для grade3; платные (toll) дороги
+переставил cutline, version=4 -> 5
 
 -->
 
 <rendertheme xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://mapsforge.org/renderTheme" 
 	xsi:schemaLocation="http://mapsforge.org/renderTheme https://raw.githubusercontent.com/mapsforge/mapsforge/master/resources/renderTheme.xsd" 
-	version="4" map-background="#ffffea">
+	version="5" map-background="#ffffea">
 
 
-	<stylemenu id="r4menu" defaultvalue="turista" defaultlang="en">
+	<stylemenu id="r5menu" defaultvalue="turista" defaultlang="en">
 
 		<layer id="hiking_routes_t" enabled="true">
 			<name lang="hu" value="Turistaút kiemelés (piros)" />
@@ -222,12 +225,14 @@ Magellan changes:
 				<caption k="name" font-style="bold_italic" font-family="serif" font-size="10" fill="#6E6E6E" stroke="#ffffff" stroke-width="2.00" />
 			</rule>
 		</rule>
+
 		<rule e="way" k="natural" v="scrub">
 			<area src="file:/patterns/scrub.svg" symbol-percent="250" />
 			<rule e="way" k="*" v="*" zoom-min="14">
 				<caption k="name" font-style="bold_italic" font-family="serif" font-size="10" fill="#6E6E6E" stroke="#ffffff" stroke-width="2.00" />
 			</rule>
 		</rule>
+
 		<rule e="way" k="natural" v="rock|stone|bare_rock|bedrock">
 			<area src="file:/patterns/bare_rock-128.png" />
 			<rule e="way" k="*" v="*" zoom-min="14">
@@ -254,6 +259,10 @@ Magellan changes:
 			<rule e="way" k="*" v="*" zoom-min="14">
 				<caption k="name" font-style="bold_italic" font-family="serif" font-size="10" fill="#6E6E6E" stroke="#ffffff" stroke-width="2.00" />
 			</rule>
+		</rule>
+
+		<rule e="way" k="man_made" v="cutline">
+			<line stroke="#60DDFFDD" stroke-width="2.4" stroke-linecap="butt" />
 		</rule>
 
 		<rule e="way" k="landuse|man_made" v="*">
@@ -542,7 +551,7 @@ Magellan changes:
 		<rule e="way" k="highway" v="*">
 			<rule e="way" k="tunnel" v="true|yes">
 				<!-- Toll -->
-				<rule cat="toll_roads" e="way" k="toll" v="yes">
+				<rule cat="toll_roads" e="way" k="toll" v="tl_yes">
 					<rule e="way" k="highway" v="tertiary">
 						<line stroke="#00f9ff" stroke-width="3.50" />
 					</rule>
@@ -911,7 +920,6 @@ Magellan changes:
 			<rule e="way" k="tourism" v="zoo|picnic_site|caravan_site|camp_site">
 				<area fill="#c7f1a3" stroke="#6fc18e" stroke-width="0.20" />
 			</rule>
-
 			<rule e="way" k="*" v="*" zoom-min="16">
 				<caption k="name" font-style="bold" font-size="10" fill="#000000" stroke="#ffffff" stroke-width="2.00" />
 			</rule>
@@ -985,7 +993,6 @@ Magellan changes:
 
 	<!-- Bicycle ways no tunnel -->
 
-
 	<rule cat="standard_bc" e="way" k="lcn|rcn|ncn|icn" v="proposed">
 		<rule e="way" k="tunnel" v="~|no|false">
 			<rule e="way" k="highway" v="footway">
@@ -1006,16 +1013,16 @@ Magellan changes:
 			<rule e="way" k="tracktype" v="grade1" zoom-min="13">
 				<line stroke="#FA41FA" stroke-width="1.90" stroke-dasharray="5.0,5.0" stroke-linecap="butt" />
 			</rule>
-			<rule e="way" k="tracktype" v="grade3" zoom-min="13" zoom-max="14">
+			<rule e="way" k="tracktype" v="grade2|grade3|grade4|grade5|~" zoom-min="13" zoom-max="14">
 				<line stroke="#FA41FA" stroke-width="1.25" stroke-dasharray="5.0,5.0" stroke-linecap="butt" />
 			</rule>
-			<rule e="way" k="tracktype" v="grade3" zoom-min="15" zoom-max="15">
+			<rule e="way" k="tracktype" v="grade2|grade3|grade4|grade5|~" zoom-min="15" zoom-max="15">
 				<line stroke="#FA41FA" stroke-width="1.20" stroke-dasharray="5.0,5.0" stroke-linecap="butt" />
 			</rule>
-			<rule e="way" k="tracktype" v="grade3" zoom-min="16" zoom-max="16">
+			<rule e="way" k="tracktype" v="grade2|grade3|grade4|grade5|~" zoom-min="16" zoom-max="16">
 				<line stroke="#FA41FA" stroke-width="1.15" stroke-dasharray="5.0,5.0" stroke-linecap="butt" />
 			</rule>
-			<rule e="way" k="tracktype" v="grade3" zoom-min="17">
+			<rule e="way" k="tracktype" v="grade2|grade3|grade4|grade5|~" zoom-min="17">
 				<line stroke="#FA41FA" stroke-width="1.10" stroke-dasharray="5.0,5.0" stroke-linecap="butt" />
 			</rule>
 			<rule e="way" k="highway" v="unclassified|residential|living_street|service|road">
@@ -1052,16 +1059,16 @@ Magellan changes:
 			<rule e="way" k="tracktype" v="grade1" zoom-min="13">
 				<line stroke="#FA41FA" stroke-width="3.00" stroke-dasharray="5.0,5.0" stroke-linecap="butt" />
 			</rule>
-			<rule e="way" k="tracktype" v="grade3" zoom-min="13" zoom-max="14">
+			<rule e="way" k="tracktype" v="grade2|grade3|grade4|grade5|~" zoom-min="13" zoom-max="14">
 				<line stroke="#FA41FA" stroke-width="2.45" stroke-dasharray="5.0,5.0" stroke-linecap="butt" />
 			</rule>
-			<rule e="way" k="tracktype" v="grade3" zoom-min="15" zoom-max="15">
+			<rule e="way" k="tracktype" v="grade2|grade3|grade4|grade5|~" zoom-min="15" zoom-max="15">
 				<line stroke="#FA41FA" stroke-width="2.40" stroke-dasharray="5.0,5.0" stroke-linecap="butt" />
 			</rule>
-			<rule e="way" k="tracktype" v="grade3" zoom-min="16" zoom-max="16">
+			<rule e="way" k="tracktype" v="grade2|grade3|grade4|grade5|~" zoom-min="16" zoom-max="16">
 				<line stroke="#FA41FA" stroke-width="2.35" stroke-dasharray="5.0,5.0" stroke-linecap="butt" />
 			</rule>
-			<rule e="way" k="tracktype" v="grade3" zoom-min="17">
+			<rule e="way" k="tracktype" v="grade2|grade3|grade4|grade5|~" zoom-min="17">
 				<line stroke="#FA41FA" stroke-width="2.30" stroke-dasharray="5.0,5.0" stroke-linecap="butt" />
 			</rule>
 			<rule e="way" k="highway" v="unclassified|residential|living_street|service|road">
@@ -1098,16 +1105,16 @@ Magellan changes:
 			<rule e="way" k="tracktype" v="grade1" zoom-min="13">
 				<line stroke="#FA41FA" stroke-width="3.00" stroke-dasharray="5.0,5.0" stroke-linecap="butt" />
 			</rule>
-			<rule e="way" k="tracktype" v="grade3" zoom-min="13" zoom-max="14">
+			<rule e="way" k="tracktype" v="grade2|grade3|grade4|grade5|~" zoom-min="13" zoom-max="14">
 				<line stroke="#FA41FA" stroke-width="2.45" stroke-dasharray="5.0,5.0" stroke-linecap="butt" />
 			</rule>
-			<rule e="way" k="tracktype" v="grade3" zoom-min="15" zoom-max="15">
+			<rule e="way" k="tracktype" v="grade2|grade3|grade4|grade5|~" zoom-min="15" zoom-max="15">
 				<line stroke="#FA41FA" stroke-width="2.40" stroke-dasharray="5.0,5.0" stroke-linecap="butt" />
 			</rule>
-			<rule e="way" k="tracktype" v="grade3" zoom-min="16" zoom-max="16">
+			<rule e="way" k="tracktype" v="grade2|grade3|grade4|grade5|~" zoom-min="16" zoom-max="16">
 				<line stroke="#FA41FA" stroke-width="2.35" stroke-dasharray="5.0,5.0" stroke-linecap="butt" />
 			</rule>
-			<rule e="way" k="tracktype" v="grade3" zoom-min="17">
+			<rule e="way" k="tracktype" v="grade2|grade3|grade4|grade5|~" zoom-min="17">
 				<line stroke="#FA41FA" stroke-width="2.30" stroke-dasharray="5.0,5.0" stroke-linecap="butt" />
 			</rule>
 			<rule e="way" k="highway" v="unclassified|residential|living_street|service|road">
@@ -1144,16 +1151,16 @@ Magellan changes:
 			<rule e="way" k="tracktype" v="grade1" zoom-min="13">
 				<line stroke="#FA41FA" stroke-width="3.00" />
 			</rule>
-			<rule e="way" k="tracktype" v="grade3" zoom-min="13" zoom-max="14">
+			<rule e="way" k="tracktype" v="grade2|grade3|grade4|grade5|~" zoom-min="13" zoom-max="14">
 				<line stroke="#FA41FA" stroke-width="2.45" />
 			</rule>
-			<rule e="way" k="tracktype" v="grade3" zoom-min="15" zoom-max="15">
+			<rule e="way" k="tracktype" v="grade2|grade3|grade4|grade5|~" zoom-min="15" zoom-max="15">
 				<line stroke="#FA41FA" stroke-width="2.40" />
 			</rule>
-			<rule e="way" k="tracktype" v="grade3" zoom-min="16" zoom-max="16">
+			<rule e="way" k="tracktype" v="grade2|grade3|grade4|grade5|~" zoom-min="16" zoom-max="16">
 				<line stroke="#FA41FA" stroke-width="2.35" />
 			</rule>
-			<rule e="way" k="tracktype" v="grade3" zoom-min="17">
+			<rule e="way" k="tracktype" v="grade2|grade3|grade4|grade5|~" zoom-min="17">
 				<line stroke="#FA41FA" stroke-width="2.30" />
 			</rule>
 			<rule e="way" k="highway" v="unclassified|residential|living_street|service|road">
@@ -1200,16 +1207,16 @@ Magellan changes:
 			<rule e="way" k="tracktype" v="grade1" zoom-min="13">
 				<line stroke="#FFA8FF" stroke-width="3.00" />
 			</rule>
-			<rule e="way" k="tracktype" v="grade3" zoom-min="13" zoom-max="14">
+			<rule e="way" k="tracktype" v="grade2|grade3|grade4|grade5|~" zoom-min="13" zoom-max="14">
 				<line stroke="#FFA8FF" stroke-width="2.45" />
 			</rule>
-			<rule e="way" k="tracktype" v="grade3" zoom-min="15" zoom-max="15">
+			<rule e="way" k="tracktype" v="grade2|grade3|grade4|grade5|~" zoom-min="15" zoom-max="15">
 				<line stroke="#FFA8FF" stroke-width="2.40" />
 			</rule>
-			<rule e="way" k="tracktype" v="grade3" zoom-min="16" zoom-max="16">
+			<rule e="way" k="tracktype" v="grade2|grade3|grade4|grade5|~" zoom-min="16" zoom-max="16">
 				<line stroke="#FFA8FF" stroke-width="2.35" />
 			</rule>
-			<rule e="way" k="tracktype" v="grade3" zoom-min="17">
+			<rule e="way" k="tracktype" v="grade2|grade3|grade4|grade5|~" zoom-min="17">
 				<line stroke="#FFA8FF" stroke-width="2.30" />
 			</rule>
 			<rule e="way" k="highway" v="unclassified|residential|living_street|service|road">
@@ -1273,16 +1280,16 @@ Magellan changes:
 			<rule e="way" k="tracktype" v="grade1" zoom-min="13">
 				<line stroke="#A400A4" stroke-width="3.00" />
 			</rule>
-			<rule e="way" k="tracktype" v="grade3" zoom-min="13" zoom-max="14">
+			<rule e="way" k="tracktype" v="grade2|grade3|grade4|grade5|~" zoom-min="13" zoom-max="14">
 				<line stroke="#A400A4" stroke-width="2.45" />
 			</rule>
-			<rule e="way" k="tracktype" v="grade3" zoom-min="15" zoom-max="15">
+			<rule e="way" k="tracktype" v="grade2|grade3|grade4|grade5|~" zoom-min="15" zoom-max="15">
 				<line stroke="#A400A4" stroke-width="2.40" />
 			</rule>
-			<rule e="way" k="tracktype" v="grade3" zoom-min="16" zoom-max="16">
+			<rule e="way" k="tracktype" v="grade2|grade3|grade4|grade5|~" zoom-min="16" zoom-max="16">
 				<line stroke="#A400A4" stroke-width="2.35" />
 			</rule>
-			<rule e="way" k="tracktype" v="grade3" zoom-min="17">
+			<rule e="way" k="tracktype" v="grade2|grade3|grade4|grade5|~" zoom-min="17">
 				<line stroke="#A400A4" stroke-width="2.30" />
 			</rule>
 			<rule e="way" k="highway" v="unclassified|residential|living_street|service|road">
@@ -1349,16 +1356,16 @@ Magellan changes:
 			<rule e="way" k="tracktype" v="grade2" zoom-min="17">
 				<line stroke="#fd1725" stroke-width="1.30" />
 			</rule>
-			<rule e="way" k="tracktype" v="grade3" zoom-min="13" zoom-max="14">
+			<rule e="way" k="tracktype" v="grade3|grade4|grade5|~" zoom-min="13" zoom-max="14">
 				<line stroke="#fd1725" stroke-width="1.45" />
 			</rule>
-			<rule e="way" k="tracktype" v="grade3" zoom-min="15" zoom-max="15">
+			<rule e="way" k="tracktype" v="grade3|grade4|grade5|~" zoom-min="15" zoom-max="15">
 				<line stroke="#fd1725" stroke-width="1.40" />
 			</rule>
-			<rule e="way" k="tracktype" v="grade3" zoom-min="16" zoom-max="16">
+			<rule e="way" k="tracktype" v="grade3|grade4|grade5|~" zoom-min="16" zoom-max="16">
 				<line stroke="#fd1725" stroke-width="1.35" />
 			</rule>
-			<rule e="way" k="tracktype" v="grade3" zoom-min="17">
+			<rule e="way" k="tracktype" v="grade3|grade4|grade5|~" zoom-min="17">
 				<line stroke="#fd1725" stroke-width="1.30" />
 			</rule>
 			<rule e="way" k="highway" v="unclassified|residential|living_street|service|road">
@@ -1409,16 +1416,16 @@ Magellan changes:
 			<rule e="way" k="tracktype" v="grade2" zoom-min="17">
 				<line stroke="#006EFF" stroke-width="1.30" />
 			</rule>
-			<rule e="way" k="tracktype" v="grade3" zoom-min="13" zoom-max="14">
+			<rule e="way" k="tracktype" v="grade3|grade4|grade5|~" zoom-min="13" zoom-max="14">
 				<line stroke="#006EFF" stroke-width="1.45" />
 			</rule>
-			<rule e="way" k="tracktype" v="grade3" zoom-min="15" zoom-max="15">
+			<rule e="way" k="tracktype" v="grade3|grade4|grade5|~" zoom-min="15" zoom-max="15">
 				<line stroke="#006EFF" stroke-width="1.40" />
 			</rule>
-			<rule e="way" k="tracktype" v="grade3" zoom-min="16" zoom-max="16">
+			<rule e="way" k="tracktype" v="grade3|grade4|grade5|~" zoom-min="16" zoom-max="16">
 				<line stroke="#006EFF" stroke-width="1.35" />
 			</rule>
-			<rule e="way" k="tracktype" v="grade3" zoom-min="17">
+			<rule e="way" k="tracktype" v="grade3|grade4|grade5|~" zoom-min="17">
 				<line stroke="#006EFF" stroke-width="1.30" />
 			</rule>
 			<rule e="way" k="highway" v="unclassified|residential|living_street|service|road">
@@ -1471,16 +1478,16 @@ Magellan changes:
 			<rule e="way" k="tracktype" v="grade2" zoom-min="17">
 				<line stroke="#F00000" stroke-width="1.30" />
 			</rule>
-			<rule e="way" k="tracktype" v="grade3" zoom-min="13" zoom-max="14">
+			<rule e="way" k="tracktype" v="grade3|grade4|grade5|~" zoom-min="13" zoom-max="14">
 				<line stroke="#F00000" stroke-width="1.45" />
 			</rule>
-			<rule e="way" k="tracktype" v="grade3" zoom-min="15" zoom-max="15">
+			<rule e="way" k="tracktype" v="grade3|grade4|grade5|~" zoom-min="15" zoom-max="15">
 				<line stroke="#F00000" stroke-width="1.40" />
 			</rule>
-			<rule e="way" k="tracktype" v="grade3" zoom-min="16" zoom-max="16">
+			<rule e="way" k="tracktype" v="grade3|grade4|grade5|~" zoom-min="16" zoom-max="16">
 				<line stroke="#F00000" stroke-width="1.35" />
 			</rule>
-			<rule e="way" k="tracktype" v="grade3" zoom-min="17">
+			<rule e="way" k="tracktype" v="grade3|grade4|grade5|~" zoom-min="17">
 				<line stroke="#F00000" stroke-width="1.30" />
 			</rule>
 			<rule e="way" k="highway" v="unclassified|residential|living_street|service|road">
@@ -1533,16 +1540,16 @@ Magellan changes:
 			<rule e="way" k="tracktype" v="grade2" zoom-min="17">
 				<line stroke="#FFD700" stroke-width="1.30" />
 			</rule>
-			<rule e="way" k="tracktype" v="grade3" zoom-min="13" zoom-max="14">
+			<rule e="way" k="tracktype" v="grade3|grade4|grade5|~" zoom-min="13" zoom-max="14">
 				<line stroke="#FFD700" stroke-width="1.45" />
 			</rule>
-			<rule e="way" k="tracktype" v="grade3" zoom-min="15" zoom-max="15">
+			<rule e="way" k="tracktype" v="grade3|grade4|grade5|~" zoom-min="15" zoom-max="15">
 				<line stroke="#FFD700" stroke-width="1.40" />
 			</rule>
-			<rule e="way" k="tracktype" v="grade3" zoom-min="16" zoom-max="16">
+			<rule e="way" k="tracktype" v="grade3|grade4|grade5|~" zoom-min="16" zoom-max="16">
 				<line stroke="#FFD700" stroke-width="1.35" />
 			</rule>
-			<rule e="way" k="tracktype" v="grade3" zoom-min="17">
+			<rule e="way" k="tracktype" v="grade3|grade4|grade5|~" zoom-min="17">
 				<line stroke="#FFD700" stroke-width="1.30" />
 			</rule>
 			<rule e="way" k="highway" v="unclassified|residential|living_street|service|road">
@@ -1595,16 +1602,16 @@ Magellan changes:
 			<rule e="way" k="tracktype" v="grade2" zoom-min="17">
 				<line stroke="#00B100" stroke-width="1.30" />
 			</rule>
-			<rule e="way" k="tracktype" v="grade3" zoom-min="13" zoom-max="14">
+			<rule e="way" k="tracktype" v="grade3|grade4|grade5|~" zoom-min="13" zoom-max="14">
 				<line stroke="#00B100" stroke-width="1.45" />
 			</rule>
-			<rule e="way" k="tracktype" v="grade3" zoom-min="15" zoom-max="15">
+			<rule e="way" k="tracktype" v="grade3|grade4|grade5|~" zoom-min="15" zoom-max="15">
 				<line stroke="#00B100" stroke-width="1.40" />
 			</rule>
-			<rule e="way" k="tracktype" v="grade3" zoom-min="16" zoom-max="16">
+			<rule e="way" k="tracktype" v="grade3|grade4|grade5|~" zoom-min="16" zoom-max="16">
 				<line stroke="#00B100" stroke-width="1.35" />
 			</rule>
-			<rule e="way" k="tracktype" v="grade3" zoom-min="17">
+			<rule e="way" k="tracktype" v="grade3|grade4|grade5|~" zoom-min="17">
 				<line stroke="#00B100" stroke-width="1.30" />
 			</rule>
 			<rule e="way" k="highway" v="unclassified|residential|living_street|service|road">
@@ -1686,10 +1693,9 @@ Magellan changes:
 
 
 	<!-- Toll highways no tunnel-->
-	<rule e="way" k="highway" v="*">
+	<rule cat="toll_roads" e="way" k="highway" v="*">
 		<rule e="way" k="tunnel" v="~|no|false">
-			<!-- Toll -->
-			<rule cat="toll_roads" e="way" k="toll" v="yes">
+			<rule  e="way" k="toll" v="tl_yes">
 				<rule e="way" k="highway" v="tertiary">
 					<line stroke="#00f9ff" stroke-width="3.50" />
 				</rule>
@@ -2504,10 +2510,6 @@ Magellan changes:
 		</rule>
 	</rule>
 
-	<rule e="way" k="man_made" v="cutline">
-		<line stroke="#60DDFFDD" stroke-width="2.2" stroke-linecap="butt" />
-	</rule>
-
 	<!-- non-physical boundaries -->
 	<rule e="way" k="boundary" v="*">
 		<rule e="way" k="boundary" v="national_park">
@@ -2524,9 +2526,7 @@ Magellan changes:
 			<line stroke="#80cc00ff" stroke-width="0.50" stroke-dasharray="3.0,5.0" stroke-linecap="butt" />
 			<pathText k="name" font-style="bold" font-size="9" stroke="#ffffff" stroke-width="2.00" />
 		</rule>
-
 	</rule>
-
 
 	<!-- place -->
 	<rule e="way" k="place" v="locality" zoom-min="17">
