@@ -345,7 +345,7 @@ Magellan changes:
 		</rule>
 
 		<!-- MTB route OMP tunnel -->
-		<rule cat="omp_mtb" e="way" k="BR" v="mtb|mtb/bicycle|bicycle/mtb">
+		<rule cat="omp_mtb" e="any" k="mtbnetwork" v="imn|nmn|rmn|lmn|omn">
 			<rule e="way" k="tunnel" v="true|yes">
 				<rule e="way" k="highway" v="steps|footway|path|track|cycleway|bridleway|platform|pedestrian">
 					<line stroke="#FDB3FD" stroke-width="2.80" stroke-dasharray="5.0,5.0" stroke-linecap="butt" />
@@ -1180,7 +1180,7 @@ Magellan changes:
 
 
 	<!-- MTB route OMP no tunnel -->
-	<rule cat="omp_mtb" e="way" k="BR" v="mtb|mtb/bicycle|bicycle/mtb">
+	<rule cat="omp_mtb" e="any" k="mtbnetwork" v="imn|nmn|rmn|lmn|omn">
 		<rule e="way" k="tunnel" v="~|no|false">
 			<rule e="way" k="highway" v="footway">
 				<line stroke="#FFA8FF" stroke-width="2.80" />
