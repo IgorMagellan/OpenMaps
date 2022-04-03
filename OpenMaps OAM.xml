@@ -35,9 +35,10 @@ Magellan changes:
 21/11/2021
 Правильные ссылки на лицензию и xsi:schemaLocation
 Исправление ошибок согласно xsi:schemaLocation с помощью XML Language Support by Red Hat
-02/04/2022
+02-03/04/2022
 ремонт всех маршрутов - добавление "|grade4|grade5|~" для grade3; платные (toll) дороги
 переставил cutline, version=4 -> 5
+удалиол категории omp_maryway (Путь Марии), maryway_tm (Маркеры пути Марии)
 
 -->
 
@@ -78,22 +79,6 @@ Magellan changes:
 			<name lang="en" value="Strong hiking routes" />
 			<name lang="ru" value="Cложные пешие маршруты (ViaFerrata)" />
 			<cat id="omp_vf" />
-		</layer>
-
-		<layer id="maryway_t">
-			<name lang="hu" value="Mária-út kiemelés" />
-			<name lang="de" value="Marienweg" />
-			<name lang="en" value="Way of Mary" />
-			<name lang="ru" value="Путь Марии" />
-			<cat id="omp_maryway" />
-		</layer>
-
-		<layer id="maryway_trailmarks_t">
-			<name lang="hu" value="Mária-út jelzések" />
-			<name lang="de" value="Marienwegmarkierungen" />
-			<name lang="en" value="Way of Mary path symbol" />
-			<name lang="ru" value="Маркеры пути Марии" />
-			<cat id="maryway_tm" />
 		</layer>
 
 		<layer id="bicycle_t">
@@ -170,8 +155,6 @@ Magellan changes:
 			<overlay id="hiking_colored_routes_t" />
 			<overlay id="hiking_trailmarks_t" />
 			<overlay id="viaferrata_t" />
-			<overlay id="maryway_t" />
-			<overlay id="maryway_trailmarks_t" />
 			<overlay id="bicycle_t" />
 			<overlay id="mtb_t" />
 			<overlay id="standard_bc_t" />
@@ -519,30 +502,6 @@ Magellan changes:
 				</rule>
 				<rule e="way" k="highway" v="motorway">
 					<line stroke="#00B100" stroke-width="4.50" stroke-dasharray="5.0,5.0" stroke-linecap="butt" />
-				</rule>
-			</rule>
-		</rule>
-
-		<!-- Maryway OMP tunnel -->
-		<rule cat="omp_maryway" e="way" k="maryway" v="omp">
-			<rule e="way" k="tunnel" v="true|yes">
-				<rule e="way" k="highway" v="steps|footway|path|track|cycleway|bridleway|platform|pedestrian">
-					<line stroke="#fd1725" stroke-width="1.80" stroke-dasharray="5.0,5.0" stroke-linecap="butt" />
-				</rule>
-				<rule e="way" k="highway" v="unclassified|residential|living_street|service|road">
-					<line stroke="#fd1725" stroke-width="2.60" stroke-dasharray="5.0,5.0" stroke-linecap="butt" />
-				</rule>
-				<rule e="way" k="highway" v="construction">
-					<line stroke="#fd1725" stroke-width="2.25" stroke-dasharray="5.0,5.0" stroke-linecap="butt" />
-				</rule>
-				<rule e="way" k="highway" v="byway">
-					<line stroke="#fd1725" stroke-width="2.10" stroke-dasharray="5.0,5.0" stroke-linecap="butt" />
-				</rule>
-				<rule e="way" k="highway" v="tertiary|motorway_link|trunk_link|primary_link|secondary_link|tertiary_link|secondary|primary|trunk">
-					<line stroke="#fd1725" stroke-width="2.75" stroke-dasharray="5.0,5.0" stroke-linecap="butt" />
-				</rule>
-				<rule e="way" k="highway" v="motorway">
-					<line stroke="#fd1725" stroke-width="4.50" stroke-dasharray="5.0,5.0" stroke-linecap="butt" />
 				</rule>
 			</rule>
 		</rule>
@@ -1627,67 +1586,6 @@ Magellan changes:
 				<line stroke="#00B100" stroke-width="1.80" />
 			</rule>
 
-		</rule>
-	</rule>
-
-
-	<!-- Maryway OMP no tunnel -->
-	<rule cat="omp_maryway" e="way" k="maryway" v="omp">
-		<rule e="way" k="tunnel" v="~|no|false">
-			<rule e="way" k="highway" v="footway">
-				<line stroke="#fd1725" stroke-width="1.80" />
-			</rule>
-			<rule e="way" k="highway" v="path" zoom-min="13" zoom-max="14">
-				<line stroke="#fd1725" stroke-width="1.45" />
-			</rule>
-			<rule e="way" k="highway" v="path" zoom-min="15" zoom-max="15">
-				<line stroke="#fd1725" stroke-width="1.40" />
-			</rule>
-			<rule e="way" k="highway" v="path" zoom-min="16" zoom-max="16">
-				<line stroke="#fd1725" stroke-width="1.35" />
-			</rule>
-			<rule e="way" k="highway" v="path" zoom-min="17">
-				<line stroke="#fd1725" stroke-width="1.30" />
-			</rule>
-			<rule e="way" k="tracktype" v="grade1" zoom-min="13">
-				<line stroke="#fd1725" stroke-width="2.00" />
-			</rule>
-			<rule e="way" k="tracktype" v="grade2" zoom-min="13" zoom-max="14">
-				<line stroke="#fd1725" stroke-width="1.45" />
-			</rule>
-			<rule e="way" k="tracktype" v="grade2" zoom-min="15" zoom-max="15">
-				<line stroke="#fd1725" stroke-width="1.40" />
-			</rule>
-			<rule e="way" k="tracktype" v="grade2" zoom-min="16" zoom-max="16">
-				<line stroke="#fd1725" stroke-width="1.35" />
-			</rule>
-			<rule e="way" k="tracktype" v="grade2" zoom-min="17">
-				<line stroke="#fd1725" stroke-width="1.30" />
-			</rule>
-			<rule e="way" k="tracktype" v="grade3" zoom-min="13" zoom-max="14">
-				<line stroke="#fd1725" stroke-width="1.45" />
-			</rule>
-			<rule e="way" k="tracktype" v="grade3" zoom-min="15" zoom-max="15">
-				<line stroke="#fd1725" stroke-width="1.40" />
-			</rule>
-			<rule e="way" k="tracktype" v="grade3" zoom-min="16" zoom-max="16">
-				<line stroke="#fd1725" stroke-width="1.35" />
-			</rule>
-			<rule e="way" k="tracktype" v="grade3" zoom-min="17">
-				<line stroke="#fd1725" stroke-width="1.30" />
-			</rule>
-			<rule e="way" k="highway" v="unclassified|residential|living_street|service|road">
-				<line stroke="#fd1725" stroke-width="2.60" />
-			</rule>
-			<rule e="way" k="highway" v="tertiary|motorway_link|trunk_link|primary_link|secondary_link|tertiary_link|secondary|primary|trunk">
-				<line stroke="#fd1725" stroke-width="2.75" />
-			</rule>
-			<rule e="way" k="highway" v="motorway">
-				<line stroke="#fd1725" stroke-width="4.50" />
-			</rule>
-			<rule e="way" k="highway" v="cycleway">
-				<line stroke="#fd1725" stroke-width="1.80" />
-			</rule>
 		</rule>
 	</rule>
 
@@ -3798,86 +3696,6 @@ Magellan changes:
 			</rule>
 			<rule e="node" k="Type" v="0x373e-18" zoom-min="18">
 				<symbol src="file:/trailmarks/0x373e.svg" symbol-percent="80" />
-			</rule>
-		</rule>
-
-
-		<!-- MARYWAY TRAIL MARKS -->
-		<rule cat="maryway_tm" e="node" k="Type" v="*">
-			<rule e="node" k="Type" v="0x353c-14" zoom-min="14" zoom-max="14">
-				<symbol src="file:/trailmarks/0x353c.svg" symbol-percent="80" />
-			</rule>
-			<rule e="node" k="Type" v="0x353c-15" zoom-min="15" zoom-max="15">
-				<symbol src="file:/trailmarks/0x353c.svg" symbol-percent="80" />
-			</rule>
-			<rule e="node" k="Type" v="0x353c-16" zoom-min="16" zoom-max="16">
-				<symbol src="file:/trailmarks/0x353c.svg" symbol-percent="80" />
-			</rule>
-			<rule e="node" k="Type" v="0x353c-17" zoom-min="17" zoom-max="17">
-				<symbol src="file:/trailmarks/0x353c.svg" symbol-percent="80" />
-			</rule>
-			<rule e="node" k="Type" v="0x353c-18" zoom-min="18">
-				<symbol src="file:/trailmarks/0x353c.svg" symbol-percent="80" />
-			</rule>
-			<rule e="node" k="Type" v="0x353d-14" zoom-min="14" zoom-max="14">
-				<symbol src="file:/trailmarks/0x353d.svg" symbol-percent="80" />
-			</rule>
-			<rule e="node" k="Type" v="0x353d-15" zoom-min="15" zoom-max="15">
-				<symbol src="file:/trailmarks/0x353d.svg" symbol-percent="80" />
-			</rule>
-			<rule e="node" k="Type" v="0x353d-16" zoom-min="16" zoom-max="16">
-				<symbol src="file:/trailmarks/0x353d.svg" symbol-percent="80" />
-			</rule>
-			<rule e="node" k="Type" v="0x353d-17" zoom-min="17" zoom-max="17">
-				<symbol src="file:/trailmarks/0x353d.svg" symbol-percent="80" />
-			</rule>
-			<rule e="node" k="Type" v="0x353d-18" zoom-min="18">
-				<symbol src="file:/trailmarks/0x353d.svg" symbol-percent="80" />
-			</rule>
-			<rule e="node" k="Type" v="0x353e-14" zoom-min="14" zoom-max="14">
-				<symbol src="file:/trailmarks/0x353e.svg" symbol-percent="80" />
-			</rule>
-			<rule e="node" k="Type" v="0x353e-15" zoom-min="15" zoom-max="15">
-				<symbol src="file:/trailmarks/0x353e.svg" symbol-percent="80" />
-			</rule>
-			<rule e="node" k="Type" v="0x353e-16" zoom-min="16" zoom-max="16">
-				<symbol src="file:/trailmarks/0x353e.svg" symbol-percent="80" />
-			</rule>
-			<rule e="node" k="Type" v="0x353e-17" zoom-min="17" zoom-max="17">
-				<symbol src="file:/trailmarks/0x353e.svg" symbol-percent="80" />
-			</rule>
-			<rule e="node" k="Type" v="0x353e-18" zoom-min="18">
-				<symbol src="file:/trailmarks/0x353e.svg" symbol-percent="80" />
-			</rule>
-			<rule e="node" k="Type" v="0x353f-14" zoom-min="14" zoom-max="14">
-				<symbol src="file:/trailmarks/0x353f.svg" symbol-percent="80" />
-			</rule>
-			<rule e="node" k="Type" v="0x353f-15" zoom-min="15" zoom-max="15">
-				<symbol src="file:/trailmarks/0x353f.svg" symbol-percent="80" />
-			</rule>
-			<rule e="node" k="Type" v="0x353f-16" zoom-min="16" zoom-max="16">
-				<symbol src="file:/trailmarks/0x353f.svg" symbol-percent="80" />
-			</rule>
-			<rule e="node" k="Type" v="0x353f-17" zoom-min="17" zoom-max="17">
-				<symbol src="file:/trailmarks/0x353f.svg" symbol-percent="80" />
-			</rule>
-			<rule e="node" k="Type" v="0x353f-18" zoom-min="18">
-				<symbol src="file:/trailmarks/0x353f.svg" symbol-percent="80" />
-			</rule>
-			<rule e="node" k="Type" v="0x373f-14" zoom-min="14" zoom-max="14">
-				<symbol src="file:/trailmarks/0x373f.svg" symbol-percent="80" />
-			</rule>
-			<rule e="node" k="Type" v="0x373f-15" zoom-min="15" zoom-max="15">
-				<symbol src="file:/trailmarks/0x373f.svg" symbol-percent="80" />
-			</rule>
-			<rule e="node" k="Type" v="0x373f-16" zoom-min="16" zoom-max="16">
-				<symbol src="file:/trailmarks/0x373f.svg" symbol-percent="80" />
-			</rule>
-			<rule e="node" k="Type" v="0x373f-17" zoom-min="17" zoom-max="17">
-				<symbol src="file:/trailmarks/0x373f.svg" symbol-percent="80" />
-			</rule>
-			<rule e="node" k="Type" v="0x373f-18" zoom-min="18">
-				<symbol src="file:/trailmarks/0x373f.svg" symbol-percent="80" />
 			</rule>
 		</rule>
 
