@@ -1267,7 +1267,7 @@ Magellan changes:
 	</rule>
 
 	<!-- Viaferrata OMP -->
-	<rule cat="omp_vf" e="way" k="viaferrata" v="omp">
+	<rule cat="omp_vf" e="way" k="via_ferrata_flag" v="set">
 		<rule e="way" k="highway" v="footway"> <line stroke="#fd1725" stroke-width="2.80" stroke-dasharray="5.0,5.0" stroke-linecap="butt" /> </rule>
 
 		<rule e="way" k="highway" v="path" zoom-min="13" zoom-max="14"> <line stroke="#fd1725" stroke-width="2.45" stroke-dasharray="0.9,2.2" stroke-linecap="butt" /> </rule>
@@ -1275,7 +1275,7 @@ Magellan changes:
 		<rule e="way" k="highway" v="path" zoom-min="16" zoom-max="16"> <line stroke="#fd1725" stroke-width="2.35" stroke-dasharray="1.5,2.8" stroke-linecap="butt" /> </rule>
 		<rule e="way" k="highway" v="path" zoom-min="17"> <line stroke="#fd1725" stroke-width="2.30" stroke-dasharray="2.0,3.3" stroke-linecap="butt" /> </rule>
 
-		<rule e="way" k="tracktype" v="grade1" zoom-min="13">				<line stroke="#fd1725" stroke-width="3.00" stroke-dasharray="5.0,5.0" stroke-linecap="butt" /> </rule>
+		<rule e="way" k="tracktype" v="grade1|grade2" zoom-min="13">		<line stroke="#fd1725" stroke-width="3.00" stroke-dasharray="5.0,5.0" stroke-linecap="butt" /> </rule>
 		<rule e="way" k="tracktype" v="grade3" zoom-min="13" zoom-max="14">	<line stroke="#fd1725" stroke-width="2.45" stroke-dasharray="5.0,5.0" stroke-linecap="butt" /> </rule>
 		<rule e="way" k="tracktype" v="grade3" zoom-min="15" zoom-max="15">	<line stroke="#fd1725" stroke-width="2.40" stroke-dasharray="5.0,5.0" stroke-linecap="butt" /> </rule>
 		<rule e="way" k="tracktype" v="grade3" zoom-min="16" zoom-max="16">	<line stroke="#fd1725" stroke-width="2.35" stroke-dasharray="5.0,5.0" stroke-linecap="butt" /> </rule>
@@ -2482,6 +2482,7 @@ Magellan changes:
 
 		<!-- OMP TRAIL MARKS -->
 		<rule cat="omp_tm" e="node" k="Type" v="*">
+		
 			<rule e="node" k="Type" v="0x3320-14" zoom-min="14" zoom-max="14">
 				<symbol src="file:/trailmarks/0x3320.svg" symbol-percent="80" />
 			</rule>
