@@ -9,6 +9,7 @@ Source: https://openmaps.eu/mapsforgedownload
 
 Licence: [CC BY-NC-SA 3.0 (Creative Commons Attribution-NonCommercial-ShareAlike 3.0 Unported)](http://creativecommons.org/licenses/by-nc-sa/3.0/) 
 
+
 Magellan's changes are listed in the header of the xml files.
 
 Legend: [maplegend_EN.pdf](maplegend_EN.pdf)
