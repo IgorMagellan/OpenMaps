@@ -38,7 +38,10 @@ Magellan changes:
 02-03/04/2022
 ремонт всех пеших маршрутов - добавление "|grade4|grade5|~" для grade3; маршрутов МТВ; платные (toll) дороги
 переставил cutline, version=4 -> 5
-удалиол категории omp_maryway (Путь Марии), maryway_tm (Маркеры пути Марии)
+удалил категории omp_maryway (Путь Марии), maryway_tm (Маркеры пути Марии)
+09/09/2023
+добавил площадные captions для водоемов, ООПТ (только ОАМ); сглаживание контурных линий и подписи высот "в гору"
+поправил заливку nature_reserve
 
 -->
 
@@ -310,11 +313,11 @@ Magellan changes:
 					<symbol src="file:/symbols/playground.svg" />
 				</rule>
 			</rule>
-			<!-- 			<rule e="way" k="leisure" v="nature_reserve">
-				<area src="file:/patterns/nature-reserve.svg"
-					stroke="#6fc18e" stroke-width="0.20" />
+			<rule e="way" k="leisure" v="nature_reserve">
+				<!-- <area src="file:/patterns/nature-reserve.svg"	stroke="#6fc18e" stroke-width="0.20" /> -->
+				<area fill="#1a11b44f" stroke="#6fc18e" stroke-width="0.20" />
 			</rule>
- -->
+
 			<rule e="way" k="leisure" v="stadium|sports_centre|water_park">
 				<area fill="#bde3cb" stroke="#6fc18e" stroke-width="0.20" />
 			</rule>
@@ -634,9 +637,9 @@ Magellan changes:
 			</rule>
 			<rule e="way" k="natural" v="water">
 				<area fill="#b5d6f1" />
-				<rule e="way" k="*" v="*" zoom-min="12">
+<!-- 				<rule e="way" k="*" v="*" zoom-min="12">
 					<caption k="name" font-style="bold_italic" font-size="10" fill="#1A8DFF" stroke="#ffffff" stroke-width="2.00" />
-				</rule>
+				</rule> -->
 
 			</rule>
 			<rule e="way" k="natural" v="glacier">
@@ -708,78 +711,77 @@ Magellan changes:
 			<!-- contour lines level 13 -->
 			<rule e="way" k="contour_ext" v="*" zoom-min="13" zoom-max="13">
 				<rule e="way" k="contour_ext" v="elevation_minor">
-					<line stroke="#927253" stroke-width="0.20" />
+					<line stroke="#927253" stroke-width="0.20" curve="cubic" />
 				</rule>
 				<rule e="way" k="contour_ext" v="elevation_medium|elevation_major">
-					<line stroke="#927253" stroke-width="0.50" />
+					<line stroke="#927253" stroke-width="0.50" curve="cubic" />
 				</rule>
 			</rule>
 			<!-- contour lines level 14-->
 			<rule e="way" k="contour_ext" v="*" zoom-min="14" zoom-max="14">
 				<rule e="way" k="contour_ext" v="elevation_minor">
-					<line stroke="#927253" stroke-width="0.15" />
+					<line stroke="#927253" stroke-width="0.15" curve="cubic" />
 				</rule>
 				<rule e="way" k="contour_ext" v="elevation_medium|elevation_major">
-					<line stroke="#927253" stroke-width="0.40" />
+					<line stroke="#927253" stroke-width="0.40" curve="cubic" />
 					<rule e="way" k="*" v="*">
-						<pathText k="name" font-style="bold" font-size="6" fill="#927253" stroke="#ffffff" stroke-width="1.00" />
-						<pathText k="ele" font-style="bold" font-size="6" fill="#927253" stroke="#ffffff" stroke-width="1.00" />
+						<pathText k="name" font-style="bold" font-size="6" fill="#927253" stroke="#ffffff" stroke-width="1.00" text-orientation="left" />
+						<pathText k="ele" font-style="bold" font-size="6" fill="#927253" stroke="#ffffff" stroke-width="1.00" text-orientation="left" />
 					</rule>
 				</rule>
 			</rule>
 			<!-- contour lines level 15-->
 			<rule e="way" k="contour_ext" v="*" zoom-min="15" zoom-max="15">
 				<rule e="way" k="contour_ext" v="elevation_minor" zoom-max="15">
-					<line stroke="#927253" stroke-width="0.18" />
+					<line stroke="#927253" stroke-width="0.18" curve="cubic" />
 					<rule e="way" k="*" v="*">
-						<pathText k="name" font-style="bold" font-size="6" fill="#927253" stroke="#ffffff" stroke-width="1.00" />
-						<pathText k="ele" font-style="bold" font-size="6" fill="#927253" stroke="#ffffff" stroke-width="1.00" />
+						<pathText k="name" font-style="bold" font-size="6" fill="#927253" stroke="#ffffff" stroke-width="1.00" text-orientation="left" />
+						<pathText k="ele" font-style="bold" font-size="6" fill="#927253" stroke="#ffffff" stroke-width="1.00" text-orientation="left" />
 					</rule>
 				</rule>
 				<rule e="way" k="contour_ext" v="elevation_medium|elevation_major">
-					<line stroke="#927253" stroke-width="0.3" />
+					<line stroke="#927253" stroke-width="0.3" curve="cubic" />
 					<rule e="way" k="*" v="*">
-						<pathText k="name" font-style="bold" font-size="8" fill="#927253" stroke="#ffffff" stroke-width="1.0" />
-						<pathText k="ele" font-style="bold" font-size="8" fill="#927253" stroke="#ffffff" stroke-width="1.0" />
+						<pathText k="name" font-style="bold" font-size="8" fill="#927253" stroke="#ffffff" stroke-width="1.0" text-orientation="left" />
+						<pathText k="ele" font-style="bold" font-size="8" fill="#927253" stroke="#ffffff" stroke-width="1.0" text-orientation="left" />
 					</rule>
 				</rule>
 			</rule>
 			<!-- contour lines level 16 -->
 			<rule e="way" k="contour_ext" v="*" zoom-min="16" zoom-max="16">
 				<rule e="way" k="contour_ext" v="elevation_minor">
-					<line stroke="#927253" stroke-width="0.14" />
+					<line stroke="#927253" stroke-width="0.14" curve="cubic" />
 					<rule e="way" k="*" v="*">
-						<pathText k="name" font-style="bold" font-size="7" fill="#927253" stroke="#ffffff" stroke-width="1.50" />
-						<pathText k="ele" font-style="bold" font-size="7" fill="#927253" stroke="#ffffff" stroke-width="1.50" />
+						<pathText k="name" font-style="bold" font-size="7" fill="#927253" stroke="#ffffff" stroke-width="1.50" text-orientation="left" />
+						<pathText k="ele" font-style="bold" font-size="7" fill="#927253" stroke="#ffffff" stroke-width="1.50" text-orientation="left" />
 					</rule>
 				</rule>
 				<rule e="way" k="contour_ext" v="elevation_medium|elevation_major">
-					<line stroke="#927253" stroke-width="0.25" />
+					<line stroke="#927253" stroke-width="0.25" curve="cubic" />
 					<rule e="way" k="*" v="*">
-						<pathText k="name" font-style="bold" font-size="9" fill="#927253" stroke="#ffffff" stroke-width="1.50" />
-						<pathText k="ele" font-style="bold" font-size="9" fill="#927253" stroke="#ffffff" stroke-width="1.50" />
+						<pathText k="name" font-style="bold" font-size="9" fill="#927253" stroke="#ffffff" stroke-width="1.50" text-orientation="left" />
+						<pathText k="ele" font-style="bold" font-size="9" fill="#927253" stroke="#ffffff" stroke-width="1.50" text-orientation="left" />
 					</rule>
 				</rule>
 			</rule>
 			<!-- contour lines level 17 and above -->
 			<rule e="way" k="contour_ext" v="*" zoom-min="17">
 				<rule e="way" k="contour_ext" v="elevation_minor">
-					<line stroke="#927253" stroke-width="0.10" />
+					<line stroke="#927253" stroke-width="0.10" curve="cubic" />
 					<rule e="way" k="*" v="*">
-						<pathText k="name" font-style="bold" font-size="8" fill="#927253" stroke="#ffffff" stroke-width="1.50" />
-						<pathText k="ele" font-style="bold" font-size="8" fill="#927253" stroke="#ffffff" stroke-width="1.50" />
+						<pathText k="name" font-style="bold" font-size="8" fill="#927253" stroke="#ffffff" stroke-width="1.50" text-orientation="left" />
+						<pathText k="ele" font-style="bold" font-size="8" fill="#927253" stroke="#ffffff" stroke-width="1.50" text-orientation="left" />
 					</rule>
 				</rule>
 				<rule e="way" k="contour_ext" v="elevation_medium|elevation_major">
-					<line stroke="#927253" stroke-width="0.20" />
+					<line stroke="#927253" stroke-width="0.20" curve="cubic" />
 					<rule e="way" k="*" v="*">
-						<pathText k="name" font-style="bold" font-size="10" fill="#927253" stroke="#ffffff" stroke-width="1.50" />
-						<pathText k="ele" font-style="bold" font-size="10" fill="#927253" stroke="#ffffff" stroke-width="1.50" />
+						<pathText k="name" font-style="bold" font-size="10" fill="#927253" stroke="#ffffff" stroke-width="1.50" text-orientation="left" />
+						<pathText k="ele" font-style="bold" font-size="10" fill="#927253" stroke="#ffffff" stroke-width="1.50" text-orientation="left" />
 					</rule>
 				</rule>
 			</rule>
 		</rule>
-
 
 		<!-- waterways -->
 
@@ -2407,14 +2409,40 @@ Magellan changes:
 			<line stroke="#666666" stroke-width="0.6" stroke-dasharray="0.3,40,0.3,30" />
 		</rule>
 	</rule>
+	
+	<!-- Площадные captions -->
+	<rule e="node" k="landuse|natural" v="reservoir|basin|water">
+		<rule e="any" k="amenity" v="~">
+			<rule e="any" k="bBoxWeight" v="xxxlarge|xxlarge">
+				<caption k="name" priority="103" font-style="bold_italic" font-size="11" fill="#1A8DFF" stroke="#E5FFFFFF" stroke-width="2" />
+			</rule>
+			<rule e="any" k="bBoxWeight" v="xlarge">
+				<caption k="name" priority="103" font-style="bold_italic" font-size="11" fill="#1A8DFF" stroke="#E5FFFFFF" stroke-width="2" />
+			</rule>
+			<rule e="any" k="bBoxWeight" v="large">
+				<caption k="name" priority="103" font-style="bold_italic" font-size="10" fill="#1A8DFF" stroke="#E5FFFFFF" stroke-width="2" />
+			</rule>
+			<rule e="any" k="bBoxWeight" v="mid">
+				<caption k="name" priority="103" font-style="bold_italic" font-size="10" fill="#1A8DFF" stroke="#E5FFFFFF" stroke-width="2" />
+			</rule>
+			<rule e="any" k="bBoxWeight" v="small|~" zoom-min="14">
+				<caption k="name" priority="103" font-style="bold_italic" font-size="10" fill="#1A8DFF" stroke="#E5FFFFFF" stroke-width="2" />
+			</rule>
+			<rule e="any" k="bBoxWeight" v="xsmall" zoom-min="15">
+				<caption k="name" priority="103" font-style="bold_italic" font-size="10" fill="#1A8DFF" stroke="#E5FFFFFF" stroke-width="2" />
+			</rule>
+			<rule e="any" k="bBoxWeight" v="tiny" zoom-min="16">
+				<caption k="name" priority="103" font-style="bold_italic" font-size="10" fill="#1A8DFF" stroke="#E5FFFFFF" stroke-width="2" />
+			</rule>
+		</rule>
+	</rule>
 
 	<!-- non-physical boundaries -->
 	<rule e="way" k="boundary" v="*">
 		<rule e="way" k="boundary" v="national_park">
 			<line stroke="#B80B0B" stroke-width="0.20" stroke-linecap="butt" />
 			<line stroke="#B80B0B" stroke-width="0.60" stroke-dasharray="2.0,13.0" stroke-linecap="butt" />
-			<pathText k="name" font-style="bold" font-size="9" stroke="#ffffff" stroke-width="2.00" />
-
+			<!-- <pathText k="name" font-style="bold" font-size="9" stroke="#ffffff" stroke-width="2.00" /> -->
 		</rule>
 		<rule e="way" k="boundary" v="political">
 			<line stroke="#cc00ff" stroke-width="0.70" />
@@ -2423,6 +2451,12 @@ Magellan changes:
 		<rule e="way" k="boundary" v="administrative">
 			<line stroke="#80cc00ff" stroke-width="0.50" stroke-dasharray="3.0,5.0" stroke-linecap="butt" />
 			<pathText k="name" font-style="bold" font-size="9" stroke="#ffffff" stroke-width="2.00" />
+		</rule>
+	</rule>
+
+	<rule e="node" k="boundary|leisure" v="protected_area|national_park|nature_reserve">
+		<rule e="node" k="protect_class" v="pr_1|pr_2|pr_3|pr_4|pr_7|pr_97|pr_98|pr_99|~">
+			<caption k="name" font-style="bold" font-size="9" fill="#222222" stroke="#bfffbf" stroke-width="2.00" />
 		</rule>
 	</rule>
 
