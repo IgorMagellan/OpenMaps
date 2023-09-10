@@ -2434,26 +2434,26 @@ Magellan changes:
 	</rule>
 	<rule e="node" k="landuse|natural" v="reservoir|basin|water">
 		<rule e="any" k="amenity" v="~">
-			<rule e="any" k="bBoxWeight" v="xxxlarge|xxlarge">
-				<caption k="name" priority="103" font-style="bold_italic" font-size="11" fill="#1A8DFF" stroke="#E5FFFFFF" stroke-width="2" text-wrap-width="120" />
+			<rule e="any" k="bBoxWeight" v="xxxlarge|xxlarge" zoom-min="7">
+				<caption k="name" priority="3" font-style="bold_italic" font-size="11" fill="#1A8DFF" stroke="#E5FFFFFF" stroke-width="2" text-wrap-width="120" />
 			</rule>
-			<rule e="any" k="bBoxWeight" v="xlarge">
-				<caption k="name" priority="103" font-style="bold_italic" font-size="11" fill="#1A8DFF" stroke="#E5FFFFFF" stroke-width="2" text-wrap-width="120" />
+			<rule e="any" k="bBoxWeight" v="xlarge" zoom-min="8">
+				<caption k="name" priority="3" font-style="bold_italic" font-size="11" fill="#1A8DFF" stroke="#E5FFFFFF" stroke-width="2" text-wrap-width="120" />
 			</rule>
-			<rule e="any" k="bBoxWeight" v="large">
-				<caption k="name" priority="103" font-style="bold_italic" font-size="10" fill="#1A8DFF" stroke="#E5FFFFFF" stroke-width="2" text-wrap-width="120" />
+			<rule e="any" k="bBoxWeight" v="large" zoom-min="9">
+				<caption k="name" priority="3" font-style="bold_italic" font-size="10" fill="#1A8DFF" stroke="#E5FFFFFF" stroke-width="2" text-wrap-width="120" />
 			</rule>
-			<rule e="any" k="bBoxWeight" v="mid">
-				<caption k="name" priority="103" font-style="bold_italic" font-size="10" fill="#1A8DFF" stroke="#E5FFFFFF" stroke-width="2" text-wrap-width="120" />
+			<rule e="any" k="bBoxWeight" v="mid" zoom-min="12">
+				<caption k="name" priority="3" font-style="bold_italic" font-size="10" fill="#1A8DFF" stroke="#E5FFFFFF" stroke-width="2" text-wrap-width="120" />
 			</rule>
 			<rule e="any" k="bBoxWeight" v="small|~" zoom-min="14">
-				<caption k="name" priority="103" font-style="bold_italic" font-size="10" fill="#1A8DFF" stroke="#E5FFFFFF" stroke-width="2" text-wrap-width="120" />
+				<caption k="name" priority="3" font-style="bold_italic" font-size="10" fill="#1A8DFF" stroke="#E5FFFFFF" stroke-width="2" text-wrap-width="120" />
 			</rule>
 			<rule e="any" k="bBoxWeight" v="xsmall" zoom-min="15">
-				<caption k="name" priority="103" font-style="bold_italic" font-size="10" fill="#1A8DFF" stroke="#E5FFFFFF" stroke-width="2" text-wrap-width="120" />
+				<caption k="name" priority="3" font-style="bold_italic" font-size="10" fill="#1A8DFF" stroke="#E5FFFFFF" stroke-width="2" text-wrap-width="120" />
 			</rule>
 			<rule e="any" k="bBoxWeight" v="tiny" zoom-min="16">
-				<caption k="name" priority="103" font-style="bold_italic" font-size="10" fill="#1A8DFF" stroke="#E5FFFFFF" stroke-width="2" text-wrap-width="120" />
+				<caption k="name" priority="3" font-style="bold_italic" font-size="10" fill="#1A8DFF" stroke="#E5FFFFFF" stroke-width="2" text-wrap-width="120" />
 			</rule>
 		</rule>
 	</rule>
