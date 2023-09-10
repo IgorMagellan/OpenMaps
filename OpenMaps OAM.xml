@@ -188,16 +188,20 @@ Magellan changes:
 		<rule e="way" k="natural|landuse" v="forest|wood">
 			<rule e="way" k="wood" v="*">
 				<rule e="way" k="wood|leaf_type" v="deciduous|broadleaved">
+					<area fill="#b8d38f"/>
 					<area src="file:/patterns/wood-deciduous.svg" symbol-percent="250" />
 				</rule>
 				<rule e="way" k="wood|leaf_type" v="coniferous|needleleaved">
+					<area fill="#a1c788"/>
 					<area src="file:/patterns/wood-coniferous.svg" symbol-percent="250" />
 				</rule>
 				<rule e="way" k="wood|leaf_type" v="mixed|leafless">
+					<area fill="#acc684"/>
 					<area src="file:/patterns/wood-mixed.svg" symbol-percent="250" />
 				</rule>
 			</rule>
 			<rule e="way" k="wood" v="~">
+				<area fill="#acc684"/>
 				<area src="file:/patterns/wood-mixed.svg" symbol-percent="250" />
 			</rule>
 			<rule e="way" k="*" v="*" zoom-min="14">
