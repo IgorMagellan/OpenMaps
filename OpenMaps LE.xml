@@ -2150,7 +2150,7 @@ contour pathtext rotate_up=false (всегда "в гору")
 
 		<!-- OMP TRAIL MARKS -->
 		<rule cat="omp_tm" e="node" k="Type" v="*">
-<rule e="node" k="Type" v="0x3320-14" zoom-min="14" zoom-max="14"><symbol src="file:/trailmarks/0x3320.svg" scale="1.6" /></rule>
+<!-- <rule e="node" k="Type" v="0x3320-14" zoom-min="14" zoom-max="14"><symbol src="file:/trailmarks/0x3320.svg" scale="1.6" /></rule>
 <rule e="node" k="Type" v="0x3320-15" zoom-min="15" zoom-max="15"><symbol src="file:/trailmarks/0x3320.svg" scale="1.6" /></rule>
 <rule e="node" k="Type" v="0x3320-16" zoom-min="16" zoom-max="16"><symbol src="file:/trailmarks/0x3320.svg" scale="1.6" /></rule>
 <rule e="node" k="Type" v="0x3320-17" zoom-min="17" zoom-max="17"><symbol src="file:/trailmarks/0x3320.svg" scale="1.6" /></rule>
@@ -2556,7 +2556,7 @@ contour pathtext rotate_up=false (всегда "в гору")
 <rule e="node" k="Type" v="0x373e-17" zoom-min="17" zoom-max="17"><symbol src="file:/trailmarks/0x373e.svg" scale="1.6" /></rule>
 <rule e="node" k="Type" v="0x373e-18" zoom-min="18"><symbol src="file:/trailmarks/0x373e.svg" scale="1.6" /></rule>
 </rule>
-
+ -->
 
 		<!-- amenity -->
 		<rule e="node" k="amenity" v="*">
