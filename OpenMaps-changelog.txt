@@ -40,8 +40,10 @@
 поправил заливку nature_reserve
 12/09/2023
 Для устранения швов в площадных заливках svg добавил впереди area fill для forest|wood, scrub, fell, vineyard, orchard, cemetery
-
 [Err]: поправил неотображение леса с разными типами листвы (хв., листв., смеш.). было только mixed; 
    cпорт.площадок - переставил stadium выше
-Изменил цвет leisure=track|byway|ls_track;
+Изменил цвет leisure=track|byway|ls_track, было не видно на stadium;
 Убрал оригинальные OMP TRAIL MARKS - в ОАМ и LoMaps другая система (общепринятая)
+Добавил подписи на пеших, велосипедных и MTB маршрутах
+у Buildings и landuse" v="residential|farmyard" изменине насыщенности цвета при изменении зума  (оригинальные цвета - остались для z16)
+выключил pathtext у fence|wall|city_wall

@@ -231,7 +231,12 @@ Magellan changes:
 					symbol-percent="250" />
 			</rule>
 			<rule e="way" k="landuse" v="residential|farmyard">
-				<area fill="#f4cd9f" />
+				<!-- <area fill="#f4cd9f" /> оригинал z16 -->
+				<rule e="way" k="*" v="*" zoom-min="9"  zoom-max="12"><area fill="#c59d6f" stroke="#997245" stroke-width="0.2" /> </rule>
+				<rule e="way" k="*" v="*" zoom-min="13" zoom-max="15"><area fill="#f0c798" /></rule>  
+				<rule e="way" k="*" v="*" zoom-min="16" zoom-max="16"><area fill="#f4cd9f" /></rule>
+				<rule e="way" k="*" v="*" zoom-min="17" zoom-max="17"><area fill="#fcd8af" /></rule>
+				<rule e="way" k="*" v="*" zoom-min="18">			  <area fill="#ffe1bf" /></rule>				
 			</rule>
 			<rule e="way" k="landuse" v="retail">
 				<area fill="#ffebeb" stroke="#e4e4e4" stroke-width="0.20" />
@@ -1131,7 +1136,7 @@ Magellan changes:
 
 
 	<!-- MTB route OMP no tunnel -->
-	<rule cat="omp_mtb" e="way" k="mtbnetwork" v="imn|nmn|rmn|lmn|omn">
+	<rule cat="omp_mtb" e="way" k="mtbnetwork|network" v="imn|nmn|rmn|lmn|omn">
 		<rule e="way" k="tunnel" v="~|no|false">
 			<rule e="way" k="highway" v="footway">
 				<line stroke="#FFA8FF" stroke-width="2.80" />
@@ -1176,7 +1181,14 @@ Magellan changes:
 				<line stroke="#FFA8FF" stroke-width="2.80" />
 			</rule>
 		</rule>
+		<rule e="any" k="*" v="*" zoom-min="13" zoom-max="15">
+			<pathText k="ref_mtb" font-style="bold" font-size="8" dy="-1.80" fill="#FFA8FF" stroke="#FFFFFF" stroke-width="2.00" repeat-start="30" repeat-gap="100" />
+		</rule>
+		<rule e="any" k="*" v="*" zoom-min="16">
+			<pathText k="ref_mtb" font-style="bold" font-size="11" dy="-1.00" fill="#FFA8FF" stroke="#FFFFFF" stroke-width="2.50" repeat-start="50" repeat-gap="300" />
+		</rule>
 	</rule>
+
 	<rule cat="omp_mtb" e="way" k="BC" v="G2" zoom-min="15">
 		<lineSymbol src="file:/trailmarks/0x373b.svg" align-center="true" repeat="true" rotate="false" repeat-gap="100" repeat-start="0" symbol-percent="80" />
 	</rule>
@@ -1249,6 +1261,12 @@ Magellan changes:
 				<line stroke="#A400A4" stroke-width="2.80" />
 			</rule>
 		</rule>
+		<rule e="any" k="*" v="*" zoom-min="13" zoom-max="15">
+			<pathText k="ref_cycle" font-style="bold" font-size="8" dy="1.80" fill="#A400A4" stroke="#FFFFFF" stroke-width="2.00" repeat-start="30" repeat-gap="100" />
+		</rule>
+		<rule e="any" k="*" v="*" zoom-min="16">
+			<pathText k="ref_cycle" font-style="bold" font-size="11" dy="1.00" fill="#A400A4" stroke="#FFFFFF" stroke-width="2.50" repeat-start="50" repeat-gap="300" />
+		</rule>				
 	</rule>
 
 	<!-- Viaferrata OMP -->
@@ -1268,7 +1286,7 @@ Magellan changes:
 	</rule>
 
 	<!-- Hiking network OMP no tunnel -->
-	<rule cat="omp_hiking" e="way" k="hknetwork" v="iwn|nwn|rwn|lwn|own">
+	<rule cat="omp_hiking" e="way" k="hknetwork|network" v="iwn|nwn|rwn|lwn|own">
 		<rule e="way" k="tunnel" v="~|no|false">
 			<rule e="way" k="highway" v="footway">
 				<line stroke="#fd1725" stroke-width="1.80" />
@@ -1325,6 +1343,12 @@ Magellan changes:
 				<line stroke="#fd1725" stroke-width="1.80" />
 			</rule>
 		</rule>
+		<rule e="any" k="*" v="*" zoom-min="13" zoom-max="15">
+			<pathText k="ref_hike"  font-style="bold" font-size="8" dy="1.80" fill="#ff0000" stroke="#FFFFFF" stroke-width="2.00"  repeat-start="30" repeat-gap="100" />
+		</rule>
+		<rule e="any" k="*" v="*" zoom-min="16">
+			<pathText k="ref_hike" font-style="bold" font-size="11" dy="1.00" fill="#ff0000" stroke="#FFFFFF" stroke-width="2.50" repeat-start="50" repeat-gap="300" />
+		</rule>		
 	</rule>
 
 	<!-- Colored hiking network BLUE OMP no tunnel -->
@@ -1384,8 +1408,8 @@ Magellan changes:
 			<rule e="way" k="highway" v="cycleway">
 				<line stroke="#006EFF" stroke-width="1.80" />
 			</rule>
-
 		</rule>
+
 	</rule>
 
 	<!-- Colored hiking network RED OMP no tunnel -->
@@ -1508,8 +1532,8 @@ Magellan changes:
 			<rule e="way" k="highway" v="cycleway">
 				<line stroke="#FFD700" stroke-width="1.80" />
 			</rule>
-
 		</rule>
+	
 	</rule>
 
 	<!-- Colored hiking network GREEN OMP no tunnel -->
@@ -1634,9 +1658,20 @@ Magellan changes:
 	</rule>
 
 
-	<!-- building -->
+	<!-- Buildings -->
 	<rule e="way" k="building" v="*">
-		<area fill="#c48f76" stroke="#7c523e" stroke-width="0.10" />
+		<!-- <area fill="#c48f76" stroke="#7c523e" stroke-width="0.10" /> оригинал z16 -->
+		<rule e="way" k="*" v="*" zoom-max="14">				<area fill="#694532" stroke="#3f291f" stroke-width="0.18" /> </rule>
+		<rule e="way" k="*" v="*" zoom-min="15" zoom-max="15">	<area fill="#926855" stroke="#55382b" stroke-width="0.14" /> </rule>
+		<rule e="way" k="*" v="*" zoom-min="16" zoom-max="16">	<area fill="#c48f76" stroke="#7c523e" stroke-width="0.1" /> </rule>
+		<rule e="way" k="*" v="*" zoom-min="17" zoom-max="17">	<area fill="#ecad90" stroke="#b8795d" stroke-width="0.09" /> </rule>
+		<rule e="way" k="*" v="*" zoom-min="18">				<area fill="#fcb492" stroke="#ac7c68" stroke-width="0.08" /> </rule>
+
+		<!-- <rule e="way" k="*" v="*" zoom-max="14">				<area fill="#f8b89b" stroke="#b8795d" stroke-width="0.14" /> </rule>
+		<rule e="way" k="*" v="*" zoom-min="15" zoom-max="15">	<area fill="#c48f76" stroke="#7c523e" stroke-width="0.12" /> </rule>
+		<rule e="way" k="*" v="*" zoom-min="16" zoom-max="16">	<area fill="#c48f76" stroke="#7c523e" stroke-width="0.1" /> </rule>
+		<rule e="way" k="*" v="*" zoom-min="17" zoom-max="17">	<area fill="#926855" stroke="#55382b" stroke-width="0.09" /> </rule>
+		<rule e="way" k="*" v="*" zoom-min="18">				<area fill="#775241" stroke="#462e24" stroke-width="0.08" /> </rule> -->
 		<rule e="way" k="*" v="*" zoom-min="16">
 			<caption k="name" font-style="bold" font-size="10" fill="#000000" stroke="#ffffff" stroke-width="2.00" />
 			<caption k="addr:housenumber" font-style="bold" font-size="10" fill="#606060" stroke="#ffffff" stroke-width="2.00" />
@@ -1958,8 +1993,7 @@ Magellan changes:
 		<rule e="way" k="barrier" v="fence|wall|city_wall" zoom-min="16">
 			<line stroke="#007200" stroke-width="0.20" stroke-linecap="butt" />
 			<line stroke="#007200" stroke-width="0.60" stroke-dasharray="2.0,13.0" stroke-linecap="butt" />
-			<pathText k="name" font-style="bold" font-size="9" stroke="#ffffff" stroke-width="2.00" />
-
+			<!-- <pathText k="name" font-style="bold" font-size="9" stroke="#ffffff" stroke-width="2.00" /> -->
 		</rule>
 		<rule e="way" k="barrier" v="retaining_wall">
 			<line stroke="#888888" stroke-width="0.10" stroke-linecap="butt" />
