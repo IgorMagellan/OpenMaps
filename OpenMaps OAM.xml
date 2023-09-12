@@ -204,6 +204,7 @@ Magellan changes:
 		</rule>
 
 		<rule e="way" k="landuse" v="vineyard">
+			<area fill="#e0e56a" />
 			<area src="file:/patterns/vineyard.svg" symbol-percent="250" />
 			<rule e="way" k="*" v="*" zoom-min="14">
 				<caption k="name" font-style="bold_italic" font-family="serif" font-size="10"
@@ -212,6 +213,7 @@ Magellan changes:
 		</rule>
 
 		<rule e="way" k="landuse" v="orchard">
+			<area fill="#e0e56a" />
 			<area src="file:/patterns/orchard.svg" symbol-percent="250" />
 			<rule e="way" k="*" v="*" zoom-min="14">
 				<caption k="name" font-style="bold_italic" font-family="serif" font-size="10"
@@ -251,6 +253,7 @@ Magellan changes:
 				<area fill="#e9dd72" stroke="#556b2f" stroke-width="0.20" />
 			</rule>
 			<rule e="way" k="landuse" v="cemetery">
+				<area fill="#bde9cd" />
 				<area src="file:/patterns/cemetery.svg" stroke="#e4e4e4" stroke-width="0.20"
 					symbol-percent="250" />
 			</rule>
@@ -299,15 +302,16 @@ Magellan changes:
 				<area fill="#1a11b44f" stroke="#6fc18e" stroke-width="0.20" />
 			</rule>
 
-			<rule e="way" k="leisure" v="track">
+			<rule e="way" k="leisure" v="track|byway|ls_track">
 				<rule e="way" k="area" v="yes|true">
-					<area fill="#bde3cb" stroke="#6fc18e" stroke-width="0.025" />
+					<area fill="#80d39f" stroke="#23412e" stroke-width="0.025" />
 				</rule>
 				<rule e="way" k="area" v="~|no|false">
 					<line stroke="#6fc18e" stroke-width="0.75" />
-					<line stroke="#bde3cb" stroke-width="0.70" />
+					<line stroke="#7dc095" stroke-width="0.70" />
 				</rule>
 			</rule>
+			
 			<rule e="way" k="leisure" v="swimming_pool">
 				<area fill="#b5d6f1" stroke="#6060ff" stroke-width="0.20" />
 			</rule>
@@ -317,7 +321,7 @@ Magellan changes:
 					stroke-width="2.00" />
 			</rule>
 		</rule>
-
+	
 		<!-- MTB route OMP tunnel -->
 		<rule cat="omp_mtb" e="way" k="mtbnetwork" v="imn|nmn|rmn|lmn|omn">
 			<rule e="way" k="tunnel" v="true|yes">
