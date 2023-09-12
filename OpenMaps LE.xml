@@ -60,7 +60,8 @@ contour pathtext rotate_up=false (всегда "в гору")
 добавил safety_rope|ladder|rungs
 добавил man_made=adit|adit_disused
 поправил неотображение bare_rock поверх леса, изменил на свой
-
+12/9/2023
+поправил неотображение леса с разными типами листвы (хв., листв., смеш.). было только mixed
 
 -->
 <rendertheme xmlns="http://mapsforge.org/renderTheme" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
@@ -211,20 +212,15 @@ contour pathtext rotate_up=false (всегда "в гору")
 	<rule e="way" k="*" v="*">   
 	
 		<!-- landuse -->
-		
+
 		<rule e="way" k="natural|landuse" v="forest|wood">
-			<rule e="way" k="wood" v="*">
-				<rule e="way" k="wood|leaf_type" v="deciduous|broadleaved">
-					<area src="file:/patterns/wood-deciduous.svg" scale="2" />
-				</rule>
-				<rule e="way" k="wood|leaf_type" v="coniferous|needleleaved">
-					<area src="file:/patterns/wood-coniferous.svg" scale="2" />
-				</rule>
-				<rule e="way" k="wood|leaf_type" v="mixed|leafless">
-					<area src="file:/patterns/wood-mixed.svg" scale="2" />
-				</rule>
+			<rule e="way" k="wood|leaf_type" v="deciduous|broadleaved">
+				<area src="file:/patterns/wood-deciduous.svg" scale="2" />
 			</rule>
-			<rule e="way" k="wood" v="~">
+			<rule e="way" k="wood|leaf_type" v="coniferous|needleleaved">
+				<area src="file:/patterns/wood-coniferous.svg" scale="2" />
+			</rule>
+			<rule e="way" k="wood|leaf_type" v="mixed|leafless">
 				<area src="file:/patterns/wood-mixed.svg" scale="2" />
 			</rule>
 			<rule e="way" k="*" v="*" zoom-min="14">
@@ -325,7 +321,7 @@ contour pathtext rotate_up=false (всегда "в гору")
 					stroke-width="4.00" />
 			</rule>
 		</rule>
-		
+
 		<!-- leisure -->
 		<rule e="way" k="sport" v="golf">
 			<area fill="#c7f1a3" stroke="#6fc18e" stroke-width="0.40" />
@@ -341,7 +337,7 @@ contour pathtext rotate_up=false (всегда "в гору")
 				</rule>
 			</rule>
 			<!-- Magellan -->
-<!-- 			<rule e="way" k="leisure" v="nature_reserve">
+			<!-- 			<rule e="way" k="leisure" v="nature_reserve">
 				<area src="file:/patterns/nature-reserve.svg" scale="2" stroke="#6fc18e" stroke-width="0.40" />
 			</rule> -->
 
@@ -366,7 +362,7 @@ contour pathtext rotate_up=false (всегда "в гору")
 					stroke-width="4.00" />
 			</rule>
 		</rule>
-		
+
 		<!-- MTB OMP  tunnel -->
 		<rule cat="omp_mtb" e="way" k="BR" v="mtb|mtb/bicycle|bicycle/mtb">
 		<rule e="way" k="tunnel" v="true|yes">
@@ -389,9 +385,9 @@ contour pathtext rotate_up=false (всегда "в гору")
 			<line stroke="#FFA8FF" stroke-width="11.00" stroke-dasharray="10.0,10.0" stroke-linecap="butt" />
 			</rule>
 		</rule>	
-		</rule>	
-		
-		
+		</rule>
+
+
 		<!-- Bicycle route OMP tunnel -->
 		<rule cat="omp_bc" e="way" k="BR" v="bicycle|mtb/bicycle|bicycle/mtb">
 		<rule e="way" k="tunnel" v="true|yes">
@@ -415,8 +411,8 @@ contour pathtext rotate_up=false (всегда "в гору")
 			</rule>
 		</rule>	
 		</rule>
-		
-		
+
+
 		<!-- Hiking network OMP tunnel -->
 		<rule cat="omp_hiking" e="way" k="network" v="omp">
 		<rule e="way" k="tunnel" v="true|yes">
@@ -440,7 +436,7 @@ contour pathtext rotate_up=false (всегда "в гору")
 			</rule>
 		</rule>
 		</rule>
-		
+
 		<!-- Colored hiking network BLUE OMP tunnel -->
 		<rule cat="colored_hiking" e="way" k="osmc:symbol" v="blue">
 		<rule e="way" k="tunnel" v="true|yes">
@@ -464,7 +460,7 @@ contour pathtext rotate_up=false (всегда "в гору")
 			</rule>
 		</rule>
 		</rule>
-		
+
 		<!-- Colored hiking network RED OMP tunnel -->
 		<rule cat="colored_hiking" e="way" k="osmc:symbol" v="red">
 		<rule e="way" k="tunnel" v="true|yes">
@@ -488,7 +484,7 @@ contour pathtext rotate_up=false (всегда "в гору")
 			</rule>
 		</rule>
 		</rule>
-		
+
 		<!-- Colored hiking network YELLOW OMP tunnel -->
 		<rule cat="colored_hiking" e="way" k="osmc:symbol" v="yellow">
 		<rule e="way" k="tunnel" v="true|yes">
@@ -512,7 +508,7 @@ contour pathtext rotate_up=false (всегда "в гору")
 			</rule>
 		</rule>
 		</rule>
-		
+
 		<!-- Colored hiking network GREEN OMP tunnel -->
 		<rule cat="colored_hiking" e="way" k="osmc:symbol" v="green">
 		<rule e="way" k="tunnel" v="true|yes">
@@ -536,11 +532,11 @@ contour pathtext rotate_up=false (всегда "в гору")
 			</rule>
 		</rule>
 		</rule>
-		
+
 		<!-- Toll highways tunnel-->
 		<rule e="way" k="highway" v="*">
 		<rule e="way" k="tunnel" v="true|yes">
-			<!-- Toll -->
+				<!-- Toll -->
 			<rule cat="toll_roads" e="way" k="toll" v="yes">
 					<rule e="way" k="highway" v="tertiary">
 						<line stroke="#00f9ff" stroke-width="7.00" />
@@ -717,7 +713,7 @@ contour pathtext rotate_up=false (всегда "в гору")
 			<line stroke="#555555" stroke-width="0.6" stroke-linecap="butt" />
 			<rule e="way" k="*" v="*" zoom-min="15"> <caption k="name" font-style="italic" font-family="sans_serif" font-size="20" fill="#20202F" stroke="#ffffff" stroke-width="4.00"  /> </rule>
 		</rule>
-	<!-- Малые овраги LM -->
+			<!-- Малые овраги LM -->
 	<rule e="way" k="barrier|natural" v="ditch|gully"  zoom-min="15">
 		<line stroke="#80555555" stroke-width="0.25dp" curve="cubic" />
 		<rule cat="tms_land-names" e="way" k="*" v="*" > <caption k="name" dy="-15" font-style="italic" font-family="sans_serif" font-size="10dp" fill="#BF111111" stroke="#ffffff" stroke-width="2dp"  />	</rule>				
@@ -734,7 +730,7 @@ contour pathtext rotate_up=false (всегда "в гору")
 			</rule>
 		
 		</rule>
-		
+
 		<!-- contour lines -->
 		
 	<rule cat="omp_contour" e="way" k="contour_ext" v="*">
@@ -793,7 +789,7 @@ contour pathtext rotate_up=false (всегда "в гору")
 						<pathText k="ele" font-style="bold" font-size="18" fill="#927253" stroke="#ffffff" stroke-width="3.00" rotate_up="false"/>
 					</rule>
 				</rule>
-			</rule>   
+			</rule>
 			<!-- contour lines level 17 and above -->
 			<rule e="way" k="contour_ext" v="*" zoom-min="17">
 				<rule e="way" k="contour_ext" v="elevation_minor">   
@@ -849,7 +845,7 @@ contour pathtext rotate_up=false (всегда "в гору")
 
 			<rule e="way" k="waterway" v="stream">
 				<line stroke="#1A8DFF" stroke-width="1.00" />
-		<!-- 		<line stroke="#b5d6f1" stroke-width="0.60"  align-center="true" /> -->				
+				<!-- 		<line stroke="#b5d6f1" stroke-width="0.60"  align-center="true" /> -->				
 				<lineSymbol src="file:/symbols/bluearrow.svg" scale="2" position="above" repeat="true" />
 				<rule e="way" k="*" v="*" zoom-min="14">
 				<pathText k="name" font-style="bold_italic" font-family="sans_serif" font-size="20" fill="#1A8DFF" stroke="#ffffff" stroke-width="4.00" />
@@ -991,8 +987,8 @@ contour pathtext rotate_up=false (всегда "в гору")
 			</rule>
 		</rule>
 	</rule>
-	
-		<!-- Bicycle ways no tunnel -->
+
+	<!-- Bicycle ways no tunnel -->
 
 		<rule cat="standard_bc" e="way" k="lcn|rcn|ncn|icn" v="proposed">
 		<rule e="way" k="tunnel" v="~|no|false">
@@ -1085,7 +1081,7 @@ contour pathtext rotate_up=false (всегда "в гору")
 		</rule>	
 		</rule>
 
-		<!-- MTB route OMP no tunnel -->
+	<!-- MTB route OMP no tunnel -->
 		<rule cat="omp_mtb" e="way" k="BR" v="mtb|mtb/bicycle|bicycle/mtb">
 		<rule e="way" k="tunnel" v="~|no|false">
 			<rule e="way" k="highway" v="footway"><line stroke="#FFA8FF" stroke-width="5.60" /></rule>
@@ -1121,9 +1117,9 @@ contour pathtext rotate_up=false (всегда "в гору")
 			<rule cat="omp_mtb" e="way" k="BC" v="B2/G2/R2" zoom-min="15"><lineSymbol src="file:/trailmarks/0x373abc.svg" scale="1.6" align-center="true" repeat="true" rotate="false" repeat-gap="100" repeat-start="0" />
 			</rule>
 					</rule> <!-- Magellan added  -->
-		
-		
-		<!-- Bicycle route OMP no tunnel -->
+
+
+	<!-- Bicycle route OMP no tunnel -->
 		<rule cat="omp_bc" e="way" k="BR" v="bicycle|mtb/bicycle|bicycle/mtb">
 		<rule e="way" k="tunnel" v="~|no|false">
 			<rule e="way" k="highway" v="footway"><line stroke="#A400A4" stroke-width="5.60" /></rule>
@@ -1142,8 +1138,8 @@ contour pathtext rotate_up=false (всегда "в гору")
 			<rule e="way" k="highway" v="cycleway"><line stroke="#A400A4" stroke-width="5.60" /></rule>
 		</rule>	
 		</rule>
-		
-		<!-- Viaferrata OMP --> 
+
+	<!-- Viaferrata OMP --> 
 		<rule cat="omp_vf" e="way" k="viaferrata" v="omp">
 			<rule e="way" k="highway" v="footway"><line stroke="#fd1725" stroke-width="5.60" stroke-dasharray="10.0,10.0" stroke-linecap="butt"/></rule>
 			<rule e="way" k="highway" v="path" zoom-min="13" zoom-max="14"><line stroke="#fd1725" stroke-width="4.90" stroke-dasharray="1.8,4.4" stroke-linecap="butt"/></rule>
@@ -1155,9 +1151,9 @@ contour pathtext rotate_up=false (всегда "в гору")
 			<rule e="way" k="tracktype" v="grade3" zoom-min="15" zoom-max="15"><line stroke="#fd1725" stroke-width="4.80" stroke-dasharray="10.0,10.0" stroke-linecap="butt"/></rule>
 			<rule e="way" k="tracktype" v="grade3" zoom-min="16" zoom-max="16"><line stroke="#fd1725" stroke-width="4.70" stroke-dasharray="10.0,10.0" stroke-linecap="butt"/></rule>
 			<rule e="way" k="tracktype" v="grade3" zoom-min="17"><line stroke="#fd1725" stroke-width="4.60" stroke-dasharray="10.0,10.0" stroke-linecap="butt"/></rule>
-		</rule>	
-		
-		<!-- Hiking network OMP no tunnel -->
+		</rule>
+
+	<!-- Hiking network OMP no tunnel -->
 		<rule cat="omp_hiking" e="way" k="network" v="omp">
 		<rule e="way" k="tunnel" v="~|no|false">
 			<rule e="way" k="highway" v="footway"><line stroke="#fd1725" stroke-width="3.60" /></rule>
@@ -1180,8 +1176,8 @@ contour pathtext rotate_up=false (всегда "в гору")
 			<rule e="way" k="highway" v="cycleway"><line stroke="#fd1725" stroke-width="3.60" /></rule>
 		</rule>
 		</rule>
-		
-		<!-- Colored hiking network BLUE OMP no tunnel -->
+
+	<!-- Colored hiking network BLUE OMP no tunnel -->
 		<rule cat="colored_hiking" e="way" k="osmc:symbol" v="blue">
 		<rule e="way" k="tunnel" v="~|no|false">
 			<rule e="way" k="highway" v="footway"><line stroke="#006EFF" stroke-width="3.60" /></rule>
@@ -1204,8 +1200,8 @@ contour pathtext rotate_up=false (всегда "в гору")
 			<rule e="way" k="highway" v="cycleway"><line stroke="#006EFF" stroke-width="3.60" /></rule>
 		</rule>
 		</rule>
-		
-		<!-- Colored hiking network RED OMP no tunnel -->
+
+	<!-- Colored hiking network RED OMP no tunnel -->
 		<rule cat="colored_hiking" e="way" k="osmc:symbol" v="red">
 		<rule e="way" k="tunnel" v="~|no|false">
 			<rule e="way" k="highway" v="footway"><line stroke="#F00000" stroke-width="3.60" /></rule>
@@ -1228,8 +1224,8 @@ contour pathtext rotate_up=false (всегда "в гору")
 			<rule e="way" k="highway" v="cycleway"><line stroke="#F00000" stroke-width="3.60" /></rule>
 		</rule>
 		</rule>
-		
-		<!-- Colored hiking network YELLOW OMP no tunnel -->
+
+	<!-- Colored hiking network YELLOW OMP no tunnel -->
 		<rule cat="colored_hiking" e="way" k="osmc:symbol" v="yellow">
 		<rule e="way" k="tunnel" v="~|no|false">
 			<rule e="way" k="highway" v="footway"><line stroke="#FFD700" stroke-width="3.60" /></rule>
@@ -1252,8 +1248,8 @@ contour pathtext rotate_up=false (всегда "в гору")
 			<rule e="way" k="highway" v="cycleway"><line stroke="#FFD700" stroke-width="3.60" /></rule>
 		</rule>
 		</rule>
-		
-		<!-- Colored hiking network GREEN OMP no tunnel -->
+
+	<!-- Colored hiking network GREEN OMP no tunnel -->
 		<rule cat="colored_hiking" e="way" k="osmc:symbol" v="green">
 		<rule e="way" k="tunnel" v="~|no|false">
 			<rule e="way" k="highway" v="footway"><line stroke="#00B100" stroke-width="3.60" /></rule>
@@ -1276,8 +1272,8 @@ contour pathtext rotate_up=false (всегда "в гору")
 			<rule e="way" k="highway" v="cycleway"><line stroke="#00B100" stroke-width="3.60" /></rule>
 		</rule>
 		</rule>
-		
-		<!-- Toll highways no tunnel-->
+
+	<!-- Toll highways no tunnel-->
 		<rule e="way" k="highway" v="*">
 		<rule e="way" k="tunnel" v="~|no|false">
 			<!-- Toll -->
@@ -1301,7 +1297,7 @@ contour pathtext rotate_up=false (всегда "в гору")
 		</rule>
 		</rule>
 
-		<!-- Töltés no tunnel -->
+	<!-- Töltés no tunnel -->
 		<rule e="way" k="embankment" v="emb_yes" zoom-min="17">
 			<rule e="way" k="highway" v="footway"><line stroke="#000000" stroke-width="3.60" stroke-dasharray="2.0,20.0" stroke-linecap="butt" /></rule>
 			<rule e="way" k="highway" v="path"><line stroke="#000000" stroke-width="2.90" stroke-dasharray="2.0,20.0" stroke-linecap="butt" /></rule>
@@ -1318,7 +1314,7 @@ contour pathtext rotate_up=false (всегда "в гору")
 				<line stroke="#dddddd" stroke-width="1.76" stroke-linecap="butt" /> 
 			</rule>			
 		</rule>
-		
+
 	<!-- building -->
 	<rule e="way" k="building" v="*">
 		<area fill="#c48f76" stroke="#7c523e" stroke-width="0.20" />
@@ -1334,9 +1330,9 @@ contour pathtext rotate_up=false (всегда "в гору")
 	</rule>
 
 
-		<!-- Normál utak kontur-->
+	<!-- Normál utak kontur-->
 		<rule e="way" k="highway" v="*">
-			<!-- no tunnel -->
+		<!-- no tunnel -->
 			<rule e="way" k="tunnel" v="~|no|false">
 			<!-- no bridge -->
 			<rule e="way" k="bridge" v="~|no|false">
@@ -1433,11 +1429,11 @@ contour pathtext rotate_up=false (всегда "в гору")
 				</rule>
 				</rule>
 			</rule>
-		
-		
-	 <!-- Normál utak magja-->
+
+
+	<!-- Normál utak magja-->
 		<rule e="way" k="highway" v="*">
-			<!-- no tunnel -->
+		<!-- no tunnel -->
 			<rule e="way" k="tunnel" v="~|no|false">
 			<!-- no bridge -->
 			<rule e="way" k="bridge" v="~|no|false">
@@ -1623,7 +1619,7 @@ contour pathtext rotate_up=false (всегда "в гору")
 			</rule>
 		</rule>
 
-		<!-- runways cores -->
+	<!-- runways cores -->
 		<rule e="way" k="aeroway" v="*">
 			<rule e="way" k="aeroway" v="runway">
 				<line stroke="#d4dcbd" stroke-width="9.00" stroke-linecap="square" />
@@ -1634,7 +1630,7 @@ contour pathtext rotate_up=false (всегда "в гору")
 		</rule>
 
 
-		<!-- man_made features -->
+	<!-- man_made features -->
 		<rule e="way" k="man_made" v="pier">
 			<rule e="way" k="*" v="*" closed="no">
 				<line stroke="#d0d0d0" stroke-width="0.80" stroke-linecap="butt" />
@@ -1645,7 +1641,7 @@ contour pathtext rotate_up=false (всегда "в гору")
 			</rule>
 		</rule>
 
-		<!-- barriers -->
+	<!-- barriers -->
 		<rule e="way" k="barrier" v="*">
 			<rule e="way" k="barrier" v="fence|wall|city_wall" zoom-min="16">
 				<line stroke="#007200" stroke-width="0.40" stroke-linecap="butt" />
@@ -1657,13 +1653,13 @@ contour pathtext rotate_up=false (всегда "в гору")
 				<line stroke="#888888" stroke-width="0.20" stroke-linecap="butt" />
 			</rule>
 		</rule>
-		
-		<!-- non-physical routes -->
+
+	<!-- non-physical routes -->
 		<rule e="way" k="route" v="ferry">
 			<line stroke="#6c6c90" stroke-width="0.40" stroke-dasharray="30.0,20.0" stroke-linecap="butt" />
 		</rule>
 
-		<!-- highway one-way markers -->
+	<!-- highway one-way markers -->
 		<rule e="way" k="tunnel" v="~|false|no">
 			<rule e="way" k="area" v="~|false|no">
 				<rule e="way" k="highway" v="*">
@@ -1674,7 +1670,7 @@ contour pathtext rotate_up=false (всегда "в гору")
 			</rule>
 		</rule>
 
-		<!-- pistes -->
+	<!-- pistes -->
 			<rule cat="omp_winter" e="way" k="piste:type" v="downhill" closed="no" zoom-min="14" >
 				<rule e="way" k="piste:difficulty" v="expert|freeride" >
 				<line stroke="#70ff8c00" stroke-width="4.00" />
@@ -1704,13 +1700,13 @@ contour pathtext rotate_up=false (всегда "в гору")
 			<lineSymbol src="file:/symbols/skitour.svg" scale="2" align-center="true" rotate="false" repeat="true" repeat-start="0" repeat-gap="160" />
 				</rule>
 				</rule>
-	
+
 	<!-- <rule e="way" k="piste:type" v="downhill" closed="yes">
 		<line stroke="#5598F5FF" stroke-width="1.2" />
 		<area fill="#5598F5FF" />
 	</rule> -->
 
-		<!-- aerial ways -->
+	<!-- aerial ways -->
 		<rule e="way" k="aerialway" v="*">
 			<line stroke="#202020" stroke-width="0.80" stroke-linecap="butt" />
 			<rule e="way" k="*" v="*" zoom-max="15">
@@ -1740,14 +1736,14 @@ contour pathtext rotate_up=false (всегда "в гору")
 			</rule>
 		</rule>
 
-		<!-- railway (no tunnel) -->
+	<!-- railway (no tunnel) -->
 		<rule e="way" k="railway" v="*">
 			<rule e="way" k="tunnel" v="~|false|no">
 				<rule e="way" k="railway" v="station">
 					<area fill="#9b9b79" stroke="#707070" stroke-width="0.60" />
 				</rule>
 
-				<!-- railway bridge casings -->
+			<!-- railway bridge casings -->
 				<rule e="way" k="bridge" v="yes|true">
 					<rule e="way" k="railway" v="tram">
 						<line stroke="#000000" stroke-width="0.80" stroke-linecap="butt" />
@@ -1760,7 +1756,7 @@ contour pathtext rotate_up=false (всегда "в гору")
 					</rule>
 				</rule>
 
-				<!-- railway casings and cores -->
+			<!-- railway casings and cores -->
 				<rule e="way" k="railway" v="tram">
 					<line stroke="#303030" stroke-width="0.60" stroke-linecap="butt" />
 					<line stroke="#303030" stroke-width="1.40" stroke-dasharray="2.0,3.2,2.0,20.0" stroke-linecap="butt" />
@@ -1803,8 +1799,8 @@ contour pathtext rotate_up=false (всегда "в гору")
 				</rule>
 			</rule>
 		</rule>
-		
-		<!-- Hidak -->
+
+	<!-- Hidak -->
 	<rule e="way" k="*" v="*">
 		<!-- no tunnel -->
 		<rule e="way" k="tunnel" v="~|no|false">
@@ -1901,7 +1897,7 @@ contour pathtext rotate_up=false (всегда "в гору")
 						<line stroke="#ff7700" stroke-width="7.00" stroke-linecap="butt"/>
 						
 					</rule>
-					<!-- Hidak magja -->
+						<!-- Hidak magja -->
 					<rule e="way" k="highway" v="footway|platform|pedestrian">
 						<line stroke="#707070" stroke-width="0.40" stroke-dasharray="12.0,12.0" stroke-linecap="butt"/>
 						<rule e="way" k="*" v="*" zoom-min="15">
@@ -2077,7 +2073,7 @@ contour pathtext rotate_up=false (всегда "в гору")
 				</rule>						
 		</rule>
 
-		<!-- non-physical boundaries -->
+	<!-- non-physical boundaries -->
 		<rule e="way" k="boundary" v="*">
 			<rule e="way" k="boundary" v="national_park">
 				<line stroke="#B80B0B" stroke-width="0.40" stroke-linecap="butt" />
@@ -2097,14 +2093,13 @@ contour pathtext rotate_up=false (всегда "в гору")
 		</rule>
 
 
-
-		<!-- place -->
+	<!-- place -->
 		<rule e="way" k="place" v="locality" zoom-min="17">
 			<caption k="name" font-style="bold" font-size="20" fill="#000000" stroke="#ffffff"
 				stroke-width="4.00" />
 		</rule>
-		
-		<!-- power -->
+
+	<!-- power -->
 		<rule e="way" k="power" v="line" zoom-max="15" >
 			<line stroke="#808080" stroke-width="0.60" stroke-linecap="butt" />
 			<line stroke="#808080" stroke-width="2.00" stroke-dasharray="2.6,60.0" stroke-linecap="round" />
@@ -2121,14 +2116,14 @@ contour pathtext rotate_up=false (всегда "в гору")
 			<line stroke="#808080" stroke-width="0.40" stroke-linecap="butt" />
 			<line stroke="#808080" stroke-width="1.20" stroke-dasharray="2.0,240.0" stroke-linecap="round" />
 		</rule>
-		
-		<!-- access -->
+
+	<!-- access -->
 		
 		<rule cat="access_vehicle" e="way" k="highway" v="pedestrian" zoom-min="16">
 						<line src="file:/patterns/access-private.svg" stroke-width="3.00" />
 		</rule>
-		
-<!-- safety measures -->
+
+	<!-- safety measures -->
 		<rule e="any" k="safety_rope" v="*|sr_yes" zoom-min="16">
 			<symbol priority="100" src="file:/symbols/safety_rope.svg" symbol-height="16" />
 		</rule>
@@ -2137,8 +2132,8 @@ contour pathtext rotate_up=false (всегда "в гору")
 		</rule>
 		<rule e="any" k="rungs" v="*|rn_yes" zoom-min="16">
 			<symbol priority="100" src="file:/symbols/rungs.svg" symbol-height="16" />
-		</rule>	
-		
+		</rule>
+
 	<!-- NODES -->
 	<rule e="node" k="*" v="*">
 		<!-- aeroway -->
@@ -2151,8 +2146,8 @@ contour pathtext rotate_up=false (всегда "в гору")
 				<caption k="name" dy="-28" font-style="bold" font-size="18" fill="#000000" stroke="#ffffff" stroke-width="4.00" />
 			</rule>
 		</rule>
-		
-		
+
+
 		<!-- OMP TRAIL MARKS -->
 		<rule cat="omp_tm" e="node" k="Type" v="*">
 <rule e="node" k="Type" v="0x3320-14" zoom-min="14" zoom-max="14"><symbol src="file:/trailmarks/0x3320.svg" scale="1.6" /></rule>
@@ -2560,7 +2555,7 @@ contour pathtext rotate_up=false (всегда "в гору")
 <rule e="node" k="Type" v="0x373e-16" zoom-min="16" zoom-max="16"><symbol src="file:/trailmarks/0x373e.svg" scale="1.6" /></rule>
 <rule e="node" k="Type" v="0x373e-17" zoom-min="17" zoom-max="17"><symbol src="file:/trailmarks/0x373e.svg" scale="1.6" /></rule>
 <rule e="node" k="Type" v="0x373e-18" zoom-min="18"><symbol src="file:/trailmarks/0x373e.svg" scale="1.6" /></rule>
-</rule>		
+</rule>
 
 
 		<!-- amenity -->
@@ -2740,7 +2735,7 @@ contour pathtext rotate_up=false (всегда "в гору")
 					stroke-width="4.00" />
 			</rule>
 
-		
+
 		<!-- barrier -->
 		<rule e="node" k="barrier" v="bollard">
 			<circle r="3.00" fill="#707070" />
@@ -2758,8 +2753,6 @@ contour pathtext rotate_up=false (всегда "в гору")
 		</rule>
 
 
-
-
 		<!-- highway -->
 		<rule e="node" k="highway" v="*">
 			<rule cat="pub_transp" e="node" k="highway" v="bus_stop" zoom-min="15">
@@ -2774,8 +2767,6 @@ contour pathtext rotate_up=false (всегда "в гору")
 				<circle r="2.80" scale-radius="true" fill="#ffffff" />
 			</rule>
 		</rule>
-
-
 
 
 		<!-- historic -->
@@ -2847,7 +2838,7 @@ contour pathtext rotate_up=false (всегда "в гору")
 			<caption k="name" dy="-28" font-style="bold" font-size="18" fill="#000000" stroke="#ffffff"
 					stroke-width="4.00" />
 		</rule>
-		
+
 		<!-- tower:type -->
 		<rule e="node" k="tower:type" v="observation" zoom-min="16">
 			<symbol src="file:/symbols/observation.svg" scale="2" />
@@ -2860,7 +2851,7 @@ contour pathtext rotate_up=false (всегда "в гору")
 			<caption k="name" dy="-28" font-style="bold" font-size="18" fill="#000000" stroke="#ffffff"
 					stroke-width="4.00" />
 		</rule>
-			
+
 		<!-- building -->
 			<rule e="node" k="building" v="detached" zoom-min="16">
 				<symbol src="file:/symbols/building.svg" scale="1.6" />
@@ -2872,7 +2863,6 @@ contour pathtext rotate_up=false (всегда "в гору")
 			<caption k="name" dy="-28" font-style="bold" font-size="18" fill="#000000" stroke="#ffffff"
 					stroke-width="4.00" />
 			</rule>
-
 
 
 		<!-- man_made -->
@@ -2982,8 +2972,8 @@ contour pathtext rotate_up=false (всегда "в гору")
 		<symbol priority="425" id="tms_adit" src="file:/symbols/adit_disused.svg" symbol-height="16" />
 		<caption symbol-id="tms_adit" position="above" dy="-20" k="name" font-style="bold" font-size="10dp" fill="#000000" stroke="#FFFFFF" stroke-width="2.0dp" />
  		<caption symbol-id="tms_adit" position="below" k="ele"  font-style="bold" font-size="8dp" fill="#000000" stroke="#FFFFFF" stroke-width="2.0dp" />
-	</rule>	
-	
+	</rule>
+
 		<!-- waterway -->
 			<rule e="node" k="waterway" v="lock_gate" zoom-min="16">
 				<symbol src="file:/symbols/dam.svg" scale="2" />
@@ -2995,21 +2985,21 @@ contour pathtext rotate_up=false (всегда "в гору")
 				<caption k="name" dy="-28" font-style="bold_italic" font-size="18" fill="#115DFF" stroke="#ffffff"
 					stroke-width="4.00" />
 			</rule>
-			
+
 		<!-- ford -->
 			<rule e="node" k="ford" v="yes" zoom-min="17">
 				<symbol src="file:/symbols/ford.svg" scale="2" />
 			<caption k="name" dy="-28" font-style="bold" font-size="18" fill="#000000" stroke="#ffffff"
 					stroke-width="4.00" />
 			</rule>
-			
+
 		<!-- speedcams -->
 			<rule e="node" k="highway" v="speed_camera" zoom-min="17">
 				<symbol src="file:/symbols/speedcam.svg" scale="2" />
 			<caption k="name" dy="-28" font-style="bold" font-size="18" fill="#000000" stroke="#ffffff"
 					stroke-width="4.00" />
-			</rule>	
-			
+			</rule>
+
 		<!-- checkpoint -->
 			<rule e="node" k="checkpoint" v="hiking" zoom-min="17">
 				<symbol src="file:/symbols/checkpoint.svg" scale="2" />
@@ -3017,7 +3007,7 @@ contour pathtext rotate_up=false (всегда "в гору")
 					stroke-width="4.00" />
 			</rule>
 
-			
+
 		<!-- mountain pass -->
 			<rule e="node" k="mountain_pass" v="yes" zoom-min="15">
 				<symbol src="file:/symbols/pass.svg" scale="2" />
@@ -3026,8 +3016,8 @@ contour pathtext rotate_up=false (всегда "в гору")
 			<caption k="name" dy="-28" font-style="bold" font-size="18" fill="#000000" stroke="#ffffff"
 					stroke-width="4.00" />
 			</rule>
-			
-		
+
+
 		<!-- bridge -->
 			<rule e="node" k="bridge" v="*" zoom-min="15">
 				<symbol src="file:/symbols/bridge.svg" scale="2" />
@@ -3062,7 +3052,7 @@ contour pathtext rotate_up=false (всегда "в гору")
 					stroke-width="4.00" />
 			</rule>
 		</rule>
-		
+
 
 		<!-- railway -->
 		<rule e="node" k="railway" v="*">

@@ -1,54 +1,19 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <!--
+Version 8.2
 
 Mapsforge rendertheme for Openmaps by Davidovits
 Contact: http://www.openmaps.eu
 Licence: CC BY-NC-SA 3.0 (Creative Commons Attribution-NonCommercial-ShareAlike 3.0 Unported) http://creativecommons.org/licenses/by-nc-sa/3.0/
 
 Magellan changes:
-12/08/2020
-Добавил русский язык в меню слоев
-[Err]: Добавил отображение track без tracktype ( ~ )
-[Err]: поправил неотображение embankment: +railway, track
-поправил мосты railway rail и  tram, осталось subway...
-поправил толщины (case) улиц
-[Err]: убрал ошибку brigde вместо bridge 
-[Err]: убрал ошибку отображения дорог с плохим surface (raw)
-изменил цвет landuse construction|greenfield
-13/08/2020
-разбирался с soccer, tennis, добавил пикчи, мешается leisure pitch НЕ ЗАКОНЧИЛ!
-добавил просеки cutline
-подставил вместо отсутв. 0x373e.svg 0x353e.svg
-поправил cliff|earth_bank
-добавил natural=grassland
-добавил funicular
-добавил barrier|natural=ditch|gully
-17/8/2020
-добавил safety_rope|ladder|rungs
-добавил man_made=adit|adit_disused
-[Err]: поправил неотображение bare_rock, изменил на другой
-добавил ЛЭП minor_line
-03/04/2021
-добавил хребты ridge|arete
-видимость tourism=information на zoom 15
-добавил tower=observation|communication
-21/11/2021
-Правильные ссылки на лицензию и xsi:schemaLocation
-Исправление ошибок согласно xsi:schemaLocation с помощью XML Language Support by Red Hat
-02-03/04/2022
-ремонт всех пеших маршрутов - добавление "|grade4|grade5|~" для grade3; маршрутов МТВ; платные (toll) дороги
-переставил cutline, version=4 -> 5
-удалил категории omp_maryway (Путь Марии), maryway_tm (Маркеры пути Марии)
-09/09/2023
-добавил площадные captions для водоемов, ООПТ (только ОАМ); сглаживание контурных линий и подписи высот "в гору"
-поправил заливку nature_reserve
+см. OpenMaps-changelog.txt
 
 -->
 
 <rendertheme xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://mapsforge.org/renderTheme" 
 	xsi:schemaLocation="http://mapsforge.org/renderTheme https://raw.githubusercontent.com/mapsforge/mapsforge/master/resources/renderTheme.xsd" 
 	version="5" map-background="#ffffea">
-
 
 	<stylemenu id="r5menu" defaultvalue="turista" defaultlang="en">
 
@@ -186,68 +151,71 @@ Magellan changes:
 	<rule e="way" k="*" v="*">
 		<!-- landuse -->
 		<rule e="way" k="natural|landuse" v="forest|wood">
-			<rule e="way" k="wood" v="*">
-				<rule e="way" k="wood|leaf_type" v="deciduous|broadleaved">
-					<area fill="#b8d38f"/>
-					<area src="file:/patterns/wood-deciduous.svg" symbol-percent="250" />
-				</rule>
-				<rule e="way" k="wood|leaf_type" v="coniferous|needleleaved">
-					<area fill="#a1c788"/>
-					<area src="file:/patterns/wood-coniferous.svg" symbol-percent="250" />
-				</rule>
-				<rule e="way" k="wood|leaf_type" v="mixed|leafless">
-					<area fill="#acc684"/>
-					<area src="file:/patterns/wood-mixed.svg" symbol-percent="250" />
-				</rule>
+			<rule e="way" k="wood|leaf_type" v="deciduous|broadleaved">
+				<area fill="#b8d38f" />
+				<area src="file:/patterns/wood-deciduous.svg" symbol-percent="250" />
 			</rule>
-			<rule e="way" k="wood" v="~">
-				<area fill="#acc684"/>
+			<rule e="way" k="wood|leaf_type" v="coniferous|needleleaved">
+				<area fill="#a1c788" />
+				<area src="file:/patterns/wood-coniferous.svg" symbol-percent="250" />
+			</rule>
+			<rule e="way" k="wood|leaf_type" v="~|mixed|leafless">
+				<area fill="#acc684" />
 				<area src="file:/patterns/wood-mixed.svg" symbol-percent="250" />
 			</rule>
 			<rule e="way" k="*" v="*" zoom-min="14">
-				<caption k="name" font-style="italic" font-family="serif" font-size="10" fill="#609348" />
+				<caption k="name" font-style="italic" font-family="serif" font-size="10"
+					fill="#609348" />
 			</rule>
 		</rule>
 
 		<rule e="way" k="natural" v="fell">
+			<area fill="#dbf9b7" />
 			<area src="file:/patterns/fell.svg" symbol-percent="250" />
 			<rule e="way" k="*" v="*" zoom-min="14">
-				<caption k="name" font-style="bold_italic" font-family="serif" font-size="10" fill="#6E6E6E" stroke="#ffffff" stroke-width="2.00" />
+				<caption k="name" font-style="bold_italic" font-family="serif" font-size="10"
+					fill="#6E6E6E" stroke="#ffffff" stroke-width="2.00" />
 			</rule>
 		</rule>
 
 		<rule e="way" k="natural" v="scrub">
+			<area fill="#d1f0ad" />
 			<area src="file:/patterns/scrub.svg" symbol-percent="250" />
 			<rule e="way" k="*" v="*" zoom-min="14">
-				<caption k="name" font-style="bold_italic" font-family="serif" font-size="10" fill="#6E6E6E" stroke="#ffffff" stroke-width="2.00" />
+				<caption k="name" font-style="bold_italic" font-family="serif" font-size="10"
+					fill="#6E6E6E" stroke="#ffffff" stroke-width="2.00" />
 			</rule>
 		</rule>
 
 		<rule e="way" k="natural" v="rock|stone|bare_rock|bedrock">
 			<area src="file:/patterns/bare_rock-128.png" />
 			<rule e="way" k="*" v="*" zoom-min="14">
-				<caption k="name" font-style="bold_italic" font-family="serif" font-size="10" fill="#6E6E6E" stroke="#ffffff" stroke-width="2.00" />
+				<caption k="name" font-style="bold_italic" font-family="serif" font-size="10"
+					fill="#6E6E6E" stroke="#ffffff" stroke-width="2.00" />
 			</rule>
 		</rule>
 
 		<rule e="way" k="natural" v="scree">
 			<area src="file:/patterns/scree.svg" symbol-percent="250" />
 			<rule e="way" k="*" v="*" zoom-min="14">
-				<caption k="name" font-style="bold_italic" font-family="serif" font-size="10" fill="#6E6E6E" stroke="#ffffff" stroke-width="2.00" />
+				<caption k="name" font-style="bold_italic" font-family="serif" font-size="10"
+					fill="#6E6E6E" stroke="#ffffff" stroke-width="2.00" />
 			</rule>
 		</rule>
 
 		<rule e="way" k="landuse" v="vineyard">
 			<area src="file:/patterns/vineyard.svg" symbol-percent="250" />
 			<rule e="way" k="*" v="*" zoom-min="14">
-				<caption k="name" font-style="bold_italic" font-family="serif" font-size="10" fill="#6E6E6E" stroke="#ffffff" stroke-width="2.00" />
+				<caption k="name" font-style="bold_italic" font-family="serif" font-size="10"
+					fill="#6E6E6E" stroke="#ffffff" stroke-width="2.00" />
 			</rule>
 		</rule>
 
 		<rule e="way" k="landuse" v="orchard">
 			<area src="file:/patterns/orchard.svg" symbol-percent="250" />
 			<rule e="way" k="*" v="*" zoom-min="14">
-				<caption k="name" font-style="bold_italic" font-family="serif" font-size="10" fill="#6E6E6E" stroke="#ffffff" stroke-width="2.00" />
+				<caption k="name" font-style="bold_italic" font-family="serif" font-size="10"
+					fill="#6E6E6E" stroke="#ffffff" stroke-width="2.00" />
 			</rule>
 		</rule>
 
@@ -257,7 +225,8 @@ Magellan changes:
 
 		<rule e="way" k="landuse|man_made" v="*">
 			<rule e="way" k="landuse" v="military">
-				<area src="file:/patterns/military.svg" stroke="#e4e4e4" stroke-width="0.20" symbol-percent="250" />
+				<area src="file:/patterns/military.svg" stroke="#e4e4e4" stroke-width="0.20"
+					symbol-percent="250" />
 			</rule>
 			<rule e="way" k="landuse" v="residential|farmyard">
 				<area fill="#f4cd9f" />
@@ -282,7 +251,8 @@ Magellan changes:
 				<area fill="#e9dd72" stroke="#556b2f" stroke-width="0.20" />
 			</rule>
 			<rule e="way" k="landuse" v="cemetery">
-				<area src="file:/patterns/cemetery.svg" stroke="#e4e4e4" stroke-width="0.20" symbol-percent="250" />
+				<area src="file:/patterns/cemetery.svg" stroke="#e4e4e4" stroke-width="0.20"
+					symbol-percent="250" />
 			</rule>
 			<rule e="way" k="landuse" v="field|farm|farmland|meadow|grass">
 				<area fill="#daf2b6" />
@@ -299,7 +269,8 @@ Magellan changes:
 			</rule>
 
 			<rule e="way" k="*" v="*" zoom-min="15">
-				<caption k="name" font-style="bold" font-size="10" fill="#000000" stroke="#ffffff" stroke-width="2.00" />
+				<caption k="name" font-style="bold" font-size="10" fill="#000000" stroke="#ffffff"
+					stroke-width="2.00" />
 			</rule>
 		</rule>
 
@@ -307,7 +278,12 @@ Magellan changes:
 		<rule e="way" k="sport" v="golf">
 			<area fill="#c7f1a3" stroke="#6fc18e" stroke-width="0.20" />
 		</rule>
+
 		<rule e="way" k="leisure" v="*">
+			<rule e="way" k="leisure" v="stadium|sports_centre|water_park">
+				<area fill="#bde3cb" stroke="#6fc18e" stroke-width="0.20" />
+			</rule>
+
 			<rule e="way" k="leisure" v="park|garden|golf_course|common|green">
 				<area fill="#c7f1a3" stroke="#6fc18e" stroke-width="0.20" />
 			</rule>
@@ -318,13 +294,11 @@ Magellan changes:
 				</rule>
 			</rule>
 			<rule e="way" k="leisure" v="nature_reserve">
-				<!-- <area src="file:/patterns/nature-reserve.svg"	stroke="#6fc18e" stroke-width="0.20" /> -->
+				<!-- <area src="file:/patterns/nature-reserve.svg"	stroke="#6fc18e"
+				stroke-width="0.20" /> -->
 				<area fill="#1a11b44f" stroke="#6fc18e" stroke-width="0.20" />
 			</rule>
 
-			<rule e="way" k="leisure" v="stadium|sports_centre|water_park">
-				<area fill="#bde3cb" stroke="#6fc18e" stroke-width="0.20" />
-			</rule>
 			<rule e="way" k="leisure" v="track">
 				<rule e="way" k="area" v="yes|true">
 					<area fill="#bde3cb" stroke="#6fc18e" stroke-width="0.025" />
@@ -339,7 +313,8 @@ Magellan changes:
 			</rule>
 
 			<rule e="way" k="*" v="*" zoom-min="17">
-				<caption k="name" font-style="bold" font-size="10" fill="#000000" stroke="#ffffff" stroke-width="2.00" />
+				<caption k="name" font-style="bold" font-size="10" fill="#000000" stroke="#ffffff"
+					stroke-width="2.00" />
 			</rule>
 		</rule>
 
@@ -641,7 +616,7 @@ Magellan changes:
 			</rule>
 			<rule e="way" k="natural" v="water">
 				<area fill="#b5d6f1" />
-<!-- 				<rule e="way" k="*" v="*" zoom-min="12">
+				<!-- 				<rule e="way" k="*" v="*" zoom-min="12">
 					<caption k="name" font-style="bold_italic" font-size="10" fill="#1A8DFF" stroke="#ffffff" stroke-width="2.00" />
 				</rule> -->
 
@@ -2413,7 +2388,7 @@ Magellan changes:
 			<line stroke="#666666" stroke-width="0.6" stroke-dasharray="0.3,40,0.3,30" />
 		</rule>
 	</rule>
-	
+
 	<!-- non-physical boundaries -->
 	<rule e="way" k="boundary" v="*">
 		<rule e="way" k="boundary" v="national_park">
@@ -2461,7 +2436,7 @@ Magellan changes:
 			</rule>
 		</rule>
 	</rule>
-	
+
 	<!-- place -->
 	<rule e="way" k="place" v="locality" zoom-min="17">
 		<caption k="name" font-style="bold" font-size="10" fill="#000000" stroke="#ffffff" stroke-width="2.00" />

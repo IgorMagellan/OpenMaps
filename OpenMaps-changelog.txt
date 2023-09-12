@@ -1,0 +1,45 @@
+~~~~~~~~~~~~~~~~~~~~~~~
+* OpenMaps версия 8.2 *
+~~~~~~~~~~~~~~~~~~~~~~~
+
+12/08/2020
+Добавил русский язык в меню слоев
+[Err]: Добавил отображение track без tracktype ( ~ )
+[Err]: поправил неотображение embankment: +railway, track
+поправил мосты railway rail и  tram, осталось subway...
+поправил толщины (case) улиц
+[Err]: убрал ошибку brigde вместо bridge 
+[Err]: убрал ошибку отображения дорог с плохим surface (raw)
+изменил цвет landuse construction|greenfield
+13/08/2020
+разбирался с soccer, tennis, добавил пикчи, мешается leisure pitch НЕ ЗАКОНЧИЛ!
+добавил просеки cutline
+подставил вместо отсутв. 0x373e.svg 0x353e.svg
+поправил cliff|earth_bank
+добавил natural=grassland
+добавил funicular
+добавил barrier|natural=ditch|gully
+17/8/2020
+добавил safety_rope|ladder|rungs
+добавил man_made=adit|adit_disused
+[Err]: поправил неотображение bare_rock, изменил на другой
+добавил ЛЭП minor_line
+03/04/2021
+добавил хребты ridge|arete
+видимость tourism=information на zoom 15
+добавил tower=observation|communication
+21/11/2021
+Правильные ссылки на лицензию и xsi:schemaLocation
+Исправление ошибок согласно xsi:schemaLocation с помощью XML Language Support by Red Hat
+02-03/04/2022
+ремонт всех пеших маршрутов - добавление "|grade4|grade5|~" для grade3; маршрутов МТВ; платные (toll) дороги
+переставил cutline, version=4 -> 5
+удалил категории omp_maryway (Путь Марии), maryway_tm (Маркеры пути Марии)
+09/09/2023
+добавил площадные captions для водоемов, ООПТ (только ОАМ); сглаживание контурных линий и подписи высот "в гору"
+поправил заливку nature_reserve
+12/09/2023
+Для устранения швов в площадных заливках svg добавил впереди area fill для forest|wood, scrub, fell
+
+[Err]: поправил неотображение леса с разными типами листвы (хв., листв., смеш.). было только mixed; 
+   cпорт.площадок - переставил stadium выше
