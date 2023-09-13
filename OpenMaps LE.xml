@@ -2150,9 +2150,9 @@ contour pathtext rotate_up=false (всегда "в гору")
 
 
 		<!-- OMP TRAIL MARKS -->
-		<rule cat="omp_tm" e="node" k="Type" v="*">
+<!-- 		<rule cat="omp_tm" e="node" k="Type" v="*">
 
-		</rule>
+		</rule> -->
 
 
 		<!-- amenity -->
