@@ -2713,11 +2713,11 @@ Magellan changes:
 	<!-- NODES -->
 	<!-- <rule e="node" k="*" v="*"> -->
 		<!-- aeroway -->
-		<rule e="any" k="aeroway" v="*">
-			<rule e="any" k="aeroway" v="helipad" zoom-min="15">
+		<rule e="node" k="aeroway" v="*">
+			<rule e="node" k="aeroway" v="helipad" zoom-min="15">
 				<symbol id="helipad" src="file:/symbols/helipad.svg" symbol-percent="120" />
 			</rule>
-			<rule e="any" k="aeroway" v="aerodrome|airport" zoom-min="13">
+			<rule e="node" k="aeroway" v="aerodrome|airport" zoom-min="13">
 				<symbol id="airport" src="file:/symbols/airport.svg" />
 				<caption k="name" symbol-id="airport" position="auto" font-style="bold" font-size="9" fill="#000000" stroke="#ffffff" stroke-width="2.00" />
 			</rule>
@@ -3040,7 +3040,7 @@ Magellan changes:
 				<symbol id="cave" src="file:/symbols/cave_entrance.svg" />
 				<caption k="name" symbol-id="cave" position="auto" font-style="bold" font-size="9" fill="#000000" stroke="#ffffff" stroke-width="2.0" />
 			</rule>
-			<rule e="any" k="natural" v="spring" zoom-min="12">
+			<rule e="node" k="natural" v="spring" zoom-min="12">
 				<symbol id="spring" src="file:/symbols/spring.svg" />
 				<caption k="name" symbol-id="spring" position="auto" font-style="bold" font-size="9" fill="#000000" stroke="#ffffff" stroke-width="2.0" />
 			</rule>
