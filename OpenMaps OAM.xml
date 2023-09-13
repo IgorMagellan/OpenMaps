@@ -233,10 +233,10 @@ Magellan changes:
 			<rule e="way" k="landuse" v="residential|farmyard">
 				<!-- <area fill="#f4cd9f" /> оригинал z16 -->
 				<rule e="way" k="*" v="*" zoom-min="9"  zoom-max="12"><area fill="#c59d6f" stroke="#997245" stroke-width="0.2" /> </rule>
-				<rule e="way" k="*" v="*" zoom-min="13" zoom-max="15"><area fill="#f0c798" /></rule>  
+				<rule e="way" k="*" v="*" zoom-min="13" zoom-max="15"><area fill="#f0c798" /></rule>
 				<rule e="way" k="*" v="*" zoom-min="16" zoom-max="16"><area fill="#f4cd9f" /></rule>
 				<rule e="way" k="*" v="*" zoom-min="17" zoom-max="17"><area fill="#fcd8af" /></rule>
-				<rule e="way" k="*" v="*" zoom-min="18">			  <area fill="#ffe1bf" /></rule>				
+				<rule e="way" k="*" v="*" zoom-min="18">			  <area fill="#ffe1bf" /></rule>
 			</rule>
 			<rule e="way" k="landuse" v="retail">
 				<area fill="#ffebeb" stroke="#e4e4e4" stroke-width="0.20" />
@@ -262,8 +262,9 @@ Magellan changes:
 				<area src="file:/patterns/cemetery.svg" stroke="#e4e4e4" stroke-width="0.20"
 					symbol-percent="250" />
 			</rule>
-			<rule e="way" k="landuse" v="field|farm|farmland|meadow|grass">
-				<area fill="#daf2b6" />
+			<rule e="way" k="landuse" v="field|farm|farmland|meadow|grass" zoom-min="13">
+				<!-- <area fill="#daf2b6" /> -->
+				<area fill="#e7f2b6" />
 			</rule>
 			<rule e="way" k="landuse" v="allotments|village_green|recreation_ground">
 				<area fill="#daf2b6" />
