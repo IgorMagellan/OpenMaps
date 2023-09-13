@@ -47,3 +47,7 @@
 Добавил подписи на пеших, велосипедных и MTB маршрутах
 у Buildings и landuse" v="residential|farmyard" изменине насыщенности цвета при изменении зума  (оригинальные цвета - остались для z16)
 выключил pathtext у fence|wall|city_wall
+13/09/2023
+Изменил farmland на z13 + цвет светлее, grassland разделил arete fill и stroke - устранение швов на z12,13
+ремонт colored_hiking
+

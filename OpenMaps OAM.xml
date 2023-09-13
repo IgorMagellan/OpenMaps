@@ -44,7 +44,7 @@ Magellan changes:
 		<layer id="viaferrata_t" enabled="true">
 			<name lang="hu" value="Alpin utak, via ferrata" />
 			<name lang="de" value="Kräftige Wanderrouten" />
-			<name lang="en" value="Strong hiking routes" />
+			<name lang="en" value="Strong hiking routes (ViaFerrata)" />
 			<name lang="ru" value="Cложные пешие маршруты (ViaFerrata)" />
 			<cat id="omp_vf" />
 		</layer>
@@ -232,11 +232,16 @@ Magellan changes:
 			</rule>
 			<rule e="way" k="landuse" v="residential|farmyard">
 				<!-- <area fill="#f4cd9f" /> оригинал z16 -->
-				<rule e="way" k="*" v="*" zoom-min="9"  zoom-max="12"><area fill="#c59d6f" stroke="#997245" stroke-width="0.2" /> </rule>
-				<rule e="way" k="*" v="*" zoom-min="13" zoom-max="15"><area fill="#f0c798" /></rule>
-				<rule e="way" k="*" v="*" zoom-min="16" zoom-max="16"><area fill="#f4cd9f" /></rule>
-				<rule e="way" k="*" v="*" zoom-min="17" zoom-max="17"><area fill="#fcd8af" /></rule>
-				<rule e="way" k="*" v="*" zoom-min="18">			  <area fill="#ffe1bf" /></rule>
+				<rule e="way" k="*" v="*" zoom-min="9"  zoom-max="12">
+					<area fill="#c59d6f" stroke="#997245" stroke-width="0.2" /> </rule>
+				<rule e="way" k="*" v="*" zoom-min="13" zoom-max="15">
+					<area fill="#f0c798" /></rule>
+				<rule e="way" k="*" v="*" zoom-min="16" zoom-max="16">
+					<area fill="#f4cd9f" /></rule>
+				<rule e="way" k="*" v="*" zoom-min="17" zoom-max="17">
+					<area fill="#fcd8af" /></rule>
+				<rule e="way" k="*" v="*" zoom-min="18">
+					<area fill="#ffe1bf" /></rule>
 			</rule>
 			<rule e="way" k="landuse" v="retail">
 				<area fill="#ffebeb" stroke="#e4e4e4" stroke-width="0.20" />
@@ -332,22 +337,28 @@ Magellan changes:
 		<rule cat="omp_mtb" e="way" k="mtbnetwork" v="imn|nmn|rmn|lmn|omn">
 			<rule e="way" k="tunnel" v="true|yes">
 				<rule e="way" k="highway" v="steps|footway|path|track|cycleway|bridleway|platform|pedestrian">
-					<line stroke="#FDB3FD" stroke-width="2.80" stroke-dasharray="5.0,5.0" stroke-linecap="butt" />
+					<line stroke="#FDB3FD" stroke-width="2.80" stroke-dasharray="5.0,5.0"
+						stroke-linecap="butt" />
 				</rule>
 				<rule e="way" k="highway" v="unclassified|residential|living_street|service|road">
-					<line stroke="#FDB3FD" stroke-width="3.60" stroke-dasharray="5.0,5.0" stroke-linecap="butt" />
+					<line stroke="#FDB3FD" stroke-width="3.60" stroke-dasharray="5.0,5.0"
+						stroke-linecap="butt" />
 				</rule>
 				<rule e="way" k="highway" v="construction">
-					<line stroke="#FDB3FD" stroke-width="3.25" stroke-dasharray="5.0,5.0" stroke-linecap="butt" />
+					<line stroke="#FDB3FD" stroke-width="3.25" stroke-dasharray="5.0,5.0"
+						stroke-linecap="butt" />
 				</rule>
 				<rule e="way" k="highway" v="byway">
-					<line stroke="#FDB3FD" stroke-width="3.10" stroke-dasharray="5.0,5.0" stroke-linecap="butt" />
+					<line stroke="#FDB3FD" stroke-width="3.10" stroke-dasharray="5.0,5.0"
+						stroke-linecap="butt" />
 				</rule>
 				<rule e="way" k="highway" v="tertiary|motorway_link|trunk_link|primary_link|secondary_link|tertiary_link|secondary|primary|trunk">
-					<line stroke="#FDB3FD" stroke-width="3.75" stroke-dasharray="5.0,5.0" stroke-linecap="butt" />
+					<line stroke="#FDB3FD" stroke-width="3.75" stroke-dasharray="5.0,5.0"
+						stroke-linecap="butt" />
 				</rule>
 				<rule e="way" k="highway" v="motorway">
-					<line stroke="#FDB3FD" stroke-width="5.50" stroke-dasharray="5.0,5.0" stroke-linecap="butt" />
+					<line stroke="#FDB3FD" stroke-width="5.50" stroke-dasharray="5.0,5.0"
+						stroke-linecap="butt" />
 				</rule>
 			</rule>
 		</rule>
@@ -357,22 +368,28 @@ Magellan changes:
 		<rule cat="omp_bc" e="way" k="network" v="icn|ncn|rcn|lcn|ocn|hcw">
 			<rule e="way" k="tunnel" v="true|yes">
 				<rule e="way" k="highway" v="steps|footway|path|track|cycleway|bridleway|platform|pedestrian">
-					<line stroke="#A400A4" stroke-width="2.80" stroke-dasharray="5.0,5.0" stroke-linecap="butt" />
+					<line stroke="#A400A4" stroke-width="2.80" stroke-dasharray="5.0,5.0"
+						stroke-linecap="butt" />
 				</rule>
 				<rule e="way" k="highway" v="unclassified|residential|living_street|service|road">
-					<line stroke="#A400A4" stroke-width="3.60" stroke-dasharray="5.0,5.0" stroke-linecap="butt" />
+					<line stroke="#A400A4" stroke-width="3.60" stroke-dasharray="5.0,5.0"
+						stroke-linecap="butt" />
 				</rule>
 				<rule e="way" k="highway" v="construction">
-					<line stroke="#A400A4" stroke-width="3.25" stroke-dasharray="5.0,5.0" stroke-linecap="butt" />
+					<line stroke="#A400A4" stroke-width="3.25" stroke-dasharray="5.0,5.0"
+						stroke-linecap="butt" />
 				</rule>
 				<rule e="way" k="highway" v="byway">
-					<line stroke="#A400A4" stroke-width="3.10" stroke-dasharray="5.0,5.0" stroke-linecap="butt" />
+					<line stroke="#A400A4" stroke-width="3.10" stroke-dasharray="5.0,5.0"
+						stroke-linecap="butt" />
 				</rule>
 				<rule e="way" k="highway" v="tertiary|motorway_link|trunk_link|primary_link|secondary_link|tertiary_link|secondary|primary|trunk">
-					<line stroke="#A400A4" stroke-width="3.75" stroke-dasharray="5.0,5.0" stroke-linecap="butt" />
+					<line stroke="#A400A4" stroke-width="3.75" stroke-dasharray="5.0,5.0"
+						stroke-linecap="butt" />
 				</rule>
 				<rule e="way" k="highway" v="motorway">
-					<line stroke="#A400A4" stroke-width="5.50" stroke-dasharray="5.0,5.0" stroke-linecap="butt" />
+					<line stroke="#A400A4" stroke-width="5.50" stroke-dasharray="5.0,5.0"
+						stroke-linecap="butt" />
 				</rule>
 			</rule>
 		</rule>
@@ -382,118 +399,162 @@ Magellan changes:
 		<rule cat="omp_hiking" e="way" k="network" v="omp">
 			<rule e="way" k="tunnel" v="true|yes">
 				<rule e="way" k="highway" v="steps|footway|path|track|cycleway|bridleway|platform|pedestrian">
-					<line stroke="#fd1725" stroke-width="1.80" stroke-dasharray="5.0,5.0" stroke-linecap="butt" />
+					<line stroke="#fd1725" stroke-width="1.80" stroke-dasharray="5.0,5.0"
+						stroke-linecap="butt" />
 				</rule>
 				<rule e="way" k="highway" v="unclassified|residential|living_street|service|road">
-					<line stroke="#fd1725" stroke-width="2.60" stroke-dasharray="5.0,5.0" stroke-linecap="butt" />
+					<line stroke="#fd1725" stroke-width="2.60" stroke-dasharray="5.0,5.0"
+						stroke-linecap="butt" />
 				</rule>
 				<rule e="way" k="highway" v="construction">
-					<line stroke="#fd1725" stroke-width="2.25" stroke-dasharray="5.0,5.0" stroke-linecap="butt" />
+					<line stroke="#fd1725" stroke-width="2.25" stroke-dasharray="5.0,5.0"
+						stroke-linecap="butt" />
 				</rule>
 				<rule e="way" k="highway" v="byway">
-					<line stroke="#fd1725" stroke-width="2.10" stroke-dasharray="5.0,5.0" stroke-linecap="butt" />
+					<line stroke="#fd1725" stroke-width="2.10" stroke-dasharray="5.0,5.0"
+						stroke-linecap="butt" />
 				</rule>
 				<rule e="way" k="highway" v="tertiary|motorway_link|trunk_link|primary_link|secondary_link|tertiary_link|secondary|primary|trunk">
-					<line stroke="#fd1725" stroke-width="2.75" stroke-dasharray="5.0,5.0" stroke-linecap="butt" />
+					<line stroke="#fd1725" stroke-width="2.75" stroke-dasharray="5.0,5.0"
+						stroke-linecap="butt" />
 				</rule>
 				<rule e="way" k="highway" v="motorway">
-					<line stroke="#fd1725" stroke-width="4.50" stroke-dasharray="5.0,5.0" stroke-linecap="butt" />
+					<line stroke="#fd1725" stroke-width="4.50" stroke-dasharray="5.0,5.0"
+						stroke-linecap="butt" />
 				</rule>
 			</rule>
 		</rule>
 
-		<!-- Colored hiking network BLUE OMP tunnel -->
-		<rule cat="colored_hiking" e="way" k="osmc:symbol" v="blue">
-			<rule e="way" k="tunnel" v="true|yes">
-				<rule e="way" k="highway" v="steps|footway|path|track|cycleway|bridleway|platform|pedestrian">
-					<line stroke="#006EFF" stroke-width="1.80" stroke-dasharray="5.0,5.0" stroke-linecap="butt" />
-				</rule>
-				<rule e="way" k="highway" v="unclassified|residential|living_street|service|road">
-					<line stroke="#006EFF" stroke-width="2.60" stroke-dasharray="5.0,5.0" stroke-linecap="butt" />
-				</rule>
-				<rule e="way" k="highway" v="construction">
-					<line stroke="#006EFF" stroke-width="2.25" stroke-dasharray="5.0,5.0" stroke-linecap="butt" />
-				</rule>
-				<rule e="way" k="highway" v="byway">
-					<line stroke="#006EFF" stroke-width="2.10" stroke-dasharray="5.0,5.0" stroke-linecap="butt" />
-				</rule>
-				<rule e="way" k="highway" v="tertiary|motorway_link|trunk_link|primary_link|secondary_link|tertiary_link|secondary|primary|trunk">
-					<line stroke="#006EFF" stroke-width="2.75" stroke-dasharray="5.0,5.0" stroke-linecap="butt" />
-				</rule>
-				<rule e="way" k="highway" v="motorway">
-					<line stroke="#006EFF" stroke-width="4.50" stroke-dasharray="5.0,5.0" stroke-linecap="butt" />
-				</rule>
-			</rule>
-		</rule>
-
-		<!-- Colored hiking network RED OMP tunnel -->
-		<rule cat="colored_hiking" e="way" k="osmc:symbol" v="red">
-			<rule e="way" k="tunnel" v="true|yes">
-				<rule e="way" k="highway" v="steps|footway|path|track|cycleway|bridleway|platform|pedestrian">
-					<line stroke="#F00000" stroke-width="1.80" stroke-dasharray="5.0,5.0" stroke-linecap="butt" />
-				</rule>
-				<rule e="way" k="highway" v="unclassified|residential|living_street|service|road">
-					<line stroke="#F00000" stroke-width="2.60" stroke-dasharray="5.0,5.0" stroke-linecap="butt" />
-				</rule>
-				<rule e="way" k="highway" v="construction">
-					<line stroke="#F00000" stroke-width="2.25" stroke-dasharray="5.0,5.0" stroke-linecap="butt" />
-				</rule>
-				<rule e="way" k="highway" v="byway">
-					<line stroke="#F00000" stroke-width="2.10" stroke-dasharray="5.0,5.0" stroke-linecap="butt" />
-				</rule>
-				<rule e="way" k="highway" v="tertiary|motorway_link|trunk_link|primary_link|secondary_link|tertiary_link|secondary|primary|trunk">
-					<line stroke="#F00000" stroke-width="2.75" stroke-dasharray="5.0,5.0" stroke-linecap="butt" />
-				</rule>
-				<rule e="way" k="highway" v="motorway">
-					<line stroke="#F00000" stroke-width="4.50" stroke-dasharray="5.0,5.0" stroke-linecap="butt" />
+		<rule e="any" k="hknetwork" v="iwn|nwn">
+			<!-- Colored hiking network BLUE OMP tunnel -->
+			<rule cat="colored_hiking" e="way" k="osmc_color" v="wmco_blue">
+				<rule e="way" k="tunnel" v="true|yes">
+					<rule e="way" k="highway"
+						v="steps|footway|path|track|cycleway|bridleway|platform|pedestrian">
+						<line stroke="#006EFF" stroke-width="1.80" stroke-dasharray="5.0,5.0"
+							stroke-linecap="butt" />
+					</rule>
+					<rule e="way" k="highway"
+						v="unclassified|residential|living_street|service|road">
+						<line stroke="#006EFF" stroke-width="2.60" stroke-dasharray="5.0,5.0"
+							stroke-linecap="butt" />
+					</rule>
+					<rule e="way" k="highway" v="construction">
+						<line stroke="#006EFF" stroke-width="2.25" stroke-dasharray="5.0,5.0"
+							stroke-linecap="butt" />
+					</rule>
+					<rule e="way" k="highway" v="byway">
+						<line stroke="#006EFF" stroke-width="2.10" stroke-dasharray="5.0,5.0"
+							stroke-linecap="butt" />
+					</rule>
+					<rule e="way" k="highway"
+						v="tertiary|motorway_link|trunk_link|primary_link|secondary_link|tertiary_link|secondary|primary|trunk">
+						<line stroke="#006EFF" stroke-width="2.75" stroke-dasharray="5.0,5.0"
+							stroke-linecap="butt" />
+					</rule>
+					<rule e="way" k="highway" v="motorway">
+						<line stroke="#006EFF" stroke-width="4.50" stroke-dasharray="5.0,5.0"
+							stroke-linecap="butt" />
+					</rule>
 				</rule>
 			</rule>
-		</rule>
 
-		<!-- Colored hiking network YELLOW OMP tunnel -->
-		<rule cat="colored_hiking" e="way" k="osmc:symbol" v="yellow">
-			<rule e="way" k="tunnel" v="true|yes">
-				<rule e="way" k="highway" v="steps|footway|path|track|cycleway|bridleway|platform|pedestrian">
-					<line stroke="#FFD700" stroke-width="1.80" stroke-dasharray="5.0,5.0" stroke-linecap="butt" />
-				</rule>
-				<rule e="way" k="highway" v="unclassified|residential|living_street|service|road">
-					<line stroke="#FFD700" stroke-width="2.60" stroke-dasharray="5.0,5.0" stroke-linecap="butt" />
-				</rule>
-				<rule e="way" k="highway" v="construction">
-					<line stroke="#FFD700" stroke-width="2.25" stroke-dasharray="5.0,5.0" stroke-linecap="butt" />
-				</rule>
-				<rule e="way" k="highway" v="byway">
-					<line stroke="#FFD700" stroke-width="2.10" stroke-dasharray="5.0,5.0" stroke-linecap="butt" />
-				</rule>
-				<rule e="way" k="highway" v="tertiary|motorway_link|trunk_link|primary_link|secondary_link|tertiary_link|secondary|primary|trunk">
-					<line stroke="#FFD700" stroke-width="2.75" stroke-dasharray="5.0,5.0" stroke-linecap="butt" />
-				</rule>
-				<rule e="way" k="highway" v="motorway">
-					<line stroke="#FFD700" stroke-width="4.50" stroke-dasharray="5.0,5.0" stroke-linecap="butt" />
+			<!-- Colored hiking network RED OMP tunnel -->
+			<rule cat="colored_hiking" e="way" k="osmc_color" v="wmco_red">
+				<rule e="way" k="tunnel" v="true|yes">
+					<rule e="way" k="highway"
+						v="steps|footway|path|track|cycleway|bridleway|platform|pedestrian">
+						<line stroke="#F00000" stroke-width="1.80" stroke-dasharray="5.0,5.0"
+							stroke-linecap="butt" />
+					</rule>
+					<rule e="way" k="highway"
+						v="unclassified|residential|living_street|service|road">
+						<line stroke="#F00000" stroke-width="2.60" stroke-dasharray="5.0,5.0"
+							stroke-linecap="butt" />
+					</rule>
+					<rule e="way" k="highway" v="construction">
+						<line stroke="#F00000" stroke-width="2.25" stroke-dasharray="5.0,5.0"
+							stroke-linecap="butt" />
+					</rule>
+					<rule e="way" k="highway" v="byway">
+						<line stroke="#F00000" stroke-width="2.10" stroke-dasharray="5.0,5.0"
+							stroke-linecap="butt" />
+					</rule>
+					<rule e="way" k="highway"
+						v="tertiary|motorway_link|trunk_link|primary_link|secondary_link|tertiary_link|secondary|primary|trunk">
+						<line stroke="#F00000" stroke-width="2.75" stroke-dasharray="5.0,5.0"
+							stroke-linecap="butt" />
+					</rule>
+					<rule e="way" k="highway" v="motorway">
+						<line stroke="#F00000" stroke-width="4.50" stroke-dasharray="5.0,5.0"
+							stroke-linecap="butt" />
+					</rule>
 				</rule>
 			</rule>
-		</rule>
 
-		<!-- Colored hiking network GREEN OMP tunnel -->
-		<rule cat="colored_hiking" e="way" k="osmc:symbol" v="green">
-			<rule e="way" k="tunnel" v="true|yes">
-				<rule e="way" k="highway" v="steps|footway|path|track|cycleway|bridleway|platform|pedestrian">
-					<line stroke="#00B100" stroke-width="1.80" stroke-dasharray="5.0,5.0" stroke-linecap="butt" />
+			<!-- Colored hiking network YELLOW OMP tunnel -->
+			<rule cat="colored_hiking" e="way" k="osmc_color" v="wmco_yellow">
+				<rule e="way" k="tunnel" v="true|yes">
+					<rule e="way" k="highway"
+						v="steps|footway|path|track|cycleway|bridleway|platform|pedestrian">
+						<line stroke="#FFD700" stroke-width="1.80" stroke-dasharray="5.0,5.0"
+							stroke-linecap="butt" />
+					</rule>
+					<rule e="way" k="highway"
+						v="unclassified|residential|living_street|service|road">
+						<line stroke="#FFD700" stroke-width="2.60" stroke-dasharray="5.0,5.0"
+							stroke-linecap="butt" />
+					</rule>
+					<rule e="way" k="highway" v="construction">
+						<line stroke="#FFD700" stroke-width="2.25" stroke-dasharray="5.0,5.0"
+							stroke-linecap="butt" />
+					</rule>
+					<rule e="way" k="highway" v="byway">
+						<line stroke="#FFD700" stroke-width="2.10" stroke-dasharray="5.0,5.0"
+							stroke-linecap="butt" />
+					</rule>
+					<rule e="way" k="highway"
+						v="tertiary|motorway_link|trunk_link|primary_link|secondary_link|tertiary_link|secondary|primary|trunk">
+						<line stroke="#FFD700" stroke-width="2.75" stroke-dasharray="5.0,5.0"
+							stroke-linecap="butt" />
+					</rule>
+					<rule e="way" k="highway" v="motorway">
+						<line stroke="#FFD700" stroke-width="4.50" stroke-dasharray="5.0,5.0"
+							stroke-linecap="butt" />
+					</rule>
 				</rule>
-				<rule e="way" k="highway" v="unclassified|residential|living_street|service|road">
-					<line stroke="#00B100" stroke-width="2.60" stroke-dasharray="5.0,5.0" stroke-linecap="butt" />
-				</rule>
-				<rule e="way" k="highway" v="construction">
-					<line stroke="#00B100" stroke-width="2.25" stroke-dasharray="5.0,5.0" stroke-linecap="butt" />
-				</rule>
-				<rule e="way" k="highway" v="byway">
-					<line stroke="#00B100" stroke-width="2.10" stroke-dasharray="5.0,5.0" stroke-linecap="butt" />
-				</rule>
-				<rule e="way" k="highway" v="tertiary|motorway_link|trunk_link|primary_link|secondary_link|tertiary_link|secondary|primary|trunk">
-					<line stroke="#00B100" stroke-width="2.75" stroke-dasharray="5.0,5.0" stroke-linecap="butt" />
-				</rule>
-				<rule e="way" k="highway" v="motorway">
-					<line stroke="#00B100" stroke-width="4.50" stroke-dasharray="5.0,5.0" stroke-linecap="butt" />
+			</rule>
+
+			<!-- Colored hiking network GREEN OMP tunnel -->
+			<rule cat="colored_hiking" e="way" k="osmc_color" v="wmco_green">
+				<rule e="way" k="tunnel" v="true|yes">
+					<rule e="way" k="highway"
+						v="steps|footway|path|track|cycleway|bridleway|platform|pedestrian">
+						<line stroke="#00B100" stroke-width="1.80" stroke-dasharray="5.0,5.0"
+							stroke-linecap="butt" />
+					</rule>
+					<rule e="way" k="highway"
+						v="unclassified|residential|living_street|service|road">
+						<line stroke="#00B100" stroke-width="2.60" stroke-dasharray="5.0,5.0"
+							stroke-linecap="butt" />
+					</rule>
+					<rule e="way" k="highway" v="construction">
+						<line stroke="#00B100" stroke-width="2.25" stroke-dasharray="5.0,5.0"
+							stroke-linecap="butt" />
+					</rule>
+					<rule e="way" k="highway" v="byway">
+						<line stroke="#00B100" stroke-width="2.10" stroke-dasharray="5.0,5.0"
+							stroke-linecap="butt" />
+					</rule>
+					<rule e="way" k="highway"
+						v="tertiary|motorway_link|trunk_link|primary_link|secondary_link|tertiary_link|secondary|primary|trunk">
+						<line stroke="#00B100" stroke-width="2.75" stroke-dasharray="5.0,5.0"
+							stroke-linecap="butt" />
+					</rule>
+					<rule e="way" k="highway" v="motorway">
+						<line stroke="#00B100" stroke-width="4.50" stroke-dasharray="5.0,5.0"
+							stroke-linecap="butt" />
+					</rule>
 				</rule>
 			</rule>
 		</rule>
@@ -529,38 +590,52 @@ Magellan changes:
 			<rule e="way" k="highway" v="*">
 
 				<rule e="way" k="highway" v="steps|footway|path|track|cycleway|bridleway|platform|pedestrian">
-					<line stroke="#000000" stroke-width="0.80" stroke-dasharray="5.0,5.0" stroke-linecap="butt" />
-					<line stroke="#FFFFFF" stroke-width="0.65" stroke-dasharray="5.0,5.0" stroke-linecap="butt" />
+					<line stroke="#000000" stroke-width="0.80" stroke-dasharray="5.0,5.0"
+						stroke-linecap="butt" />
+					<line stroke="#FFFFFF" stroke-width="0.65" stroke-dasharray="5.0,5.0"
+						stroke-linecap="butt" />
 				</rule>
 				<rule e="way" k="highway" v="unclassified|residential|living_street|service|road">
-					<line stroke="#000000" stroke-width="1.60" stroke-dasharray="5.0,5.0" stroke-linecap="butt" />
-					<line stroke="#FFFFFF" stroke-width="1.35" stroke-dasharray="5.0,5.0" stroke-linecap="butt" />
+					<line stroke="#000000" stroke-width="1.60" stroke-dasharray="5.0,5.0"
+						stroke-linecap="butt" />
+					<line stroke="#FFFFFF" stroke-width="1.35" stroke-dasharray="5.0,5.0"
+						stroke-linecap="butt" />
 				</rule>
 				<rule e="way" k="highway" v="construction">
-					<line stroke="#000000" stroke-width="1.25" stroke-dasharray="5.0,5.0" stroke-linecap="butt" />
-					<line stroke="#FFFFFF" stroke-width="1.00" stroke-dasharray="5.0,5.0" stroke-linecap="butt" />
+					<line stroke="#000000" stroke-width="1.25" stroke-dasharray="5.0,5.0"
+						stroke-linecap="butt" />
+					<line stroke="#FFFFFF" stroke-width="1.00" stroke-dasharray="5.0,5.0"
+						stroke-linecap="butt" />
 				</rule>
 				<rule e="way" k="highway" v="byway">
-					<line stroke="#000000" stroke-width="1.10" stroke-dasharray="5.0,5.0" stroke-linecap="butt" />
-					<line stroke="#FFFFFF" stroke-width="0.65" stroke-dasharray="5.0,5.0" stroke-linecap="butt" />
+					<line stroke="#000000" stroke-width="1.10" stroke-dasharray="5.0,5.0"
+						stroke-linecap="butt" />
+					<line stroke="#FFFFFF" stroke-width="0.65" stroke-dasharray="5.0,5.0"
+						stroke-linecap="butt" />
 				</rule>
 				<rule e="way" k="highway" v="tertiary|motorway_link|trunk_link|primary_link|secondary_link|tertiary_link|secondary|primary|trunk">
-					<line stroke="#000000" stroke-width="1.75" stroke-dasharray="5.0,5.0" stroke-linecap="butt" />
-					<line stroke="#FFFFFF" stroke-width="1.5" stroke-dasharray="5.0,5.0" stroke-linecap="butt" />
+					<line stroke="#000000" stroke-width="1.75" stroke-dasharray="5.0,5.0"
+						stroke-linecap="butt" />
+					<line stroke="#FFFFFF" stroke-width="1.5" stroke-dasharray="5.0,5.0"
+						stroke-linecap="butt" />
 				</rule>
 				<rule e="way" k="highway" v="motorway">
-					<line stroke="#000000" stroke-width="3.50" stroke-dasharray="5.0,5.0" stroke-linecap="butt" />
-					<line stroke="#FFFFFF" stroke-width="1.70" stroke-dasharray="5.0,5.0" stroke-linecap="butt" />
+					<line stroke="#000000" stroke-width="3.50" stroke-dasharray="5.0,5.0"
+						stroke-linecap="butt" />
+					<line stroke="#FFFFFF" stroke-width="1.70" stroke-dasharray="5.0,5.0"
+						stroke-linecap="butt" />
 				</rule>
 			</rule>
 
 			<!-- railway tunnel -->
 			<rule e="way" k="railway" v="*">
 				<rule e="way" k="railway" v="tram|subway|light_rail|narrow_gauge|funicular">
-					<line stroke="#880f0f4c" stroke-width="0.25" stroke-dasharray="4.0,4.0" stroke-linecap="butt" />
+					<line stroke="#880f0f4c" stroke-width="0.25" stroke-dasharray="4.0,4.0"
+						stroke-linecap="butt" />
 				</rule>
 				<rule e="way" k="railway" v="rail">
-					<line stroke="#aa333333" stroke-width="0.40" stroke-dasharray="4.0,4.0" stroke-linecap="butt" />
+					<line stroke="#aa333333" stroke-width="0.40" stroke-dasharray="4.0,4.0"
+						stroke-linecap="butt" />
 				</rule>
 			</rule>
 		</rule>
@@ -600,14 +675,16 @@ Magellan changes:
 			</rule>
 
 			<rule e="way" k="*" v="*" zoom-min="17">
-				<caption k="name" font-style="bold" font-size="10" fill="#000000" stroke="#ffffff" stroke-width="1.8" />
+				<caption k="name" font-style="bold" font-size="10" fill="#000000" stroke="#ffffff"
+					stroke-width="1.8" />
 			</rule>
 		</rule>
 
 		<rule e="way" k="shop" v="mall" zoom-min="13">
 			<area fill="#b42f2f" stroke="#b5d6f1" stroke-width="0.1" />
 			<rule e="way" k="*" v="*" zoom-min="16">
-				<caption k="name" font-style="bold" font-size="10" fill="#000000" stroke="#ffffff" stroke-width="1.80" />
+				<caption k="name" font-style="bold" font-size="10" fill="#000000" stroke="#ffffff"
+					stroke-width="1.80" />
 			</rule>
 		</rule>
 
@@ -620,7 +697,8 @@ Magellan changes:
 				<rule e="way" k="*" v="*" closed="yes">
 					<area fill="#b5d6f1" stroke="#b5d6f1" stroke-width="0.40" />
 					<rule e="way" k="*" v="*" zoom-min="14">
-						<caption k="name" font-style="bold" font-size="10" fill="#000000" stroke="#ffffff" stroke-width="2.00" />
+						<caption k="name" font-style="bold" font-size="10" fill="#000000"
+							stroke="#ffffff" stroke-width="2.00" />
 					</rule>
 				</rule>
 			</rule>
@@ -634,18 +712,21 @@ Magellan changes:
 			<rule e="way" k="natural" v="glacier">
 				<area fill="#ddecec" />
 				<rule e="way" k="*" v="*" zoom-min="14">
-					<caption k="name" font-style="bold_italic" font-size="10" fill="#1A8DFF" stroke="#ffffff" stroke-width="2.00" />
+					<caption k="name" font-style="bold_italic" font-size="10" fill="#1A8DFF"
+						stroke="#ffffff" stroke-width="2.00" />
 				</rule>
 			</rule>
 			<rule e="way" k="natural" v="land">
 				<area fill="#f8f8f8" stroke="#e0e0e0" stroke-width="0.10" />
 				<rule e="way" k="*" v="*" zoom-min="14">
-					<caption k="name" font-style="bold" font-size="10" fill="#000000" stroke="#ffffff" stroke-width="2.00" />
+					<caption k="name" font-style="bold" font-size="10" fill="#000000"
+						stroke="#ffffff" stroke-width="2.00" />
 				</rule>
 			</rule>
 
 			<rule e="way" k="natural" v="grassland">
-				<area fill="#eeffbb" stroke="#77dd66" stroke-width="0.1" />
+				<line stroke="#77dd66" stroke-width="0.1" />
+				<area fill="#eeffbb" />
 				<rule e="way" k="*" v="*" zoom-min="14">
 					<caption k="name" font-style="italic" font-family="serif" font-size="10" fill="#609348" />
 				</rule>
@@ -654,7 +735,8 @@ Magellan changes:
 			<rule e="way" k="natural" v="beach">
 				<area fill="#eecc55" />
 				<rule e="way" k="*" v="*" zoom-min="14">
-					<caption k="name" font-style="bold" font-size="10" fill="#000000" stroke="#ffffff" stroke-width="2.00" />
+					<caption k="name" font-style="bold" font-size="10" fill="#000000"
+						stroke="#ffffff" stroke-width="2.00" />
 				</rule>
 			</rule>
 			<rule e="way" k="natural" v="heath">
@@ -663,33 +745,43 @@ Magellan changes:
 			<rule e="way" k="natural" v="marsh|wetland">
 				<area src="file:/patterns/marsh.svg" symbol-percent="250" />
 				<rule e="way" k="*" v="*" zoom-min="14">
-					<caption k="name" font-style="bold_italic" font-size="10" fill="#1A8DFF" stroke="#ffffff" stroke-width="2.00" />
+					<caption k="name" font-style="bold_italic" font-size="10" fill="#1A8DFF"
+						stroke="#ffffff" stroke-width="2.00" />
 				</rule>
 			</rule>
 
 			<rule e="way" k="*" v="cliff|earth_bank" zoom-min="14">
-				<line stroke="#606060" stroke-width="1.20" dy="0.36" stroke-dasharray="0.8,5" stroke-linecap="butt" />
+				<line stroke="#606060" stroke-width="1.20" dy="0.36" stroke-dasharray="0.8,5"
+					stroke-linecap="butt" />
 				<line stroke="#606060" stroke-width="0.42" stroke-linecap="butt" />
 				<rule e="way" k="*" v="*" zoom-min="15">
-					<pathText k="name" font-style="italic" font-family="serif" font-size="10" fill="#20202F" stroke="#ffffff" stroke-width="2.00" />
+					<pathText k="name" font-style="italic" font-family="serif" font-size="10"
+						fill="#20202F" stroke="#ffffff" stroke-width="2.00" />
 				</rule>
 			</rule>
 
 			<rule e="way" k="barrier|natural" v="ditch|gully" zoom-min="14">
 				<line stroke="#80555555" stroke-width="0.50" />
 				<rule e="way" k="*" v="*">
-					<caption k="name" dy="-15" font-style="italic" font-family="serif" font-size="10" fill="#BF111111" stroke="#ffffff" stroke-width="2" />
+					<caption k="name" dy="-15" font-style="italic" font-family="serif"
+						font-size="10" fill="#BF111111" stroke="#ffffff" stroke-width="2" />
 				</rule>
 			</rule>
 
 			<rule e="way" k="natural" v="valley" zoom-min="15">
-				<pathText k="name" font-style="bold_italic" font-family="serif" font-size="10" fill="#6E6E6E" stroke="#ffffff" stroke-width="2.00" />
+				<pathText k="name" font-style="bold_italic" font-family="serif" font-size="10"
+					fill="#6E6E6E" stroke="#ffffff" stroke-width="2.00" />
 			</rule>
 
 			<rule e="way" k="*" v="ridge|arete" zoom-min="13">
-				<line stroke="#80606060" stroke-width="0.4" stroke-dasharray="1,2" stroke-linecap="round" scale="all" />
-				<pathText k="name" dy="2" font-style="italic" font-family="serif" font-size="12" fill="#888888" stroke="#888888" stroke-width="0.1" display="always" priority="-20" repeat-start="50" repeat-gap="300" />
-				<lineSymbol src="file:symbols/s_ridge.svg" align-center="true" repeat="true" repeat-gap="75" repeat-start="0" display="always" priority="-20" symbol-height="16" />
+				<line stroke="#80606060" stroke-width="0.4" stroke-dasharray="1,2"
+					stroke-linecap="round" scale="all" />
+				<pathText k="name" dy="2" font-style="italic" font-family="serif" font-size="12"
+					fill="#888888" stroke="#888888" stroke-width="0.1" display="always"
+					priority="-20" repeat-start="50" repeat-gap="300" />
+				<lineSymbol src="file:symbols/s_ridge.svg" align-center="true" repeat="true"
+					repeat-gap="75" repeat-start="0" display="always" priority="-20"
+					symbol-height="16" />
 			</rule>
 
 		</rule>
@@ -714,8 +806,10 @@ Magellan changes:
 				<rule e="way" k="contour_ext" v="elevation_medium|elevation_major">
 					<line stroke="#927253" stroke-width="0.40" curve="cubic" />
 					<rule e="way" k="*" v="*">
-						<pathText k="name" font-style="bold" font-size="6" fill="#927253" stroke="#ffffff" stroke-width="1.00" text-orientation="left" />
-						<pathText k="ele" font-style="bold" font-size="6" fill="#927253" stroke="#ffffff" stroke-width="1.00" text-orientation="left" />
+						<pathText k="name" font-style="bold" font-size="6" fill="#927253"
+							stroke="#ffffff" stroke-width="1.00" text-orientation="left" />
+						<pathText k="ele" font-style="bold" font-size="6" fill="#927253"
+							stroke="#ffffff" stroke-width="1.00" text-orientation="left" />
 					</rule>
 				</rule>
 			</rule>
@@ -724,15 +818,19 @@ Magellan changes:
 				<rule e="way" k="contour_ext" v="elevation_minor" zoom-max="15">
 					<line stroke="#927253" stroke-width="0.18" curve="cubic" />
 					<rule e="way" k="*" v="*">
-						<pathText k="name" font-style="bold" font-size="6" fill="#927253" stroke="#ffffff" stroke-width="1.00" text-orientation="left" />
-						<pathText k="ele" font-style="bold" font-size="6" fill="#927253" stroke="#ffffff" stroke-width="1.00" text-orientation="left" />
+						<pathText k="name" font-style="bold" font-size="6" fill="#927253"
+							stroke="#ffffff" stroke-width="1.00" text-orientation="left" />
+						<pathText k="ele" font-style="bold" font-size="6" fill="#927253"
+							stroke="#ffffff" stroke-width="1.00" text-orientation="left" />
 					</rule>
 				</rule>
 				<rule e="way" k="contour_ext" v="elevation_medium|elevation_major">
 					<line stroke="#927253" stroke-width="0.3" curve="cubic" />
 					<rule e="way" k="*" v="*">
-						<pathText k="name" font-style="bold" font-size="8" fill="#927253" stroke="#ffffff" stroke-width="1.0" text-orientation="left" />
-						<pathText k="ele" font-style="bold" font-size="8" fill="#927253" stroke="#ffffff" stroke-width="1.0" text-orientation="left" />
+						<pathText k="name" font-style="bold" font-size="8" fill="#927253"
+							stroke="#ffffff" stroke-width="1.0" text-orientation="left" />
+						<pathText k="ele" font-style="bold" font-size="8" fill="#927253"
+							stroke="#ffffff" stroke-width="1.0" text-orientation="left" />
 					</rule>
 				</rule>
 			</rule>
@@ -741,15 +839,19 @@ Magellan changes:
 				<rule e="way" k="contour_ext" v="elevation_minor">
 					<line stroke="#927253" stroke-width="0.14" curve="cubic" />
 					<rule e="way" k="*" v="*">
-						<pathText k="name" font-style="bold" font-size="7" fill="#927253" stroke="#ffffff" stroke-width="1.50" text-orientation="left" />
-						<pathText k="ele" font-style="bold" font-size="7" fill="#927253" stroke="#ffffff" stroke-width="1.50" text-orientation="left" />
+						<pathText k="name" font-style="bold" font-size="7" fill="#927253"
+							stroke="#ffffff" stroke-width="1.50" text-orientation="left" />
+						<pathText k="ele" font-style="bold" font-size="7" fill="#927253"
+							stroke="#ffffff" stroke-width="1.50" text-orientation="left" />
 					</rule>
 				</rule>
 				<rule e="way" k="contour_ext" v="elevation_medium|elevation_major">
 					<line stroke="#927253" stroke-width="0.25" curve="cubic" />
 					<rule e="way" k="*" v="*">
-						<pathText k="name" font-style="bold" font-size="9" fill="#927253" stroke="#ffffff" stroke-width="1.50" text-orientation="left" />
-						<pathText k="ele" font-style="bold" font-size="9" fill="#927253" stroke="#ffffff" stroke-width="1.50" text-orientation="left" />
+						<pathText k="name" font-style="bold" font-size="9" fill="#927253"
+							stroke="#ffffff" stroke-width="1.50" text-orientation="left" />
+						<pathText k="ele" font-style="bold" font-size="9" fill="#927253"
+							stroke="#ffffff" stroke-width="1.50" text-orientation="left" />
 					</rule>
 				</rule>
 			</rule>
@@ -758,15 +860,19 @@ Magellan changes:
 				<rule e="way" k="contour_ext" v="elevation_minor">
 					<line stroke="#927253" stroke-width="0.10" curve="cubic" />
 					<rule e="way" k="*" v="*">
-						<pathText k="name" font-style="bold" font-size="8" fill="#927253" stroke="#ffffff" stroke-width="1.50" text-orientation="left" />
-						<pathText k="ele" font-style="bold" font-size="8" fill="#927253" stroke="#ffffff" stroke-width="1.50" text-orientation="left" />
+						<pathText k="name" font-style="bold" font-size="8" fill="#927253"
+							stroke="#ffffff" stroke-width="1.50" text-orientation="left" />
+						<pathText k="ele" font-style="bold" font-size="8" fill="#927253"
+							stroke="#ffffff" stroke-width="1.50" text-orientation="left" />
 					</rule>
 				</rule>
 				<rule e="way" k="contour_ext" v="elevation_medium|elevation_major">
 					<line stroke="#927253" stroke-width="0.20" curve="cubic" />
 					<rule e="way" k="*" v="*">
-						<pathText k="name" font-style="bold" font-size="10" fill="#927253" stroke="#ffffff" stroke-width="1.50" text-orientation="left" />
-						<pathText k="ele" font-style="bold" font-size="10" fill="#927253" stroke="#ffffff" stroke-width="1.50" text-orientation="left" />
+						<pathText k="name" font-style="bold" font-size="10" fill="#927253"
+							stroke="#ffffff" stroke-width="1.50" text-orientation="left" />
+						<pathText k="ele" font-style="bold" font-size="10" fill="#927253"
+							stroke="#ffffff" stroke-width="1.50" text-orientation="left" />
 					</rule>
 				</rule>
 			</rule>
@@ -785,11 +891,14 @@ Magellan changes:
 
 			<!-- waterway cores -->
 			<rule e="way" k="waterway" v="ditch">
-				<line stroke="#1A8DFF" stroke-width="0.60" stroke-dasharray="10.0,5.0" stroke-linecap="butt" />
-				<line stroke="#b5d6f1" stroke-width="0.40" stroke-dasharray="10.0,5.0" stroke-linecap="butt" />
+				<line stroke="#1A8DFF" stroke-width="0.60" stroke-dasharray="10.0,5.0"
+					stroke-linecap="butt" />
+				<line stroke="#b5d6f1" stroke-width="0.40" stroke-dasharray="10.0,5.0"
+					stroke-linecap="butt" />
 				<lineSymbol src="file:/symbols/bluearrow.svg" align-center="true" repeat="true" />
 				<rule e="way" k="*" v="*" zoom-min="14">
-					<pathText k="name" font-style="bold_italic" font-family="serif" font-size="10" fill="#1A8DFF" stroke="#ffffff" stroke-width="2.00" />
+					<pathText k="name" font-style="bold_italic" font-family="serif" font-size="10"
+						fill="#1A8DFF" stroke="#ffffff" stroke-width="2.00" />
 				</rule>
 			</rule>
 			<rule e="way" k="waterway" v="drain">
@@ -801,7 +910,8 @@ Magellan changes:
 				<line stroke="#b5d6f1" stroke-width="0.80" />
 				<lineSymbol src="file:/symbols/bluearrow.svg" align-center="true" repeat="true" />
 				<rule e="way" k="*" v="*" zoom-min="14">
-					<pathText k="name" font-style="bold_italic" font-family="serif" font-size="10" fill="#1A8DFF" stroke="#ffffff" stroke-width="2.00" />
+					<pathText k="name" font-style="bold_italic" font-family="serif" font-size="10"
+						fill="#1A8DFF" stroke="#ffffff" stroke-width="2.00" />
 				</rule>
 			</rule>
 			<rule e="way" k="waterway" v="stream">
@@ -809,7 +919,8 @@ Magellan changes:
 				<line stroke="#b5d6f1" stroke-width="0.80" />
 				<lineSymbol src="file:/symbols/bluearrow.svg" align-center="true" repeat="true" />
 				<rule e="way" k="*" v="*" zoom-min="14">
-					<pathText k="name" font-style="bold_italic" font-family="serif" font-size="10" fill="#1A8DFF" stroke="#ffffff" stroke-width="2.00" />
+					<pathText k="name" font-style="bold_italic" font-family="serif" font-size="10"
+						fill="#1A8DFF" stroke="#ffffff" stroke-width="2.00" />
 				</rule>
 			</rule>
 			<rule e="way" k="waterway" v="river">
@@ -817,7 +928,8 @@ Magellan changes:
 				<line stroke="#b5d6f1" stroke-width="2.00" />
 				<lineSymbol src="file:/symbols/bluearrow.svg" align-center="true" repeat="true" />
 				<rule e="way" k="*" v="*" zoom-min="12">
-					<pathText k="name" font-style="bold_italic" font-family="serif" font-size="13" fill="#1A8DFF" stroke="#ffffff" stroke-width="2.00" />
+					<pathText k="name" font-style="bold_italic" font-family="serif" font-size="13"
+						fill="#1A8DFF" stroke="#ffffff" stroke-width="2.00" />
 				</rule>
 			</rule>
 			<rule e="way" k="waterway" v="dock">
@@ -871,7 +983,8 @@ Magellan changes:
 				<area fill="#c7f1a3" stroke="#6fc18e" stroke-width="0.20" />
 			</rule>
 			<rule e="way" k="*" v="*" zoom-min="16">
-				<caption k="name" font-style="bold" font-size="10" fill="#000000" stroke="#ffffff" stroke-width="2.00" />
+				<caption k="name" font-style="bold" font-size="10" fill="#000000" stroke="#ffffff"
+					stroke-width="2.00" />
 			</rule>
 		</rule>
 
@@ -936,7 +1049,8 @@ Magellan changes:
 			</rule>
 
 			<rule e="way" k="*" v="*" zoom-min="16">
-				<caption k="name" font-style="bold" font-size="10" fill="#000000" stroke="#ffffff" stroke-width="2.00" />
+				<caption k="name" font-style="bold" font-size="10" fill="#000000" stroke="#ffffff"
+					stroke-width="2.00" />
 			</rule>
 		</rule>
 	</rule>
@@ -946,138 +1060,180 @@ Magellan changes:
 	<rule cat="standard_bc" e="way" k="network" v="icn|ncn|rcn|lcn|ocn|hcw">
 		<rule e="way" k="tunnel" v="~|no|false">
 			<rule e="way" k="highway" v="footway">
-				<line stroke="#FA41FA" stroke-width="1.60" stroke-dasharray="5.0,5.0" stroke-linecap="butt" />
+				<line stroke="#FA41FA" stroke-width="1.60" stroke-dasharray="5.0,5.0"
+					stroke-linecap="butt" />
 			</rule>
 			<rule e="way" k="highway" v="path" zoom-min="13" zoom-max="14">
-				<line stroke="#FA41FA" stroke-width="1.25" stroke-dasharray="5.0,5.0" stroke-linecap="butt" />
+				<line stroke="#FA41FA" stroke-width="1.25" stroke-dasharray="5.0,5.0"
+					stroke-linecap="butt" />
 			</rule>
 			<rule e="way" k="highway" v="path" zoom-min="15" zoom-max="15">
-				<line stroke="#FA41FA" stroke-width="1.20" stroke-dasharray="5.0,5.0" stroke-linecap="butt" />
+				<line stroke="#FA41FA" stroke-width="1.20" stroke-dasharray="5.0,5.0"
+					stroke-linecap="butt" />
 			</rule>
 			<rule e="way" k="highway" v="path" zoom-min="16" zoom-max="16">
-				<line stroke="#FA41FA" stroke-width="1.15" stroke-dasharray="5.0,5.0" stroke-linecap="butt" />
+				<line stroke="#FA41FA" stroke-width="1.15" stroke-dasharray="5.0,5.0"
+					stroke-linecap="butt" />
 			</rule>
 			<rule e="way" k="highway" v="path" zoom-min="17">
-				<line stroke="#FA41FA" stroke-width="1.10" stroke-dasharray="5.0,5.0" stroke-linecap="butt" />
+				<line stroke="#FA41FA" stroke-width="1.10" stroke-dasharray="5.0,5.0"
+					stroke-linecap="butt" />
 			</rule>
 			<rule e="way" k="tracktype" v="grade1" zoom-min="13">
-				<line stroke="#FA41FA" stroke-width="1.90" stroke-dasharray="5.0,5.0" stroke-linecap="butt" />
+				<line stroke="#FA41FA" stroke-width="1.90" stroke-dasharray="5.0,5.0"
+					stroke-linecap="butt" />
 			</rule>
 			<rule e="way" k="tracktype" v="grade2|grade3|grade4|grade5|~" zoom-min="13" zoom-max="14">
-				<line stroke="#FA41FA" stroke-width="1.25" stroke-dasharray="5.0,5.0" stroke-linecap="butt" />
+				<line stroke="#FA41FA" stroke-width="1.25" stroke-dasharray="5.0,5.0"
+					stroke-linecap="butt" />
 			</rule>
 			<rule e="way" k="tracktype" v="grade2|grade3|grade4|grade5|~" zoom-min="15" zoom-max="15">
-				<line stroke="#FA41FA" stroke-width="1.20" stroke-dasharray="5.0,5.0" stroke-linecap="butt" />
+				<line stroke="#FA41FA" stroke-width="1.20" stroke-dasharray="5.0,5.0"
+					stroke-linecap="butt" />
 			</rule>
 			<rule e="way" k="tracktype" v="grade2|grade3|grade4|grade5|~" zoom-min="16" zoom-max="16">
-				<line stroke="#FA41FA" stroke-width="1.15" stroke-dasharray="5.0,5.0" stroke-linecap="butt" />
+				<line stroke="#FA41FA" stroke-width="1.15" stroke-dasharray="5.0,5.0"
+					stroke-linecap="butt" />
 			</rule>
 			<rule e="way" k="tracktype" v="grade2|grade3|grade4|grade5|~" zoom-min="17">
-				<line stroke="#FA41FA" stroke-width="1.10" stroke-dasharray="5.0,5.0" stroke-linecap="butt" />
+				<line stroke="#FA41FA" stroke-width="1.10" stroke-dasharray="5.0,5.0"
+					stroke-linecap="butt" />
 			</rule>
 			<rule e="way" k="highway" v="unclassified|residential|living_street|service|road">
-				<line stroke="#FA41FA" stroke-width="2.40" stroke-dasharray="5.0,5.0" stroke-linecap="butt" />
+				<line stroke="#FA41FA" stroke-width="2.40" stroke-dasharray="5.0,5.0"
+					stroke-linecap="butt" />
 			</rule>
 			<rule e="way" k="highway" v="tertiary|motorway_link|trunk_link|primary_link|secondary_link|tertiary_link|secondary|primary|trunk">
-				<line stroke="#FA41FA" stroke-width="2.55" stroke-dasharray="5.0,5.0" stroke-linecap="butt" />
+				<line stroke="#FA41FA" stroke-width="2.55" stroke-dasharray="5.0,5.0"
+					stroke-linecap="butt" />
 			</rule>
 			<rule e="way" k="highway" v="motorway">
-				<line stroke="#FA41FA" stroke-width="4.30" stroke-dasharray="5.0,5.0" stroke-linecap="butt" />
+				<line stroke="#FA41FA" stroke-width="4.30" stroke-dasharray="5.0,5.0"
+					stroke-linecap="butt" />
 			</rule>
 			<rule e="way" k="highway" v="cycleway">
-				<line stroke="#FA41FA" stroke-width="1.60" stroke-dasharray="5.0,5.0" stroke-linecap="butt" />
+				<line stroke="#FA41FA" stroke-width="1.60" stroke-dasharray="5.0,5.0"
+					stroke-linecap="butt" />
 			</rule>
 		</rule>
 	</rule>
 	<rule cat="standard_bc" e="way" k="cycleway|cycleway:right|cycleway:left" v="opposite|shared|shared_lane|share_busway">
 		<rule e="way" k="tunnel" v="~|no|false">
 			<rule e="way" k="highway" v="footway">
-				<line stroke="#FA41FA" stroke-width="2.80" stroke-dasharray="5.0,5.0" stroke-linecap="butt" />
+				<line stroke="#FA41FA" stroke-width="2.80" stroke-dasharray="5.0,5.0"
+					stroke-linecap="butt" />
 			</rule>
 			<rule e="way" k="highway" v="path" zoom-min="13" zoom-max="14">
-				<line stroke="#FA41FA" stroke-width="2.45" stroke-dasharray="5.0,5.0" stroke-linecap="butt" />
+				<line stroke="#FA41FA" stroke-width="2.45" stroke-dasharray="5.0,5.0"
+					stroke-linecap="butt" />
 			</rule>
 			<rule e="way" k="highway" v="path" zoom-min="15" zoom-max="15">
-				<line stroke="#FA41FA" stroke-width="2.40" stroke-dasharray="5.0,5.0" stroke-linecap="butt" />
+				<line stroke="#FA41FA" stroke-width="2.40" stroke-dasharray="5.0,5.0"
+					stroke-linecap="butt" />
 			</rule>
 			<rule e="way" k="highway" v="path" zoom-min="16" zoom-max="16">
-				<line stroke="#FA41FA" stroke-width="2.35" stroke-dasharray="5.0,5.0" stroke-linecap="butt" />
+				<line stroke="#FA41FA" stroke-width="2.35" stroke-dasharray="5.0,5.0"
+					stroke-linecap="butt" />
 			</rule>
 			<rule e="way" k="highway" v="path" zoom-min="17">
-				<line stroke="#FA41FA" stroke-width="2.30" stroke-dasharray="5.0,5.0" stroke-linecap="butt" />
+				<line stroke="#FA41FA" stroke-width="2.30" stroke-dasharray="5.0,5.0"
+					stroke-linecap="butt" />
 			</rule>
 			<rule e="way" k="tracktype" v="grade1" zoom-min="13">
-				<line stroke="#FA41FA" stroke-width="3.00" stroke-dasharray="5.0,5.0" stroke-linecap="butt" />
+				<line stroke="#FA41FA" stroke-width="3.00" stroke-dasharray="5.0,5.0"
+					stroke-linecap="butt" />
 			</rule>
 			<rule e="way" k="tracktype" v="grade2|grade3|grade4|grade5|~" zoom-min="13" zoom-max="14">
-				<line stroke="#FA41FA" stroke-width="2.45" stroke-dasharray="5.0,5.0" stroke-linecap="butt" />
+				<line stroke="#FA41FA" stroke-width="2.45" stroke-dasharray="5.0,5.0"
+					stroke-linecap="butt" />
 			</rule>
 			<rule e="way" k="tracktype" v="grade2|grade3|grade4|grade5|~" zoom-min="15" zoom-max="15">
-				<line stroke="#FA41FA" stroke-width="2.40" stroke-dasharray="5.0,5.0" stroke-linecap="butt" />
+				<line stroke="#FA41FA" stroke-width="2.40" stroke-dasharray="5.0,5.0"
+					stroke-linecap="butt" />
 			</rule>
 			<rule e="way" k="tracktype" v="grade2|grade3|grade4|grade5|~" zoom-min="16" zoom-max="16">
-				<line stroke="#FA41FA" stroke-width="2.35" stroke-dasharray="5.0,5.0" stroke-linecap="butt" />
+				<line stroke="#FA41FA" stroke-width="2.35" stroke-dasharray="5.0,5.0"
+					stroke-linecap="butt" />
 			</rule>
 			<rule e="way" k="tracktype" v="grade2|grade3|grade4|grade5|~" zoom-min="17">
-				<line stroke="#FA41FA" stroke-width="2.30" stroke-dasharray="5.0,5.0" stroke-linecap="butt" />
+				<line stroke="#FA41FA" stroke-width="2.30" stroke-dasharray="5.0,5.0"
+					stroke-linecap="butt" />
 			</rule>
 			<rule e="way" k="highway" v="unclassified|residential|living_street|service|road">
-				<line stroke="#FA41FA" stroke-width="3.60" stroke-dasharray="5.0,5.0" stroke-linecap="butt" />
+				<line stroke="#FA41FA" stroke-width="3.60" stroke-dasharray="5.0,5.0"
+					stroke-linecap="butt" />
 			</rule>
 			<rule e="way" k="highway" v="tertiary|motorway_link|trunk_link|primary_link|secondary_link|tertiary_link|secondary|primary|trunk">
-				<line stroke="#FA41FA" stroke-width="3.75" stroke-dasharray="5.0,5.0" stroke-linecap="butt" />
+				<line stroke="#FA41FA" stroke-width="3.75" stroke-dasharray="5.0,5.0"
+					stroke-linecap="butt" />
 			</rule>
 			<rule e="way" k="highway" v="motorway">
-				<line stroke="#FA41FA" stroke-width="5.50" stroke-dasharray="5.0,5.0" stroke-linecap="butt" />
+				<line stroke="#FA41FA" stroke-width="5.50" stroke-dasharray="5.0,5.0"
+					stroke-linecap="butt" />
 			</rule>
 			<rule e="way" k="highway" v="cycleway">
-				<line stroke="#FA41FA" stroke-width="2.80" stroke-dasharray="5.0,5.0" stroke-linecap="butt" />
+				<line stroke="#FA41FA" stroke-width="2.80" stroke-dasharray="5.0,5.0"
+					stroke-linecap="butt" />
 			</rule>
 		</rule>
 	</rule>
 	<rule cat="standard_bc" e="way" k="network" v="icn|ncn|rcn|lcn|ocn|hcw">
 		<rule e="way" k="tunnel" v="~|no|false">
 			<rule e="way" k="highway" v="footway">
-				<line stroke="#FA41FA" stroke-width="2.80" stroke-dasharray="5.0,5.0" stroke-linecap="butt" />
+				<line stroke="#FA41FA" stroke-width="2.80" stroke-dasharray="5.0,5.0"
+					stroke-linecap="butt" />
 			</rule>
 			<rule e="way" k="highway" v="path" zoom-min="13" zoom-max="14">
-				<line stroke="#FA41FA" stroke-width="2.45" stroke-dasharray="5.0,5.0" stroke-linecap="butt" />
+				<line stroke="#FA41FA" stroke-width="2.45" stroke-dasharray="5.0,5.0"
+					stroke-linecap="butt" />
 			</rule>
 			<rule e="way" k="highway" v="path" zoom-min="15" zoom-max="15">
-				<line stroke="#FA41FA" stroke-width="2.40" stroke-dasharray="5.0,5.0" stroke-linecap="butt" />
+				<line stroke="#FA41FA" stroke-width="2.40" stroke-dasharray="5.0,5.0"
+					stroke-linecap="butt" />
 			</rule>
 			<rule e="way" k="highway" v="path" zoom-min="16" zoom-max="16">
-				<line stroke="#FA41FA" stroke-width="2.35" stroke-dasharray="5.0,5.0" stroke-linecap="butt" />
+				<line stroke="#FA41FA" stroke-width="2.35" stroke-dasharray="5.0,5.0"
+					stroke-linecap="butt" />
 			</rule>
 			<rule e="way" k="highway" v="path" zoom-min="17">
-				<line stroke="#FA41FA" stroke-width="2.30" stroke-dasharray="5.0,5.0" stroke-linecap="butt" />
+				<line stroke="#FA41FA" stroke-width="2.30" stroke-dasharray="5.0,5.0"
+					stroke-linecap="butt" />
 			</rule>
 			<rule e="way" k="tracktype" v="grade1" zoom-min="13">
-				<line stroke="#FA41FA" stroke-width="3.00" stroke-dasharray="5.0,5.0" stroke-linecap="butt" />
+				<line stroke="#FA41FA" stroke-width="3.00" stroke-dasharray="5.0,5.0"
+					stroke-linecap="butt" />
 			</rule>
 			<rule e="way" k="tracktype" v="grade2|grade3|grade4|grade5|~" zoom-min="13" zoom-max="14">
-				<line stroke="#FA41FA" stroke-width="2.45" stroke-dasharray="5.0,5.0" stroke-linecap="butt" />
+				<line stroke="#FA41FA" stroke-width="2.45" stroke-dasharray="5.0,5.0"
+					stroke-linecap="butt" />
 			</rule>
 			<rule e="way" k="tracktype" v="grade2|grade3|grade4|grade5|~" zoom-min="15" zoom-max="15">
-				<line stroke="#FA41FA" stroke-width="2.40" stroke-dasharray="5.0,5.0" stroke-linecap="butt" />
+				<line stroke="#FA41FA" stroke-width="2.40" stroke-dasharray="5.0,5.0"
+					stroke-linecap="butt" />
 			</rule>
 			<rule e="way" k="tracktype" v="grade2|grade3|grade4|grade5|~" zoom-min="16" zoom-max="16">
-				<line stroke="#FA41FA" stroke-width="2.35" stroke-dasharray="5.0,5.0" stroke-linecap="butt" />
+				<line stroke="#FA41FA" stroke-width="2.35" stroke-dasharray="5.0,5.0"
+					stroke-linecap="butt" />
 			</rule>
 			<rule e="way" k="tracktype" v="grade2|grade3|grade4|grade5|~" zoom-min="17">
-				<line stroke="#FA41FA" stroke-width="2.30" stroke-dasharray="5.0,5.0" stroke-linecap="butt" />
+				<line stroke="#FA41FA" stroke-width="2.30" stroke-dasharray="5.0,5.0"
+					stroke-linecap="butt" />
 			</rule>
 			<rule e="way" k="highway" v="unclassified|residential|living_street|service|road">
-				<line stroke="#FA41FA" stroke-width="3.60" stroke-dasharray="5.0,5.0" stroke-linecap="butt" />
+				<line stroke="#FA41FA" stroke-width="3.60" stroke-dasharray="5.0,5.0"
+					stroke-linecap="butt" />
 			</rule>
 			<rule e="way" k="highway" v="tertiary|motorway_link|trunk_link|primary_link|secondary_link|tertiary_link|secondary|primary|trunk">
-				<line stroke="#FA41FA" stroke-width="3.75" stroke-dasharray="5.0,5.0" stroke-linecap="butt" />
+				<line stroke="#FA41FA" stroke-width="3.75" stroke-dasharray="5.0,5.0"
+					stroke-linecap="butt" />
 			</rule>
 			<rule e="way" k="highway" v="motorway">
-				<line stroke="#FA41FA" stroke-width="5.50" stroke-dasharray="5.0,5.0" stroke-linecap="butt" />
+				<line stroke="#FA41FA" stroke-width="5.50" stroke-dasharray="5.0,5.0"
+					stroke-linecap="butt" />
 			</rule>
 			<rule e="way" k="highway" v="cycleway">
-				<line stroke="#FA41FA" stroke-width="2.80" stroke-dasharray="5.0,5.0" stroke-linecap="butt" />
+				<line stroke="#FA41FA" stroke-width="2.80" stroke-dasharray="5.0,5.0"
+					stroke-linecap="butt" />
 			</rule>
 		</rule>
 	</rule>
@@ -1183,36 +1339,46 @@ Magellan changes:
 			</rule>
 		</rule>
 		<rule e="any" k="*" v="*" zoom-min="13" zoom-max="15">
-			<pathText k="ref_mtb" font-style="bold" font-size="8" dy="-1.80" fill="#FFA8FF" stroke="#FFFFFF" stroke-width="2.00" repeat-start="30" repeat-gap="100" />
+			<pathText k="ref_mtb" font-style="bold" font-size="8" dy="-1.80" fill="#FFA8FF"
+				stroke="#FFFFFF" stroke-width="2.00" repeat-start="30" repeat-gap="100" />
 		</rule>
 		<rule e="any" k="*" v="*" zoom-min="16">
-			<pathText k="ref_mtb" font-style="bold" font-size="11" dy="-1.00" fill="#FFA8FF" stroke="#FFFFFF" stroke-width="2.50" repeat-start="50" repeat-gap="300" />
+			<pathText k="ref_mtb" font-style="bold" font-size="11" dy="-1.00" fill="#FFA8FF"
+				stroke="#FFFFFF" stroke-width="2.50" repeat-start="50" repeat-gap="300" />
 		</rule>
 	</rule>
 
 	<rule cat="omp_mtb" e="way" k="BC" v="G2" zoom-min="15">
-		<lineSymbol src="file:/trailmarks/0x373b.svg" align-center="true" repeat="true" rotate="false" repeat-gap="100" repeat-start="0" symbol-percent="80" />
+		<lineSymbol src="file:/trailmarks/0x373b.svg" align-center="true" repeat="true"
+			rotate="false" repeat-gap="100" repeat-start="0" symbol-percent="80" />
 	</rule>
 	<rule cat="omp_mtb" e="way" k="BC" v="R2" zoom-min="15">
-		<lineSymbol src="file:/trailmarks/0x3739.svg" align-center="true" repeat="true" rotate="false" repeat-gap="100" repeat-start="0" symbol-percent="80" />
+		<lineSymbol src="file:/trailmarks/0x3739.svg" align-center="true" repeat="true"
+			rotate="false" repeat-gap="100" repeat-start="0" symbol-percent="80" />
 	</rule>
 	<rule cat="omp_mtb" e="way" k="BC" v="B2" zoom-min="15">
-		<lineSymbol src="file:/trailmarks/0x373a.svg" align-center="true" repeat="true" rotate="false" repeat-gap="100" repeat-start="0" symbol-percent="80" />
+		<lineSymbol src="file:/trailmarks/0x373a.svg" align-center="true" repeat="true"
+			rotate="false" repeat-gap="100" repeat-start="0" symbol-percent="80" />
 	</rule>
 	<rule cat="omp_mtb" e="way" k="BC" v="Y2" zoom-min="15">
-		<lineSymbol src="file:/trailmarks/0x373c.svg" align-center="true" repeat="true" rotate="false" repeat-gap="100" repeat-start="0" symbol-percent="80" />
+		<lineSymbol src="file:/trailmarks/0x373c.svg" align-center="true" repeat="true"
+			rotate="false" repeat-gap="100" repeat-start="0" symbol-percent="80" />
 	</rule>
 	<rule cat="omp_mtb" e="way" k="BC" v="B2/G2" zoom-min="15">
-		<lineSymbol src="file:/trailmarks/0x373ab.svg" align-center="true" repeat="true" rotate="false" repeat-gap="100" repeat-start="0" symbol-percent="110" />
+		<lineSymbol src="file:/trailmarks/0x373ab.svg" align-center="true" repeat="true"
+			rotate="false" repeat-gap="100" repeat-start="0" symbol-percent="110" />
 	</rule>
 	<rule cat="omp_mtb" e="way" k="BC" v="B2/R2" zoom-min="15">
-		<lineSymbol src="file:/trailmarks/0x373ac.svg" align-center="true" repeat="true" rotate="false" repeat-gap="100" repeat-start="0" symbol-percent="110" />
+		<lineSymbol src="file:/trailmarks/0x373ac.svg" align-center="true" repeat="true"
+			rotate="false" repeat-gap="100" repeat-start="0" symbol-percent="110" />
 	</rule>
 	<rule cat="omp_mtb" e="way" k="BC" v="G2/R2" zoom-min="15">
-		<lineSymbol src="file:/trailmarks/0x373bc.svg" align-center="true" repeat="true" rotate="false" repeat-gap="100" repeat-start="0" symbol-percent="110" />
+		<lineSymbol src="file:/trailmarks/0x373bc.svg" align-center="true" repeat="true"
+			rotate="false" repeat-gap="100" repeat-start="0" symbol-percent="110" />
 	</rule>
 	<rule cat="omp_mtb" e="way" k="BC" v="B2/G2/R2" zoom-min="15">
-		<lineSymbol src="file:/trailmarks/0x373abc.svg" align-center="true" repeat="true" rotate="false" repeat-gap="100" repeat-start="0" symbol-percent="140" />
+		<lineSymbol src="file:/trailmarks/0x373abc.svg" align-center="true" repeat="true"
+			rotate="false" repeat-gap="100" repeat-start="0" symbol-percent="140" />
 	</rule>
 
 
@@ -1263,27 +1429,49 @@ Magellan changes:
 			</rule>
 		</rule>
 		<rule e="any" k="*" v="*" zoom-min="13" zoom-max="15">
-			<pathText k="ref_cycle" font-style="bold" font-size="8" dy="1.80" fill="#A400A4" stroke="#FFFFFF" stroke-width="2.00" repeat-start="30" repeat-gap="100" />
+			<pathText k="ref_cycle" font-style="bold" font-size="8" dy="1.80" fill="#A400A4"
+				stroke="#FFFFFF" stroke-width="2.00" repeat-start="30" repeat-gap="100" />
 		</rule>
 		<rule e="any" k="*" v="*" zoom-min="16">
-			<pathText k="ref_cycle" font-style="bold" font-size="11" dy="1.00" fill="#A400A4" stroke="#FFFFFF" stroke-width="2.50" repeat-start="50" repeat-gap="300" />
+			<pathText k="ref_cycle" font-style="bold" font-size="11" dy="1.00" fill="#A400A4"
+				stroke="#FFFFFF" stroke-width="2.50" repeat-start="50" repeat-gap="300" />
 		</rule>				
 	</rule>
 
 	<!-- Viaferrata OMP -->
 	<rule cat="omp_vf" e="way" k="via_ferrata_flag" v="set">
-		<rule e="way" k="highway" v="footway"> <line stroke="#fd1725" stroke-width="2.80" stroke-dasharray="5.0,5.0" stroke-linecap="butt" /> </rule>
+		<rule e="way" k="highway" v="footway">
+			<line stroke="#fd1725" stroke-width="2.80" stroke-dasharray="5.0,5.0"
+				stroke-linecap="butt" /> </rule>
 
-		<rule e="way" k="highway" v="path" zoom-min="13" zoom-max="14"> <line stroke="#fd1725" stroke-width="2.45" stroke-dasharray="0.9,2.2" stroke-linecap="butt" /> </rule>
-		<rule e="way" k="highway" v="path" zoom-min="15" zoom-max="15"> <line stroke="#fd1725" stroke-width="2.40" stroke-dasharray="1.2,2.5" stroke-linecap="butt" /> </rule>
-		<rule e="way" k="highway" v="path" zoom-min="16" zoom-max="16"> <line stroke="#fd1725" stroke-width="2.35" stroke-dasharray="1.5,2.8" stroke-linecap="butt" /> </rule>
-		<rule e="way" k="highway" v="path" zoom-min="17"> <line stroke="#fd1725" stroke-width="2.30" stroke-dasharray="2.0,3.3" stroke-linecap="butt" /> </rule>
+		<rule e="way" k="highway" v="path" zoom-min="13" zoom-max="14">
+			<line stroke="#fd1725" stroke-width="2.45" stroke-dasharray="0.9,2.2"
+				stroke-linecap="butt" /> </rule>
+		<rule e="way" k="highway" v="path" zoom-min="15" zoom-max="15">
+			<line stroke="#fd1725" stroke-width="2.40" stroke-dasharray="1.2,2.5"
+				stroke-linecap="butt" /> </rule>
+		<rule e="way" k="highway" v="path" zoom-min="16" zoom-max="16">
+			<line stroke="#fd1725" stroke-width="2.35" stroke-dasharray="1.5,2.8"
+				stroke-linecap="butt" /> </rule>
+		<rule e="way" k="highway" v="path" zoom-min="17">
+			<line stroke="#fd1725" stroke-width="2.30" stroke-dasharray="2.0,3.3"
+				stroke-linecap="butt" /> </rule>
 
-		<rule e="way" k="tracktype" v="grade1|grade2" zoom-min="13">		<line stroke="#fd1725" stroke-width="3.00" stroke-dasharray="5.0,5.0" stroke-linecap="butt" /> </rule>
-		<rule e="way" k="tracktype" v="grade3" zoom-min="13" zoom-max="14">	<line stroke="#fd1725" stroke-width="2.45" stroke-dasharray="5.0,5.0" stroke-linecap="butt" /> </rule>
-		<rule e="way" k="tracktype" v="grade3" zoom-min="15" zoom-max="15">	<line stroke="#fd1725" stroke-width="2.40" stroke-dasharray="5.0,5.0" stroke-linecap="butt" /> </rule>
-		<rule e="way" k="tracktype" v="grade3" zoom-min="16" zoom-max="16">	<line stroke="#fd1725" stroke-width="2.35" stroke-dasharray="5.0,5.0" stroke-linecap="butt" /> </rule>
-		<rule e="way" k="tracktype" v="grade3" zoom-min="17">				<line stroke="#fd1725" stroke-width="2.30" stroke-dasharray="5.0,5.0" stroke-linecap="butt" /> </rule>
+		<rule e="way" k="tracktype" v="grade1|grade2" zoom-min="13">
+			<line stroke="#fd1725" stroke-width="3.00" stroke-dasharray="5.0,5.0"
+				stroke-linecap="butt" /> </rule>
+		<rule e="way" k="tracktype" v="grade3" zoom-min="13" zoom-max="14">
+			<line stroke="#fd1725" stroke-width="2.45" stroke-dasharray="5.0,5.0"
+				stroke-linecap="butt" /> </rule>
+		<rule e="way" k="tracktype" v="grade3" zoom-min="15" zoom-max="15">
+			<line stroke="#fd1725" stroke-width="2.40" stroke-dasharray="5.0,5.0"
+				stroke-linecap="butt" /> </rule>
+		<rule e="way" k="tracktype" v="grade3" zoom-min="16" zoom-max="16">
+			<line stroke="#fd1725" stroke-width="2.35" stroke-dasharray="5.0,5.0"
+				stroke-linecap="butt" /> </rule>
+		<rule e="way" k="tracktype" v="grade3" zoom-min="17">
+			<line stroke="#fd1725" stroke-width="2.30" stroke-dasharray="5.0,5.0"
+				stroke-linecap="butt" /> </rule>
 	</rule>
 
 	<!-- Hiking network OMP no tunnel -->
@@ -1345,260 +1533,267 @@ Magellan changes:
 			</rule>
 		</rule>
 		<rule e="any" k="*" v="*" zoom-min="13" zoom-max="15">
-			<pathText k="ref_hike"  font-style="bold" font-size="8" dy="1.80" fill="#ff0000" stroke="#FFFFFF" stroke-width="2.00"  repeat-start="30" repeat-gap="100" />
+			<pathText k="ref_hike" font-style="bold" font-size="8" dy="1.80" fill="#ff0000"
+				stroke="#FFFFFF" stroke-width="2.00" repeat-start="30" repeat-gap="100" />
 		</rule>
 		<rule e="any" k="*" v="*" zoom-min="16">
-			<pathText k="ref_hike" font-style="bold" font-size="11" dy="1.00" fill="#ff0000" stroke="#FFFFFF" stroke-width="2.50" repeat-start="50" repeat-gap="300" />
-		</rule>		
-	</rule>
-
-	<!-- Colored hiking network BLUE OMP no tunnel -->
-	<rule cat="colored_hiking" e="way" k="osmc:symbol" v="blue">
-		<rule e="way" k="tunnel" v="~|no|false">
-			<rule e="way" k="highway" v="footway">
-				<line stroke="#006EFF" stroke-width="1.80" />
-			</rule>
-			<rule e="way" k="highway" v="path" zoom-min="13" zoom-max="14">
-				<line stroke="#006EFF" stroke-width="1.45" />
-			</rule>
-			<rule e="way" k="highway" v="path" zoom-min="15" zoom-max="15">
-				<line stroke="#006EFF" stroke-width="1.40" />
-			</rule>
-			<rule e="way" k="highway" v="path" zoom-min="16" zoom-max="16">
-				<line stroke="#006EFF" stroke-width="1.35" />
-			</rule>
-			<rule e="way" k="highway" v="path" zoom-min="17">
-				<line stroke="#006EFF" stroke-width="1.30" />
-			</rule>
-			<rule e="way" k="tracktype" v="grade1" zoom-min="13">
-				<line stroke="#006EFF" stroke-width="2.00" />
-			</rule>
-			<rule e="way" k="tracktype" v="grade2" zoom-min="13" zoom-max="14">
-				<line stroke="#006EFF" stroke-width="1.45" />
-			</rule>
-			<rule e="way" k="tracktype" v="grade2" zoom-min="15" zoom-max="15">
-				<line stroke="#006EFF" stroke-width="1.40" />
-			</rule>
-			<rule e="way" k="tracktype" v="grade2" zoom-min="16" zoom-max="16">
-				<line stroke="#006EFF" stroke-width="1.35" />
-			</rule>
-			<rule e="way" k="tracktype" v="grade2" zoom-min="17">
-				<line stroke="#006EFF" stroke-width="1.30" />
-			</rule>
-			<rule e="way" k="tracktype" v="grade3|grade4|grade5|~" zoom-min="13" zoom-max="14">
-				<line stroke="#006EFF" stroke-width="1.45" />
-			</rule>
-			<rule e="way" k="tracktype" v="grade3|grade4|grade5|~" zoom-min="15" zoom-max="15">
-				<line stroke="#006EFF" stroke-width="1.40" />
-			</rule>
-			<rule e="way" k="tracktype" v="grade3|grade4|grade5|~" zoom-min="16" zoom-max="16">
-				<line stroke="#006EFF" stroke-width="1.35" />
-			</rule>
-			<rule e="way" k="tracktype" v="grade3|grade4|grade5|~" zoom-min="17">
-				<line stroke="#006EFF" stroke-width="1.30" />
-			</rule>
-			<rule e="way" k="highway" v="unclassified|residential|living_street|service|road">
-				<line stroke="#006EFF" stroke-width="2.60" />
-			</rule>
-			<rule e="way" k="highway" v="tertiary|motorway_link|trunk_link|primary_link|secondary_link|tertiary_link|secondary|primary|trunk">
-				<line stroke="#006EFF" stroke-width="2.75" />
-			</rule>
-			<rule e="way" k="highway" v="motorway">
-				<line stroke="#006EFF" stroke-width="4.50" />
-			</rule>
-			<rule e="way" k="highway" v="cycleway">
-				<line stroke="#006EFF" stroke-width="1.80" />
-			</rule>
-		</rule>
-
-	</rule>
-
-	<!-- Colored hiking network RED OMP no tunnel -->
-
-	<rule cat="colored_hiking" e="way" k="osmc:symbol" v="red">
-		<rule e="way" k="tunnel" v="~|no|false">
-			<rule e="way" k="highway" v="footway">
-				<line stroke="#F00000" stroke-width="1.80" />
-			</rule>
-			<rule e="way" k="highway" v="path" zoom-min="13" zoom-max="14">
-				<line stroke="#F00000" stroke-width="1.45" />
-			</rule>
-			<rule e="way" k="highway" v="path" zoom-min="15" zoom-max="15">
-				<line stroke="#F00000" stroke-width="1.40" />
-			</rule>
-			<rule e="way" k="highway" v="path" zoom-min="16" zoom-max="16">
-				<line stroke="#F00000" stroke-width="1.35" />
-			</rule>
-			<rule e="way" k="highway" v="path" zoom-min="17">
-				<line stroke="#F00000" stroke-width="1.30" />
-			</rule>
-			<rule e="way" k="tracktype" v="grade1" zoom-min="13">
-				<line stroke="#F00000" stroke-width="2.00" />
-			</rule>
-			<rule e="way" k="tracktype" v="grade2" zoom-min="13" zoom-max="14">
-				<line stroke="#F00000" stroke-width="1.45" />
-			</rule>
-			<rule e="way" k="tracktype" v="grade2" zoom-min="15" zoom-max="15">
-				<line stroke="#F00000" stroke-width="1.40" />
-			</rule>
-			<rule e="way" k="tracktype" v="grade2" zoom-min="16" zoom-max="16">
-				<line stroke="#F00000" stroke-width="1.35" />
-			</rule>
-			<rule e="way" k="tracktype" v="grade2" zoom-min="17">
-				<line stroke="#F00000" stroke-width="1.30" />
-			</rule>
-			<rule e="way" k="tracktype" v="grade3|grade4|grade5|~" zoom-min="13" zoom-max="14">
-				<line stroke="#F00000" stroke-width="1.45" />
-			</rule>
-			<rule e="way" k="tracktype" v="grade3|grade4|grade5|~" zoom-min="15" zoom-max="15">
-				<line stroke="#F00000" stroke-width="1.40" />
-			</rule>
-			<rule e="way" k="tracktype" v="grade3|grade4|grade5|~" zoom-min="16" zoom-max="16">
-				<line stroke="#F00000" stroke-width="1.35" />
-			</rule>
-			<rule e="way" k="tracktype" v="grade3|grade4|grade5|~" zoom-min="17">
-				<line stroke="#F00000" stroke-width="1.30" />
-			</rule>
-			<rule e="way" k="highway" v="unclassified|residential|living_street|service|road">
-				<line stroke="#F00000" stroke-width="2.60" />
-			</rule>
-			<rule e="way" k="highway" v="tertiary|motorway_link|trunk_link|primary_link|secondary_link|tertiary_link|secondary|primary|trunk">
-				<line stroke="#F00000" stroke-width="2.75" />
-			</rule>
-			<rule e="way" k="highway" v="motorway">
-				<line stroke="#F00000" stroke-width="4.50" />
-			</rule>
-			<rule e="way" k="highway" v="cycleway">
-				<line stroke="#F00000" stroke-width="1.80" />
-			</rule>
-
+			<pathText k="ref_hike" font-style="bold" font-size="11" dy="1.00" fill="#ff0000"
+				stroke="#FFFFFF" stroke-width="2.50" repeat-start="50" repeat-gap="300" />
 		</rule>
 	</rule>
 
-	<!-- Colored hiking network YELLOW OMP no tunnel -->
 
-	<rule cat="colored_hiking" e="way" k="osmc:symbol" v="yellow">
-		<rule e="way" k="tunnel" v="~|no|false">
-			<rule e="way" k="highway" v="footway">
-				<line stroke="#FFD700" stroke-width="1.80" />
-			</rule>
-			<rule e="way" k="highway" v="path" zoom-min="13" zoom-max="14">
-				<line stroke="#FFD700" stroke-width="1.45" />
-			</rule>
-			<rule e="way" k="highway" v="path" zoom-min="15" zoom-max="15">
-				<line stroke="#FFD700" stroke-width="1.40" />
-			</rule>
-			<rule e="way" k="highway" v="path" zoom-min="16" zoom-max="16">
-				<line stroke="#FFD700" stroke-width="1.35" />
-			</rule>
-			<rule e="way" k="highway" v="path" zoom-min="17">
-				<line stroke="#FFD700" stroke-width="1.30" />
-			</rule>
-			<rule e="way" k="tracktype" v="grade1" zoom-min="13">
-				<line stroke="#FFD700" stroke-width="2.00" />
-			</rule>
-			<rule e="way" k="tracktype" v="grade2" zoom-min="13" zoom-max="14">
-				<line stroke="#FFD700" stroke-width="1.45" />
-			</rule>
-			<rule e="way" k="tracktype" v="grade2" zoom-min="15" zoom-max="15">
-				<line stroke="#FFD700" stroke-width="1.40" />
-			</rule>
-			<rule e="way" k="tracktype" v="grade2" zoom-min="16" zoom-max="16">
-				<line stroke="#FFD700" stroke-width="1.35" />
-			</rule>
-			<rule e="way" k="tracktype" v="grade2" zoom-min="17">
-				<line stroke="#FFD700" stroke-width="1.30" />
-			</rule>
-			<rule e="way" k="tracktype" v="grade3|grade4|grade5|~" zoom-min="13" zoom-max="14">
-				<line stroke="#FFD700" stroke-width="1.45" />
-			</rule>
-			<rule e="way" k="tracktype" v="grade3|grade4|grade5|~" zoom-min="15" zoom-max="15">
-				<line stroke="#FFD700" stroke-width="1.40" />
-			</rule>
-			<rule e="way" k="tracktype" v="grade3|grade4|grade5|~" zoom-min="16" zoom-max="16">
-				<line stroke="#FFD700" stroke-width="1.35" />
-			</rule>
-			<rule e="way" k="tracktype" v="grade3|grade4|grade5|~" zoom-min="17">
-				<line stroke="#FFD700" stroke-width="1.30" />
-			</rule>
-			<rule e="way" k="highway" v="unclassified|residential|living_street|service|road">
-				<line stroke="#FFD700" stroke-width="2.60" />
-			</rule>
-			<rule e="way" k="highway" v="tertiary|motorway_link|trunk_link|primary_link|secondary_link|tertiary_link|secondary|primary|trunk">
-				<line stroke="#FFD700" stroke-width="2.75" />
-			</rule>
-			<rule e="way" k="highway" v="motorway">
-				<line stroke="#FFD700" stroke-width="4.50" />
-			</rule>
-			<rule e="way" k="highway" v="cycleway">
-				<line stroke="#FFD700" stroke-width="1.80" />
-			</rule>
-		</rule>
-	
-	</rule>
-
-	<!-- Colored hiking network GREEN OMP no tunnel -->
-
-	<rule cat="colored_hiking" e="way" k="osmc:symbol" v="green">
-		<rule e="way" k="tunnel" v="~|no|false">
-			<rule e="way" k="highway" v="footway">
-				<line stroke="#00B100" stroke-width="1.80" />
-			</rule>
-			<rule e="way" k="highway" v="path" zoom-min="13" zoom-max="14">
-				<line stroke="#00B100" stroke-width="1.45" />
-			</rule>
-			<rule e="way" k="highway" v="path" zoom-min="15" zoom-max="15">
-				<line stroke="#00B100" stroke-width="1.40" />
-			</rule>
-			<rule e="way" k="highway" v="path" zoom-min="16" zoom-max="16">
-				<line stroke="#00B100" stroke-width="1.35" />
-			</rule>
-			<rule e="way" k="highway" v="path" zoom-min="17">
-				<line stroke="#00B100" stroke-width="1.30" />
-			</rule>
-			<rule e="way" k="tracktype" v="grade1" zoom-min="13">
-				<line stroke="#00B100" stroke-width="2.00" />
-			</rule>
-			<rule e="way" k="tracktype" v="grade2" zoom-min="13" zoom-max="14">
-				<line stroke="#00B100" stroke-width="1.45" />
-			</rule>
-			<rule e="way" k="tracktype" v="grade2" zoom-min="15" zoom-max="15">
-				<line stroke="#00B100" stroke-width="1.40" />
-			</rule>
-			<rule e="way" k="tracktype" v="grade2" zoom-min="16" zoom-max="16">
-				<line stroke="#00B100" stroke-width="1.35" />
-			</rule>
-			<rule e="way" k="tracktype" v="grade2" zoom-min="17">
-				<line stroke="#00B100" stroke-width="1.30" />
-			</rule>
-			<rule e="way" k="tracktype" v="grade3|grade4|grade5|~" zoom-min="13" zoom-max="14">
-				<line stroke="#00B100" stroke-width="1.45" />
-			</rule>
-			<rule e="way" k="tracktype" v="grade3|grade4|grade5|~" zoom-min="15" zoom-max="15">
-				<line stroke="#00B100" stroke-width="1.40" />
-			</rule>
-			<rule e="way" k="tracktype" v="grade3|grade4|grade5|~" zoom-min="16" zoom-max="16">
-				<line stroke="#00B100" stroke-width="1.35" />
-			</rule>
-			<rule e="way" k="tracktype" v="grade3|grade4|grade5|~" zoom-min="17">
-				<line stroke="#00B100" stroke-width="1.30" />
-			</rule>
-			<rule e="way" k="highway" v="unclassified|residential|living_street|service|road">
-				<line stroke="#00B100" stroke-width="2.60" />
-			</rule>
-			<rule e="way" k="highway" v="tertiary|motorway_link|trunk_link|primary_link|secondary_link|tertiary_link|secondary|primary|trunk">
-				<line stroke="#00B100" stroke-width="2.75" />
-			</rule>
-			<rule e="way" k="highway" v="motorway">
-				<line stroke="#00B100" stroke-width="4.50" />
-			</rule>
-			<rule e="way" k="highway" v="cycleway">
-				<line stroke="#00B100" stroke-width="1.80" />
+	<rule e="any" k="hknetwork" v="iwn|nwn">
+		<!-- Colored hiking network BLUE OMP no tunnel -->
+		<rule cat="colored_hiking" e="way" k="osmc_color" v="wmco_blue">
+			<rule e="way" k="tunnel" v="~|no|false">
+				<rule e="way" k="highway" v="footway">
+					<line stroke="#006EFF" stroke-width="1.80" />
+				</rule>
+				<rule e="way" k="highway" v="path" zoom-min="13" zoom-max="14">
+					<line stroke="#006EFF" stroke-width="1.45" />
+				</rule>
+				<rule e="way" k="highway" v="path" zoom-min="15" zoom-max="15">
+					<line stroke="#006EFF" stroke-width="1.40" />
+				</rule>
+				<rule e="way" k="highway" v="path" zoom-min="16" zoom-max="16">
+					<line stroke="#006EFF" stroke-width="1.35" />
+				</rule>
+				<rule e="way" k="highway" v="path" zoom-min="17">
+					<line stroke="#006EFF" stroke-width="1.30" />
+				</rule>
+				<rule e="way" k="tracktype" v="grade1" zoom-min="13">
+					<line stroke="#006EFF" stroke-width="2.00" />
+				</rule>
+				<rule e="way" k="tracktype" v="grade2" zoom-min="13" zoom-max="14">
+					<line stroke="#006EFF" stroke-width="1.45" />
+				</rule>
+				<rule e="way" k="tracktype" v="grade2" zoom-min="15" zoom-max="15">
+					<line stroke="#006EFF" stroke-width="1.40" />
+				</rule>
+				<rule e="way" k="tracktype" v="grade2" zoom-min="16" zoom-max="16">
+					<line stroke="#006EFF" stroke-width="1.35" />
+				</rule>
+				<rule e="way" k="tracktype" v="grade2" zoom-min="17">
+					<line stroke="#006EFF" stroke-width="1.30" />
+				</rule>
+				<rule e="way" k="tracktype" v="grade3|grade4|grade5|~" zoom-min="13" zoom-max="14">
+					<line stroke="#006EFF" stroke-width="1.45" />
+				</rule>
+				<rule e="way" k="tracktype" v="grade3|grade4|grade5|~" zoom-min="15" zoom-max="15">
+					<line stroke="#006EFF" stroke-width="1.40" />
+				</rule>
+				<rule e="way" k="tracktype" v="grade3|grade4|grade5|~" zoom-min="16" zoom-max="16">
+					<line stroke="#006EFF" stroke-width="1.35" />
+				</rule>
+				<rule e="way" k="tracktype" v="grade3|grade4|grade5|~" zoom-min="17">
+					<line stroke="#006EFF" stroke-width="1.30" />
+				</rule>
+				<rule e="way" k="highway" v="unclassified|residential|living_street|service|road">
+					<line stroke="#006EFF" stroke-width="2.60" />
+				</rule>
+				<rule e="way" k="highway"
+					v="tertiary|motorway_link|trunk_link|primary_link|secondary_link|tertiary_link|secondary|primary|trunk">
+					<line stroke="#006EFF" stroke-width="2.75" />
+				</rule>
+				<rule e="way" k="highway" v="motorway">
+					<line stroke="#006EFF" stroke-width="4.50" />
+				</rule>
+				<rule e="way" k="highway" v="cycleway">
+					<line stroke="#006EFF" stroke-width="1.80" />
+				</rule>
 			</rule>
 
 		</rule>
-	</rule>
 
+		<!-- Colored hiking network RED OMP no tunnel -->
+
+		<rule cat="colored_hiking" e="way" k="osmc_color" v="wmco_red">
+			<rule e="way" k="tunnel" v="~|no|false">
+				<rule e="way" k="highway" v="footway">
+					<line stroke="#F00000" stroke-width="1.80" />
+				</rule>
+				<rule e="way" k="highway" v="path" zoom-min="13" zoom-max="14">
+					<line stroke="#F00000" stroke-width="1.45" />
+				</rule>
+				<rule e="way" k="highway" v="path" zoom-min="15" zoom-max="15">
+					<line stroke="#F00000" stroke-width="1.40" />
+				</rule>
+				<rule e="way" k="highway" v="path" zoom-min="16" zoom-max="16">
+					<line stroke="#F00000" stroke-width="1.35" />
+				</rule>
+				<rule e="way" k="highway" v="path" zoom-min="17">
+					<line stroke="#F00000" stroke-width="1.30" />
+				</rule>
+				<rule e="way" k="tracktype" v="grade1" zoom-min="13">
+					<line stroke="#F00000" stroke-width="2.00" />
+				</rule>
+				<rule e="way" k="tracktype" v="grade2" zoom-min="13" zoom-max="14">
+					<line stroke="#F00000" stroke-width="1.45" />
+				</rule>
+				<rule e="way" k="tracktype" v="grade2" zoom-min="15" zoom-max="15">
+					<line stroke="#F00000" stroke-width="1.40" />
+				</rule>
+				<rule e="way" k="tracktype" v="grade2" zoom-min="16" zoom-max="16">
+					<line stroke="#F00000" stroke-width="1.35" />
+				</rule>
+				<rule e="way" k="tracktype" v="grade2" zoom-min="17">
+					<line stroke="#F00000" stroke-width="1.30" />
+				</rule>
+				<rule e="way" k="tracktype" v="grade3|grade4|grade5|~" zoom-min="13" zoom-max="14">
+					<line stroke="#F00000" stroke-width="1.45" />
+				</rule>
+				<rule e="way" k="tracktype" v="grade3|grade4|grade5|~" zoom-min="15" zoom-max="15">
+					<line stroke="#F00000" stroke-width="1.40" />
+				</rule>
+				<rule e="way" k="tracktype" v="grade3|grade4|grade5|~" zoom-min="16" zoom-max="16">
+					<line stroke="#F00000" stroke-width="1.35" />
+				</rule>
+				<rule e="way" k="tracktype" v="grade3|grade4|grade5|~" zoom-min="17">
+					<line stroke="#F00000" stroke-width="1.30" />
+				</rule>
+				<rule e="way" k="highway" v="unclassified|residential|living_street|service|road">
+					<line stroke="#F00000" stroke-width="2.60" />
+				</rule>
+				<rule e="way" k="highway"
+					v="tertiary|motorway_link|trunk_link|primary_link|secondary_link|tertiary_link|secondary|primary|trunk">
+					<line stroke="#F00000" stroke-width="2.75" />
+				</rule>
+				<rule e="way" k="highway" v="motorway">
+					<line stroke="#F00000" stroke-width="4.50" />
+				</rule>
+				<rule e="way" k="highway" v="cycleway">
+					<line stroke="#F00000" stroke-width="1.80" />
+				</rule>
+
+			</rule>
+		</rule>
+
+		<!-- Colored hiking network YELLOW OMP no tunnel -->
+
+		<rule cat="colored_hiking" e="way" k="osmc_color" v="wmco_yellow">
+			<rule e="way" k="tunnel" v="~|no|false">
+				<rule e="way" k="highway" v="footway">
+					<line stroke="#FFD700" stroke-width="1.80" />
+				</rule>
+				<rule e="way" k="highway" v="path" zoom-min="13" zoom-max="14">
+					<line stroke="#FFD700" stroke-width="1.45" />
+				</rule>
+				<rule e="way" k="highway" v="path" zoom-min="15" zoom-max="15">
+					<line stroke="#FFD700" stroke-width="1.40" />
+				</rule>
+				<rule e="way" k="highway" v="path" zoom-min="16" zoom-max="16">
+					<line stroke="#FFD700" stroke-width="1.35" />
+				</rule>
+				<rule e="way" k="highway" v="path" zoom-min="17">
+					<line stroke="#FFD700" stroke-width="1.30" />
+				</rule>
+				<rule e="way" k="tracktype" v="grade1" zoom-min="13">
+					<line stroke="#FFD700" stroke-width="2.00" />
+				</rule>
+				<rule e="way" k="tracktype" v="grade2" zoom-min="13" zoom-max="14">
+					<line stroke="#FFD700" stroke-width="1.45" />
+				</rule>
+				<rule e="way" k="tracktype" v="grade2" zoom-min="15" zoom-max="15">
+					<line stroke="#FFD700" stroke-width="1.40" />
+				</rule>
+				<rule e="way" k="tracktype" v="grade2" zoom-min="16" zoom-max="16">
+					<line stroke="#FFD700" stroke-width="1.35" />
+				</rule>
+				<rule e="way" k="tracktype" v="grade2" zoom-min="17">
+					<line stroke="#FFD700" stroke-width="1.30" />
+				</rule>
+				<rule e="way" k="tracktype" v="grade3|grade4|grade5|~" zoom-min="13" zoom-max="14">
+					<line stroke="#FFD700" stroke-width="1.45" />
+				</rule>
+				<rule e="way" k="tracktype" v="grade3|grade4|grade5|~" zoom-min="15" zoom-max="15">
+					<line stroke="#FFD700" stroke-width="1.40" />
+				</rule>
+				<rule e="way" k="tracktype" v="grade3|grade4|grade5|~" zoom-min="16" zoom-max="16">
+					<line stroke="#FFD700" stroke-width="1.35" />
+				</rule>
+				<rule e="way" k="tracktype" v="grade3|grade4|grade5|~" zoom-min="17">
+					<line stroke="#FFD700" stroke-width="1.30" />
+				</rule>
+				<rule e="way" k="highway" v="unclassified|residential|living_street|service|road">
+					<line stroke="#FFD700" stroke-width="2.60" />
+				</rule>
+				<rule e="way" k="highway"
+					v="tertiary|motorway_link|trunk_link|primary_link|secondary_link|tertiary_link|secondary|primary|trunk">
+					<line stroke="#FFD700" stroke-width="2.75" />
+				</rule>
+				<rule e="way" k="highway" v="motorway">
+					<line stroke="#FFD700" stroke-width="4.50" />
+				</rule>
+				<rule e="way" k="highway" v="cycleway">
+					<line stroke="#FFD700" stroke-width="1.80" />
+				</rule>
+			</rule>
+
+		</rule>
+
+		<!-- Colored hiking network GREEN OMP no tunnel -->
+
+		<rule cat="colored_hiking" e="way" k="osmc_color" v="wmco_green">
+			<rule e="way" k="tunnel" v="~|no|false">
+				<rule e="way" k="highway" v="footway">
+					<line stroke="#00B100" stroke-width="1.80" />
+				</rule>
+				<rule e="way" k="highway" v="path" zoom-min="13" zoom-max="14">
+					<line stroke="#00B100" stroke-width="1.45" />
+				</rule>
+				<rule e="way" k="highway" v="path" zoom-min="15" zoom-max="15">
+					<line stroke="#00B100" stroke-width="1.40" />
+				</rule>
+				<rule e="way" k="highway" v="path" zoom-min="16" zoom-max="16">
+					<line stroke="#00B100" stroke-width="1.35" />
+				</rule>
+				<rule e="way" k="highway" v="path" zoom-min="17">
+					<line stroke="#00B100" stroke-width="1.30" />
+				</rule>
+				<rule e="way" k="tracktype" v="grade1" zoom-min="13">
+					<line stroke="#00B100" stroke-width="2.00" />
+				</rule>
+				<rule e="way" k="tracktype" v="grade2" zoom-min="13" zoom-max="14">
+					<line stroke="#00B100" stroke-width="1.45" />
+				</rule>
+				<rule e="way" k="tracktype" v="grade2" zoom-min="15" zoom-max="15">
+					<line stroke="#00B100" stroke-width="1.40" />
+				</rule>
+				<rule e="way" k="tracktype" v="grade2" zoom-min="16" zoom-max="16">
+					<line stroke="#00B100" stroke-width="1.35" />
+				</rule>
+				<rule e="way" k="tracktype" v="grade2" zoom-min="17">
+					<line stroke="#00B100" stroke-width="1.30" />
+				</rule>
+				<rule e="way" k="tracktype" v="grade3|grade4|grade5|~" zoom-min="13" zoom-max="14">
+					<line stroke="#00B100" stroke-width="1.45" />
+				</rule>
+				<rule e="way" k="tracktype" v="grade3|grade4|grade5|~" zoom-min="15" zoom-max="15">
+					<line stroke="#00B100" stroke-width="1.40" />
+				</rule>
+				<rule e="way" k="tracktype" v="grade3|grade4|grade5|~" zoom-min="16" zoom-max="16">
+					<line stroke="#00B100" stroke-width="1.35" />
+				</rule>
+				<rule e="way" k="tracktype" v="grade3|grade4|grade5|~" zoom-min="17">
+					<line stroke="#00B100" stroke-width="1.30" />
+				</rule>
+				<rule e="way" k="highway" v="unclassified|residential|living_street|service|road">
+					<line stroke="#00B100" stroke-width="2.60" />
+				</rule>
+				<rule e="way" k="highway"
+					v="tertiary|motorway_link|trunk_link|primary_link|secondary_link|tertiary_link|secondary|primary|trunk">
+					<line stroke="#00B100" stroke-width="2.75" />
+				</rule>
+				<rule e="way" k="highway" v="motorway">
+					<line stroke="#00B100" stroke-width="4.50" />
+				</rule>
+				<rule e="way" k="highway" v="cycleway">
+					<line stroke="#00B100" stroke-width="1.80" />
+				</rule>
+			</rule>
+		</rule>
+	</rule>
 
 	<!-- Toll highways no tunnel-->
 	<rule cat="toll_roads" e="way" k="highway" v="*">
@@ -2531,7 +2726,7 @@ Magellan changes:
 
 
 		<!-- OMP TRAIL MARKS -->
-<!-- 		<rule cat="omp_tm" e="node" k="Type" v="*">
+		<!-- 		<rule cat="omp_tm" e="node" k="Type" v="*">
 		
 
 		</rule> -->
