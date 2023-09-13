@@ -62,7 +62,8 @@ contour pathtext rotate_up=false (всегда "в гору")
 поправил неотображение bare_rock поверх леса, изменил на свой
 12/9/2023
 поправил неотображение леса с разными типами листвы (хв., листв., смеш.). было только mixed
-
+13/9/2023
+выключил TRAIL MARKS  ( omp_tm )
 -->
 <rendertheme xmlns="http://mapsforge.org/renderTheme" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://mapsforge.org/renderTheme ../renderTheme.xsd" scale-line-dy-by-zoom="1" fill-sea-areas="0" version="1" map-background="#ffffea">
@@ -98,7 +99,7 @@ contour pathtext rotate_up=false (всегда "в гору")
 		<name lang="hu" value="Téli sportok kiemelés" />
 		<name lang="de" value="Wintersport routen" />
 		<name lang="en" value="Winter sports routes" />
-		<name lang="ru" value="Зимние спортивные маршруты" />		
+		<name lang="ru" value="Зимние спортивные маршруты" />
 		<cat id="omp_winter" />
 	</layer>
 	
@@ -106,7 +107,7 @@ contour pathtext rotate_up=false (всегда "в гору")
 		<name lang="hu" value="Turistaút kiemelés (piros)" />
 		<name lang="de" value="Wanderrouten (rot)" />
 		<name lang="en" value="Hiking routes (red)" />
-		<name lang="ru" value="Пешие маршруты (тропы)" />		
+		<name lang="ru" value="Пешие маршруты (тропы)" />
 		<cat id="omp_hiking" />
 	</layer>
 	
@@ -118,13 +119,13 @@ contour pathtext rotate_up=false (всегда "в гору")
 		<cat id="colored_hiking" />
 	</layer>
 		
-	<layer id="hiking_trailmarks_t" enabled="true">
+<!-- 	<layer id="hiking_trailmarks_t" enabled="true">
 		<name lang="hu" value="Turistajelzések" />
 		<name lang="de" value="Wandermarkierungen" />
 		<name lang="en" value="Hiking path symbol" />
 		<name lang="ru" value="Маркер пути(тропы)" />		
 		<cat id="omp_tm" />
-	</layer>
+	</layer> -->
 		
 	<layer id="viaferrata_t" enabled="true">
 		<name lang="hu" value="Alpin utak, via ferrata" />
@@ -2150,413 +2151,9 @@ contour pathtext rotate_up=false (всегда "в гору")
 
 		<!-- OMP TRAIL MARKS -->
 		<rule cat="omp_tm" e="node" k="Type" v="*">
-<!-- <rule e="node" k="Type" v="0x3320-14" zoom-min="14" zoom-max="14"><symbol src="file:/trailmarks/0x3320.svg" scale="1.6" /></rule>
-<rule e="node" k="Type" v="0x3320-15" zoom-min="15" zoom-max="15"><symbol src="file:/trailmarks/0x3320.svg" scale="1.6" /></rule>
-<rule e="node" k="Type" v="0x3320-16" zoom-min="16" zoom-max="16"><symbol src="file:/trailmarks/0x3320.svg" scale="1.6" /></rule>
-<rule e="node" k="Type" v="0x3320-17" zoom-min="17" zoom-max="17"><symbol src="file:/trailmarks/0x3320.svg" scale="1.6" /></rule>
-<rule e="node" k="Type" v="0x3320-18" zoom-min="18"><symbol src="file:/trailmarks/0x3320.svg" scale="1.6" /></rule>
-<rule e="node" k="Type" v="0x3321-14" zoom-min="14" zoom-max="14"><symbol src="file:/trailmarks/0x3321.svg" scale="1.6" /></rule>
-<rule e="node" k="Type" v="0x3321-15" zoom-min="15" zoom-max="15"><symbol src="file:/trailmarks/0x3321.svg" scale="1.6" /></rule>
-<rule e="node" k="Type" v="0x3321-16" zoom-min="16" zoom-max="16"><symbol src="file:/trailmarks/0x3321.svg" scale="1.6" /></rule>
-<rule e="node" k="Type" v="0x3321-17" zoom-min="17" zoom-max="17"><symbol src="file:/trailmarks/0x3321.svg" scale="1.6" /></rule>
-<rule e="node" k="Type" v="0x3321-18" zoom-min="18"><symbol src="file:/trailmarks/0x3321.svg" scale="1.6" /></rule>
-<rule e="node" k="Type" v="0x3322-14" zoom-min="14" zoom-max="14"><symbol src="file:/trailmarks/0x3322.svg" scale="1.6" /></rule>
-<rule e="node" k="Type" v="0x3322-15" zoom-min="15" zoom-max="15"><symbol src="file:/trailmarks/0x3322.svg" scale="1.6" /></rule>
-<rule e="node" k="Type" v="0x3322-16" zoom-min="16" zoom-max="16"><symbol src="file:/trailmarks/0x3322.svg" scale="1.6" /></rule>
-<rule e="node" k="Type" v="0x3322-17" zoom-min="17" zoom-max="17"><symbol src="file:/trailmarks/0x3322.svg" scale="1.6" /></rule>
-<rule e="node" k="Type" v="0x3322-18" zoom-min="18"><symbol src="file:/trailmarks/0x3322.svg" scale="1.6" /></rule>
-<rule e="node" k="Type" v="0x3323-14" zoom-min="14" zoom-max="14"><symbol src="file:/trailmarks/0x3323.svg" scale="1.6" /></rule>
-<rule e="node" k="Type" v="0x3323-15" zoom-min="15" zoom-max="15"><symbol src="file:/trailmarks/0x3323.svg" scale="1.6" /></rule>
-<rule e="node" k="Type" v="0x3323-16" zoom-min="16" zoom-max="16"><symbol src="file:/trailmarks/0x3323.svg" scale="1.6" /></rule>
-<rule e="node" k="Type" v="0x3323-17" zoom-min="17" zoom-max="17"><symbol src="file:/trailmarks/0x3323.svg" scale="1.6" /></rule>
-<rule e="node" k="Type" v="0x3323-18" zoom-min="18"><symbol src="file:/trailmarks/0x3323.svg" scale="1.6" /></rule>
-<rule e="node" k="Type" v="0x3324-14" zoom-min="14" zoom-max="14"><symbol src="file:/trailmarks/0x3324.svg" scale="1.6" /></rule>
-<rule e="node" k="Type" v="0x3324-15" zoom-min="15" zoom-max="15"><symbol src="file:/trailmarks/0x3324.svg" scale="1.6" /></rule>
-<rule e="node" k="Type" v="0x3324-16" zoom-min="16" zoom-max="16"><symbol src="file:/trailmarks/0x3324.svg" scale="1.6" /></rule>
-<rule e="node" k="Type" v="0x3324-17" zoom-min="17" zoom-max="17"><symbol src="file:/trailmarks/0x3324.svg" scale="1.6" /></rule>
-<rule e="node" k="Type" v="0x3324-18" zoom-min="18"><symbol src="file:/trailmarks/0x3324.svg" scale="1.6" /></rule>
-<rule e="node" k="Type" v="0x3325-14" zoom-min="14" zoom-max="14"><symbol src="file:/trailmarks/0x3325.svg" scale="1.6" /></rule>
-<rule e="node" k="Type" v="0x3325-15" zoom-min="15" zoom-max="15"><symbol src="file:/trailmarks/0x3325.svg" scale="1.6" /></rule>
-<rule e="node" k="Type" v="0x3325-16" zoom-min="16" zoom-max="16"><symbol src="file:/trailmarks/0x3325.svg" scale="1.6" /></rule>
-<rule e="node" k="Type" v="0x3325-17" zoom-min="17" zoom-max="17"><symbol src="file:/trailmarks/0x3325.svg" scale="1.6" /></rule>
-<rule e="node" k="Type" v="0x3325-18" zoom-min="18"><symbol src="file:/trailmarks/0x3325.svg" scale="1.6" /></rule>
-<rule e="node" k="Type" v="0x3326-14" zoom-min="14" zoom-max="14"><symbol src="file:/trailmarks/0x3326.svg" scale="1.6" /></rule>
-<rule e="node" k="Type" v="0x3326-15" zoom-min="15" zoom-max="15"><symbol src="file:/trailmarks/0x3326.svg" scale="1.6" /></rule>
-<rule e="node" k="Type" v="0x3326-16" zoom-min="16" zoom-max="16"><symbol src="file:/trailmarks/0x3326.svg" scale="1.6" /></rule>
-<rule e="node" k="Type" v="0x3326-17" zoom-min="17" zoom-max="17"><symbol src="file:/trailmarks/0x3326.svg" scale="1.6" /></rule>
-<rule e="node" k="Type" v="0x3326-18" zoom-min="18"><symbol src="file:/trailmarks/0x3326.svg" scale="1.6" /></rule>
-<rule e="node" k="Type" v="0x3327-14" zoom-min="14" zoom-max="14"><symbol src="file:/trailmarks/0x3327.svg" scale="1.6" /></rule>
-<rule e="node" k="Type" v="0x3327-15" zoom-min="15" zoom-max="15"><symbol src="file:/trailmarks/0x3327.svg" scale="1.6" /></rule>
-<rule e="node" k="Type" v="0x3327-16" zoom-min="16" zoom-max="16"><symbol src="file:/trailmarks/0x3327.svg" scale="1.6" /></rule>
-<rule e="node" k="Type" v="0x3327-17" zoom-min="17" zoom-max="17"><symbol src="file:/trailmarks/0x3327.svg" scale="1.6" /></rule>
-<rule e="node" k="Type" v="0x3327-18" zoom-min="18"><symbol src="file:/trailmarks/0x3327.svg" scale="1.6" /></rule>
-<rule e="node" k="Type" v="0x3328-14" zoom-min="14" zoom-max="14"><symbol src="file:/trailmarks/0x3328.svg" scale="1.6" /></rule>
-<rule e="node" k="Type" v="0x3328-15" zoom-min="15" zoom-max="15"><symbol src="file:/trailmarks/0x3328.svg" scale="1.6" /></rule>
-<rule e="node" k="Type" v="0x3328-16" zoom-min="16" zoom-max="16"><symbol src="file:/trailmarks/0x3328.svg" scale="1.6" /></rule>
-<rule e="node" k="Type" v="0x3328-17" zoom-min="17" zoom-max="17"><symbol src="file:/trailmarks/0x3328.svg" scale="1.6" /></rule>
-<rule e="node" k="Type" v="0x3328-18" zoom-min="18"><symbol src="file:/trailmarks/0x3328.svg" scale="1.6" /></rule>
-<rule e="node" k="Type" v="0x3329-14" zoom-min="14" zoom-max="14"><symbol src="file:/trailmarks/0x3329.svg" scale="1.6" /></rule>
-<rule e="node" k="Type" v="0x3329-15" zoom-min="15" zoom-max="15"><symbol src="file:/trailmarks/0x3329.svg" scale="1.6" /></rule>
-<rule e="node" k="Type" v="0x3329-16" zoom-min="16" zoom-max="16"><symbol src="file:/trailmarks/0x3329.svg" scale="1.6" /></rule>
-<rule e="node" k="Type" v="0x3329-17" zoom-min="17" zoom-max="17"><symbol src="file:/trailmarks/0x3329.svg" scale="1.6" /></rule>
-<rule e="node" k="Type" v="0x3329-18" zoom-min="18"><symbol src="file:/trailmarks/0x3329.svg" scale="1.6" /></rule>
-<rule e="node" k="Type" v="0x332a-14" zoom-min="14" zoom-max="14"><symbol src="file:/trailmarks/0x332a.svg" scale="1.6" /></rule>
-<rule e="node" k="Type" v="0x332a-15" zoom-min="15" zoom-max="15"><symbol src="file:/trailmarks/0x332a.svg" scale="1.6" /></rule>
-<rule e="node" k="Type" v="0x332a-16" zoom-min="16" zoom-max="16"><symbol src="file:/trailmarks/0x332a.svg" scale="1.6" /></rule>
-<rule e="node" k="Type" v="0x332a-17" zoom-min="17" zoom-max="17"><symbol src="file:/trailmarks/0x332a.svg" scale="1.6" /></rule>
-<rule e="node" k="Type" v="0x332a-18" zoom-min="18"><symbol src="file:/trailmarks/0x332a.svg" scale="1.6" /></rule>
-<rule e="node" k="Type" v="0x332b-14" zoom-min="14" zoom-max="14"><symbol src="file:/trailmarks/0x332b.svg" scale="1.6" /></rule>
-<rule e="node" k="Type" v="0x332b-15" zoom-min="15" zoom-max="15"><symbol src="file:/trailmarks/0x332b.svg" scale="1.6" /></rule>
-<rule e="node" k="Type" v="0x332b-16" zoom-min="16" zoom-max="16"><symbol src="file:/trailmarks/0x332b.svg" scale="1.6" /></rule>
-<rule e="node" k="Type" v="0x332b-17" zoom-min="17" zoom-max="17"><symbol src="file:/trailmarks/0x332b.svg" scale="1.6" /></rule>
-<rule e="node" k="Type" v="0x332b-18" zoom-min="18"><symbol src="file:/trailmarks/0x332b.svg" scale="1.6" /></rule>
-<rule e="node" k="Type" v="0x332c-14" zoom-min="14" zoom-max="14"><symbol src="file:/trailmarks/0x332c.svg" scale="1.6" /></rule>
-<rule e="node" k="Type" v="0x332c-15" zoom-min="15" zoom-max="15"><symbol src="file:/trailmarks/0x332c.svg" scale="1.6" /></rule>
-<rule e="node" k="Type" v="0x332c-16" zoom-min="16" zoom-max="16"><symbol src="file:/trailmarks/0x332c.svg" scale="1.6" /></rule>
-<rule e="node" k="Type" v="0x332c-17" zoom-min="17" zoom-max="17"><symbol src="file:/trailmarks/0x332c.svg" scale="1.6" /></rule>
-<rule e="node" k="Type" v="0x332c-18" zoom-min="18"><symbol src="file:/trailmarks/0x332c.svg" scale="1.6" /></rule>
-<rule e="node" k="Type" v="0x332d-14" zoom-min="14" zoom-max="14"><symbol src="file:/trailmarks/0x332d.svg" scale="1.6" /></rule>
-<rule e="node" k="Type" v="0x332d-15" zoom-min="15" zoom-max="15"><symbol src="file:/trailmarks/0x332d.svg" scale="1.6" /></rule>
-<rule e="node" k="Type" v="0x332d-16" zoom-min="16" zoom-max="16"><symbol src="file:/trailmarks/0x332d.svg" scale="1.6" /></rule>
-<rule e="node" k="Type" v="0x332d-17" zoom-min="17" zoom-max="17"><symbol src="file:/trailmarks/0x332d.svg" scale="1.6" /></rule>
-<rule e="node" k="Type" v="0x332d-18" zoom-min="18"><symbol src="file:/trailmarks/0x332d.svg" scale="1.6" /></rule>
-<rule e="node" k="Type" v="0x332e-14" zoom-min="14" zoom-max="14"><symbol src="file:/trailmarks/0x332e.svg" scale="1.6" /></rule>
-<rule e="node" k="Type" v="0x332e-15" zoom-min="15" zoom-max="15"><symbol src="file:/trailmarks/0x332e.svg" scale="1.6" /></rule>
-<rule e="node" k="Type" v="0x332e-16" zoom-min="16" zoom-max="16"><symbol src="file:/trailmarks/0x332e.svg" scale="1.6" /></rule>
-<rule e="node" k="Type" v="0x332e-17" zoom-min="17" zoom-max="17"><symbol src="file:/trailmarks/0x332e.svg" scale="1.6" /></rule>
-<rule e="node" k="Type" v="0x332e-18" zoom-min="18"><symbol src="file:/trailmarks/0x332e.svg" scale="1.6" /></rule>
-<rule e="node" k="Type" v="0x332f-14" zoom-min="14" zoom-max="14"><symbol src="file:/trailmarks/0x332f.svg" scale="1.6" /></rule>
-<rule e="node" k="Type" v="0x332f-15" zoom-min="15" zoom-max="15"><symbol src="file:/trailmarks/0x332f.svg" scale="1.6" /></rule>
-<rule e="node" k="Type" v="0x332f-16" zoom-min="16" zoom-max="16"><symbol src="file:/trailmarks/0x332f.svg" scale="1.6" /></rule>
-<rule e="node" k="Type" v="0x332f-17" zoom-min="17" zoom-max="17"><symbol src="file:/trailmarks/0x332f.svg" scale="1.6" /></rule>
-<rule e="node" k="Type" v="0x332f-18" zoom-min="18"><symbol src="file:/trailmarks/0x332f.svg" scale="1.6" /></rule>
-<rule e="node" k="Type" v="0x3330-14" zoom-min="14" zoom-max="14"><symbol src="file:/trailmarks/0x3330.svg" scale="1.6" /></rule>
-<rule e="node" k="Type" v="0x3330-15" zoom-min="15" zoom-max="15"><symbol src="file:/trailmarks/0x3330.svg" scale="1.6" /></rule>
-<rule e="node" k="Type" v="0x3330-16" zoom-min="16" zoom-max="16"><symbol src="file:/trailmarks/0x3330.svg" scale="1.6" /></rule>
-<rule e="node" k="Type" v="0x3330-17" zoom-min="17" zoom-max="17"><symbol src="file:/trailmarks/0x3330.svg" scale="1.6" /></rule>
-<rule e="node" k="Type" v="0x3330-18" zoom-min="18"><symbol src="file:/trailmarks/0x3330.svg" scale="1.6" /></rule>
-<rule e="node" k="Type" v="0x3331-14" zoom-min="14" zoom-max="14"><symbol src="file:/trailmarks/0x3331.svg" scale="1.6" /></rule>
-<rule e="node" k="Type" v="0x3331-15" zoom-min="15" zoom-max="15"><symbol src="file:/trailmarks/0x3331.svg" scale="1.6" /></rule>
-<rule e="node" k="Type" v="0x3331-16" zoom-min="16" zoom-max="16"><symbol src="file:/trailmarks/0x3331.svg" scale="1.6" /></rule>
-<rule e="node" k="Type" v="0x3331-17" zoom-min="17" zoom-max="17"><symbol src="file:/trailmarks/0x3331.svg" scale="1.6" /></rule>
-<rule e="node" k="Type" v="0x3331-18" zoom-min="18"><symbol src="file:/trailmarks/0x3331.svg" scale="1.6" /></rule>
-<rule e="node" k="Type" v="0x3332-14" zoom-min="14" zoom-max="14"><symbol src="file:/trailmarks/0x3332.svg" scale="1.6" /></rule>
-<rule e="node" k="Type" v="0x3332-15" zoom-min="15" zoom-max="15"><symbol src="file:/trailmarks/0x3332.svg" scale="1.6" /></rule>
-<rule e="node" k="Type" v="0x3332-16" zoom-min="16" zoom-max="16"><symbol src="file:/trailmarks/0x3332.svg" scale="1.6" /></rule>
-<rule e="node" k="Type" v="0x3332-17" zoom-min="17" zoom-max="17"><symbol src="file:/trailmarks/0x3332.svg" scale="1.6" /></rule>
-<rule e="node" k="Type" v="0x3332-18" zoom-min="18"><symbol src="file:/trailmarks/0x3332.svg" scale="1.6" /></rule>
-<rule e="node" k="Type" v="0x3333-14" zoom-min="14" zoom-max="14"><symbol src="file:/trailmarks/0x3333.svg" scale="1.6" /></rule>
-<rule e="node" k="Type" v="0x3333-15" zoom-min="15" zoom-max="15"><symbol src="file:/trailmarks/0x3333.svg" scale="1.6" /></rule>
-<rule e="node" k="Type" v="0x3333-16" zoom-min="16" zoom-max="16"><symbol src="file:/trailmarks/0x3333.svg" scale="1.6" /></rule>
-<rule e="node" k="Type" v="0x3333-17" zoom-min="17" zoom-max="17"><symbol src="file:/trailmarks/0x3333.svg" scale="1.6" /></rule>
-<rule e="node" k="Type" v="0x3333-18" zoom-min="18"><symbol src="file:/trailmarks/0x3333.svg" scale="1.6" /></rule>
-<rule e="node" k="Type" v="0x3334-14" zoom-min="14" zoom-max="14"><symbol src="file:/trailmarks/0x3334.svg" scale="1.6" /></rule>
-<rule e="node" k="Type" v="0x3334-15" zoom-min="15" zoom-max="15"><symbol src="file:/trailmarks/0x3334.svg" scale="1.6" /></rule>
-<rule e="node" k="Type" v="0x3334-16" zoom-min="16" zoom-max="16"><symbol src="file:/trailmarks/0x3334.svg" scale="1.6" /></rule>
-<rule e="node" k="Type" v="0x3334-17" zoom-min="17" zoom-max="17"><symbol src="file:/trailmarks/0x3334.svg" scale="1.6" /></rule>
-<rule e="node" k="Type" v="0x3334-18" zoom-min="18"><symbol src="file:/trailmarks/0x3334.svg" scale="1.6" /></rule>
-<rule e="node" k="Type" v="0x3335-14" zoom-min="14" zoom-max="14"><symbol src="file:/trailmarks/0x3335.svg" scale="1.6" /></rule>
-<rule e="node" k="Type" v="0x3335-15" zoom-min="15" zoom-max="15"><symbol src="file:/trailmarks/0x3335.svg" scale="1.6" /></rule>
-<rule e="node" k="Type" v="0x3335-16" zoom-min="16" zoom-max="16"><symbol src="file:/trailmarks/0x3335.svg" scale="1.6" /></rule>
-<rule e="node" k="Type" v="0x3335-17" zoom-min="17" zoom-max="17"><symbol src="file:/trailmarks/0x3335.svg" scale="1.6" /></rule>
-<rule e="node" k="Type" v="0x3335-18" zoom-min="18"><symbol src="file:/trailmarks/0x3335.svg" scale="1.6" /></rule>
-<rule e="node" k="Type" v="0x3336-14" zoom-min="14" zoom-max="14"><symbol src="file:/trailmarks/0x3336.svg" scale="1.6" /></rule>
-<rule e="node" k="Type" v="0x3336-15" zoom-min="15" zoom-max="15"><symbol src="file:/trailmarks/0x3336.svg" scale="1.6" /></rule>
-<rule e="node" k="Type" v="0x3336-16" zoom-min="16" zoom-max="16"><symbol src="file:/trailmarks/0x3336.svg" scale="1.6" /></rule>
-<rule e="node" k="Type" v="0x3336-17" zoom-min="17" zoom-max="17"><symbol src="file:/trailmarks/0x3336.svg" scale="1.6" /></rule>
-<rule e="node" k="Type" v="0x3336-18" zoom-min="18"><symbol src="file:/trailmarks/0x3336.svg" scale="1.6" /></rule>
-<rule e="node" k="Type" v="0x3337-14" zoom-min="14" zoom-max="14"><symbol src="file:/trailmarks/0x3337.svg" scale="1.6" /></rule>
-<rule e="node" k="Type" v="0x3337-15" zoom-min="15" zoom-max="15"><symbol src="file:/trailmarks/0x3337.svg" scale="1.6" /></rule>
-<rule e="node" k="Type" v="0x3337-16" zoom-min="16" zoom-max="16"><symbol src="file:/trailmarks/0x3337.svg" scale="1.6" /></rule>
-<rule e="node" k="Type" v="0x3337-17" zoom-min="17" zoom-max="17"><symbol src="file:/trailmarks/0x3337.svg" scale="1.6" /></rule>
-<rule e="node" k="Type" v="0x3337-18" zoom-min="18"><symbol src="file:/trailmarks/0x3337.svg" scale="1.6" /></rule>
-<rule e="node" k="Type" v="0x3338-14" zoom-min="14" zoom-max="14"><symbol src="file:/trailmarks/0x3338.svg" scale="1.6" /></rule>
-<rule e="node" k="Type" v="0x3338-15" zoom-min="15" zoom-max="15"><symbol src="file:/trailmarks/0x3338.svg" scale="1.6" /></rule>
-<rule e="node" k="Type" v="0x3338-16" zoom-min="16" zoom-max="16"><symbol src="file:/trailmarks/0x3338.svg" scale="1.6" /></rule>
-<rule e="node" k="Type" v="0x3338-17" zoom-min="17" zoom-max="17"><symbol src="file:/trailmarks/0x3338.svg" scale="1.6" /></rule>
-<rule e="node" k="Type" v="0x3338-18" zoom-min="18"><symbol src="file:/trailmarks/0x3338.svg" scale="1.6" /></rule>
-<rule e="node" k="Type" v="0x3339-14" zoom-min="14" zoom-max="14"><symbol src="file:/trailmarks/0x3339.svg" scale="1.6" /></rule>
-<rule e="node" k="Type" v="0x3339-15" zoom-min="15" zoom-max="15"><symbol src="file:/trailmarks/0x3339.svg" scale="1.6" /></rule>
-<rule e="node" k="Type" v="0x3339-16" zoom-min="16" zoom-max="16"><symbol src="file:/trailmarks/0x3339.svg" scale="1.6" /></rule>
-<rule e="node" k="Type" v="0x3339-17" zoom-min="17" zoom-max="17"><symbol src="file:/trailmarks/0x3339.svg" scale="1.6" /></rule>
-<rule e="node" k="Type" v="0x3339-18" zoom-min="18"><symbol src="file:/trailmarks/0x3339.svg" scale="1.6" /></rule>
-<rule e="node" k="Type" v="0x333a-14" zoom-min="14" zoom-max="14"><symbol src="file:/trailmarks/0x333a.svg" scale="1.6" /></rule>
-<rule e="node" k="Type" v="0x333a-15" zoom-min="15" zoom-max="15"><symbol src="file:/trailmarks/0x333a.svg" scale="1.6" /></rule>
-<rule e="node" k="Type" v="0x333a-16" zoom-min="16" zoom-max="16"><symbol src="file:/trailmarks/0x333a.svg" scale="1.6" /></rule>
-<rule e="node" k="Type" v="0x333a-17" zoom-min="17" zoom-max="17"><symbol src="file:/trailmarks/0x333a.svg" scale="1.6" /></rule>
-<rule e="node" k="Type" v="0x333a-18" zoom-min="18"><symbol src="file:/trailmarks/0x333A.svg" scale="1.6" /></rule>
-<rule e="node" k="Type" v="0x333b-14" zoom-min="14" zoom-max="14"><symbol src="file:/trailmarks/0x333b.svg" scale="1.6" /></rule>
-<rule e="node" k="Type" v="0x333b-15" zoom-min="15" zoom-max="15"><symbol src="file:/trailmarks/0x333b.svg" scale="1.6" /></rule>
-<rule e="node" k="Type" v="0x333b-16" zoom-min="16" zoom-max="16"><symbol src="file:/trailmarks/0x333b.svg" scale="1.6" /></rule>
-<rule e="node" k="Type" v="0x333b-17" zoom-min="17" zoom-max="17"><symbol src="file:/trailmarks/0x333b.svg" scale="1.6" /></rule>
-<rule e="node" k="Type" v="0x333b-18" zoom-min="18"><symbol src="file:/trailmarks/0x333B.svg" scale="1.6" /></rule>
-<rule e="node" k="Type" v="0x333c-14" zoom-min="14" zoom-max="14"><symbol src="file:/trailmarks/0x333c.svg" scale="1.6" /></rule>
-<rule e="node" k="Type" v="0x333c-15" zoom-min="15" zoom-max="15"><symbol src="file:/trailmarks/0x333c.svg" scale="1.6" /></rule>
-<rule e="node" k="Type" v="0x333c-16" zoom-min="16" zoom-max="16"><symbol src="file:/trailmarks/0x333c.svg" scale="1.6" /></rule>
-<rule e="node" k="Type" v="0x333c-17" zoom-min="17" zoom-max="17"><symbol src="file:/trailmarks/0x333c.svg" scale="1.6" /></rule>
-<rule e="node" k="Type" v="0x333c-18" zoom-min="18"><symbol src="file:/trailmarks/0x333C.svg" scale="1.6" /></rule>
-<rule e="node" k="Type" v="0x333d-14" zoom-min="14" zoom-max="14"><symbol src="file:/trailmarks/0x333d.svg" scale="1.6" /></rule>
-<rule e="node" k="Type" v="0x333d-15" zoom-min="15" zoom-max="15"><symbol src="file:/trailmarks/0x333d.svg" scale="1.6" /></rule>
-<rule e="node" k="Type" v="0x333d-16" zoom-min="16" zoom-max="16"><symbol src="file:/trailmarks/0x333d.svg" scale="1.6" /></rule>
-<rule e="node" k="Type" v="0x333d-17" zoom-min="17" zoom-max="17"><symbol src="file:/trailmarks/0x333d.svg" scale="1.6" /></rule>
-<rule e="node" k="Type" v="0x333d-18" zoom-min="18"><symbol src="file:/trailmarks/0x333D.svg" scale="1.6" /></rule>
-<rule e="node" k="Type" v="0x333e-14" zoom-min="14" zoom-max="14"><symbol src="file:/trailmarks/0x333e.svg" scale="1.6" /></rule>
-<rule e="node" k="Type" v="0x333e-15" zoom-min="15" zoom-max="15"><symbol src="file:/trailmarks/0x333e.svg" scale="1.6" /></rule>
-<rule e="node" k="Type" v="0x333e-16" zoom-min="16" zoom-max="16"><symbol src="file:/trailmarks/0x333e.svg" scale="1.6" /></rule>
-<rule e="node" k="Type" v="0x333e-17" zoom-min="17" zoom-max="17"><symbol src="file:/trailmarks/0x333e.svg" scale="1.6" /></rule>
-<rule e="node" k="Type" v="0x333e-18" zoom-min="18"><symbol src="file:/trailmarks/0x333E.svg" scale="1.6" /></rule>
-<rule e="node" k="Type" v="0x333f-14" zoom-min="14" zoom-max="14"><symbol src="file:/trailmarks/0x333f.svg" scale="1.6" /></rule>
-<rule e="node" k="Type" v="0x333f-15" zoom-min="15" zoom-max="15"><symbol src="file:/trailmarks/0x333f.svg" scale="1.6" /></rule>
-<rule e="node" k="Type" v="0x333f-16" zoom-min="16" zoom-max="16"><symbol src="file:/trailmarks/0x333f.svg" scale="1.6" /></rule>
-<rule e="node" k="Type" v="0x333f-17" zoom-min="17" zoom-max="17"><symbol src="file:/trailmarks/0x333f.svg" scale="1.6" /></rule>
-<rule e="node" k="Type" v="0x333f-18" zoom-min="18"><symbol src="file:/trailmarks/0x333F.svg" scale="1.6" /></rule>
-<rule e="node" k="Type" v="0x3520-14" zoom-min="14" zoom-max="14"><symbol src="file:/trailmarks/0x3520.svg" scale="1.6" /></rule>
-<rule e="node" k="Type" v="0x3520-15" zoom-min="15" zoom-max="15"><symbol src="file:/trailmarks/0x3520.svg" scale="1.6" /></rule>
-<rule e="node" k="Type" v="0x3520-16" zoom-min="16" zoom-max="16"><symbol src="file:/trailmarks/0x3520.svg" scale="1.6" /></rule>
-<rule e="node" k="Type" v="0x3520-17" zoom-min="17" zoom-max="17"><symbol src="file:/trailmarks/0x3520.svg" scale="1.6" /></rule>
-<rule e="node" k="Type" v="0x3520-18" zoom-min="18"><symbol src="file:/trailmarks/0x3520.svg" scale="1.6" /></rule>
-<rule e="node" k="Type" v="0x3521-14" zoom-min="14" zoom-max="14"><symbol src="file:/trailmarks/0x3521.svg" scale="1.6" /></rule>
-<rule e="node" k="Type" v="0x3521-15" zoom-min="15" zoom-max="15"><symbol src="file:/trailmarks/0x3521.svg" scale="1.6" /></rule>
-<rule e="node" k="Type" v="0x3521-16" zoom-min="16" zoom-max="16"><symbol src="file:/trailmarks/0x3521.svg" scale="1.6" /></rule>
-<rule e="node" k="Type" v="0x3521-17" zoom-min="17" zoom-max="17"><symbol src="file:/trailmarks/0x3521.svg" scale="1.6" /></rule>
-<rule e="node" k="Type" v="0x3521-18" zoom-min="18"><symbol src="file:/trailmarks/0x3521.svg" scale="1.6" /></rule>
-<rule e="node" k="Type" v="0x3522-14" zoom-min="14" zoom-max="14"><symbol src="file:/trailmarks/0x3522.svg" scale="1.6" /></rule>
-<rule e="node" k="Type" v="0x3522-15" zoom-min="15" zoom-max="15"><symbol src="file:/trailmarks/0x3522.svg" scale="1.6" /></rule>
-<rule e="node" k="Type" v="0x3522-16" zoom-min="16" zoom-max="16"><symbol src="file:/trailmarks/0x3522.svg" scale="1.6" /></rule>
-<rule e="node" k="Type" v="0x3522-17" zoom-min="17" zoom-max="17"><symbol src="file:/trailmarks/0x3522.svg" scale="1.6" /></rule>
-<rule e="node" k="Type" v="0x3522-18" zoom-min="18"><symbol src="file:/trailmarks/0x3522.svg" scale="1.6" /></rule>
-<rule e="node" k="Type" v="0x3523-14" zoom-min="14" zoom-max="14"><symbol src="file:/trailmarks/0x3523.svg" scale="1.6" /></rule>
-<rule e="node" k="Type" v="0x3523-15" zoom-min="15" zoom-max="15"><symbol src="file:/trailmarks/0x3523.svg" scale="1.6" /></rule>
-<rule e="node" k="Type" v="0x3523-16" zoom-min="16" zoom-max="16"><symbol src="file:/trailmarks/0x3523.svg" scale="1.6" /></rule>
-<rule e="node" k="Type" v="0x3523-17" zoom-min="17" zoom-max="17"><symbol src="file:/trailmarks/0x3523.svg" scale="1.6" /></rule>
-<rule e="node" k="Type" v="0x3523-18" zoom-min="18"><symbol src="file:/trailmarks/0x3523.svg" scale="1.6" /></rule>
-<rule e="node" k="Type" v="0x3524-14" zoom-min="14" zoom-max="14"><symbol src="file:/trailmarks/0x3524.svg" scale="1.6" /></rule>
-<rule e="node" k="Type" v="0x3524-15" zoom-min="15" zoom-max="15"><symbol src="file:/trailmarks/0x3524.svg" scale="1.6" /></rule>
-<rule e="node" k="Type" v="0x3524-16" zoom-min="16" zoom-max="16"><symbol src="file:/trailmarks/0x3524.svg" scale="1.6" /></rule>
-<rule e="node" k="Type" v="0x3524-17" zoom-min="17" zoom-max="17"><symbol src="file:/trailmarks/0x3524.svg" scale="1.6" /></rule>
-<rule e="node" k="Type" v="0x3524-18" zoom-min="18"><symbol src="file:/trailmarks/0x3524.svg" scale="1.6" /></rule>
-<rule e="node" k="Type" v="0x3525-14" zoom-min="14" zoom-max="14"><symbol src="file:/trailmarks/0x3525.svg" scale="1.6" /></rule>
-<rule e="node" k="Type" v="0x3525-15" zoom-min="15" zoom-max="15"><symbol src="file:/trailmarks/0x3525.svg" scale="1.6" /></rule>
-<rule e="node" k="Type" v="0x3525-16" zoom-min="16" zoom-max="16"><symbol src="file:/trailmarks/0x3525.svg" scale="1.6" /></rule>
-<rule e="node" k="Type" v="0x3525-17" zoom-min="17" zoom-max="17"><symbol src="file:/trailmarks/0x3525.svg" scale="1.6" /></rule>
-<rule e="node" k="Type" v="0x3525-18" zoom-min="18"><symbol src="file:/trailmarks/0x3525.svg" scale="1.6" /></rule>
-<rule e="node" k="Type" v="0x3526-14" zoom-min="14" zoom-max="14"><symbol src="file:/trailmarks/0x3526.svg" scale="1.6" /></rule>
-<rule e="node" k="Type" v="0x3526-15" zoom-min="15" zoom-max="15"><symbol src="file:/trailmarks/0x3526.svg" scale="1.6" /></rule>
-<rule e="node" k="Type" v="0x3526-16" zoom-min="16" zoom-max="16"><symbol src="file:/trailmarks/0x3526.svg" scale="1.6" /></rule>
-<rule e="node" k="Type" v="0x3526-17" zoom-min="17" zoom-max="17"><symbol src="file:/trailmarks/0x3526.svg" scale="1.6" /></rule>
-<rule e="node" k="Type" v="0x3526-18" zoom-min="18"><symbol src="file:/trailmarks/0x3526.svg" scale="1.6" /></rule>
-<rule e="node" k="Type" v="0x3527-14" zoom-min="14" zoom-max="14"><symbol src="file:/trailmarks/0x3527.svg" scale="1.6" /></rule>
-<rule e="node" k="Type" v="0x3527-15" zoom-min="15" zoom-max="15"><symbol src="file:/trailmarks/0x3527.svg" scale="1.6" /></rule>
-<rule e="node" k="Type" v="0x3527-16" zoom-min="16" zoom-max="16"><symbol src="file:/trailmarks/0x3527.svg" scale="1.6" /></rule>
-<rule e="node" k="Type" v="0x3527-17" zoom-min="17" zoom-max="17"><symbol src="file:/trailmarks/0x3527.svg" scale="1.6" /></rule>
-<rule e="node" k="Type" v="0x3527-18" zoom-min="18"><symbol src="file:/trailmarks/0x3527.svg" scale="1.6" /></rule>
-<rule e="node" k="Type" v="0x3528-14" zoom-min="14" zoom-max="14"><symbol src="file:/trailmarks/0x3528.svg" scale="1.6" /></rule>
-<rule e="node" k="Type" v="0x3528-15" zoom-min="15" zoom-max="15"><symbol src="file:/trailmarks/0x3528.svg" scale="1.6" /></rule>
-<rule e="node" k="Type" v="0x3528-16" zoom-min="16" zoom-max="16"><symbol src="file:/trailmarks/0x3528.svg" scale="1.6" /></rule>
-<rule e="node" k="Type" v="0x3528-17" zoom-min="17" zoom-max="17"><symbol src="file:/trailmarks/0x3528.svg" scale="1.6" /></rule>
-<rule e="node" k="Type" v="0x3528-18" zoom-min="18"><symbol src="file:/trailmarks/0x3528.svg" scale="1.6" /></rule>
-<rule e="node" k="Type" v="0x3529-14" zoom-min="14" zoom-max="14"><symbol src="file:/trailmarks/0x3529.svg" scale="1.6" /></rule>
-<rule e="node" k="Type" v="0x3529-15" zoom-min="15" zoom-max="15"><symbol src="file:/trailmarks/0x3529.svg" scale="1.6" /></rule>
-<rule e="node" k="Type" v="0x3529-16" zoom-min="16" zoom-max="16"><symbol src="file:/trailmarks/0x3529.svg" scale="1.6" /></rule>
-<rule e="node" k="Type" v="0x3529-17" zoom-min="17" zoom-max="17"><symbol src="file:/trailmarks/0x3529.svg" scale="1.6" /></rule>
-<rule e="node" k="Type" v="0x3529-18" zoom-min="18"><symbol src="file:/trailmarks/0x3529.svg" scale="1.6" /></rule>
-<rule e="node" k="Type" v="0x352a-14" zoom-min="14" zoom-max="14"><symbol src="file:/trailmarks/0x352a.svg" scale="1.6" /></rule>
-<rule e="node" k="Type" v="0x352a-15" zoom-min="15" zoom-max="15"><symbol src="file:/trailmarks/0x352a.svg" scale="1.6" /></rule>
-<rule e="node" k="Type" v="0x352a-16" zoom-min="16" zoom-max="16"><symbol src="file:/trailmarks/0x352a.svg" scale="1.6" /></rule>
-<rule e="node" k="Type" v="0x352a-17" zoom-min="17" zoom-max="17"><symbol src="file:/trailmarks/0x352a.svg" scale="1.6" /></rule>
-<rule e="node" k="Type" v="0x352a-18" zoom-min="18"><symbol src="file:/trailmarks/0x352a.svg" scale="1.6" /></rule>
-<rule e="node" k="Type" v="0x352b-14" zoom-min="14" zoom-max="14"><symbol src="file:/trailmarks/0x352b.svg" scale="1.6" /></rule>
-<rule e="node" k="Type" v="0x352b-15" zoom-min="15" zoom-max="15"><symbol src="file:/trailmarks/0x352b.svg" scale="1.6" /></rule>
-<rule e="node" k="Type" v="0x352b-16" zoom-min="16" zoom-max="16"><symbol src="file:/trailmarks/0x352b.svg" scale="1.6" /></rule>
-<rule e="node" k="Type" v="0x352b-17" zoom-min="17" zoom-max="17"><symbol src="file:/trailmarks/0x352b.svg" scale="1.6" /></rule>
-<rule e="node" k="Type" v="0x352b-18" zoom-min="18"><symbol src="file:/trailmarks/0x352b.svg" scale="1.6" /></rule>
-<rule e="node" k="Type" v="0x352c-14" zoom-min="14" zoom-max="14"><symbol src="file:/trailmarks/0x352c.svg" scale="1.6" /></rule>
-<rule e="node" k="Type" v="0x352c-15" zoom-min="15" zoom-max="15"><symbol src="file:/trailmarks/0x352c.svg" scale="1.6" /></rule>
-<rule e="node" k="Type" v="0x352c-16" zoom-min="16" zoom-max="16"><symbol src="file:/trailmarks/0x352c.svg" scale="1.6" /></rule>
-<rule e="node" k="Type" v="0x352c-17" zoom-min="17" zoom-max="17"><symbol src="file:/trailmarks/0x352c.svg" scale="1.6" /></rule>
-<rule e="node" k="Type" v="0x352c-18" zoom-min="18"><symbol src="file:/trailmarks/0x352c.svg" scale="1.6" /></rule>
-<rule e="node" k="Type" v="0x352d-14" zoom-min="14" zoom-max="14"><symbol src="file:/trailmarks/0x352d.svg" scale="1.6" /></rule>
-<rule e="node" k="Type" v="0x352d-15" zoom-min="15" zoom-max="15"><symbol src="file:/trailmarks/0x352d.svg" scale="1.6" /></rule>
-<rule e="node" k="Type" v="0x352d-16" zoom-min="16" zoom-max="16"><symbol src="file:/trailmarks/0x352d.svg" scale="1.6" /></rule>
-<rule e="node" k="Type" v="0x352d-17" zoom-min="17" zoom-max="17"><symbol src="file:/trailmarks/0x352d.svg" scale="1.6" /></rule>
-<rule e="node" k="Type" v="0x352d-18" zoom-min="18"><symbol src="file:/trailmarks/0x352d.svg" scale="1.6" /></rule>
-<rule e="node" k="Type" v="0x352e-14" zoom-min="14" zoom-max="14"><symbol src="file:/trailmarks/0x352e.svg" scale="1.6" /></rule>
-<rule e="node" k="Type" v="0x352e-15" zoom-min="15" zoom-max="15"><symbol src="file:/trailmarks/0x352e.svg" scale="1.6" /></rule>
-<rule e="node" k="Type" v="0x352e-16" zoom-min="16" zoom-max="16"><symbol src="file:/trailmarks/0x352e.svg" scale="1.6" /></rule>
-<rule e="node" k="Type" v="0x352e-17" zoom-min="17" zoom-max="17"><symbol src="file:/trailmarks/0x352e.svg" scale="1.6" /></rule>
-<rule e="node" k="Type" v="0x352e-18" zoom-min="18"><symbol src="file:/trailmarks/0x352e.svg" scale="1.6" /></rule>
-<rule e="node" k="Type" v="0x352f-14" zoom-min="14" zoom-max="14"><symbol src="file:/trailmarks/0x352f.svg" scale="1.6" /></rule>
-<rule e="node" k="Type" v="0x352f-15" zoom-min="15" zoom-max="15"><symbol src="file:/trailmarks/0x352f.svg" scale="1.6" /></rule>
-<rule e="node" k="Type" v="0x352f-16" zoom-min="16" zoom-max="16"><symbol src="file:/trailmarks/0x352f.svg" scale="1.6" /></rule>
-<rule e="node" k="Type" v="0x352f-17" zoom-min="17" zoom-max="17"><symbol src="file:/trailmarks/0x352f.svg" scale="1.6" /></rule>
-<rule e="node" k="Type" v="0x352f-18" zoom-min="18"><symbol src="file:/trailmarks/0x352f.svg" scale="1.6" /></rule>
-<rule e="node" k="Type" v="0x3530-14" zoom-min="14" zoom-max="14"><symbol src="file:/trailmarks/0x3530.svg" scale="1.6" /></rule>
-<rule e="node" k="Type" v="0x3530-15" zoom-min="15" zoom-max="15"><symbol src="file:/trailmarks/0x3530.svg" scale="1.6" /></rule>
-<rule e="node" k="Type" v="0x3530-16" zoom-min="16" zoom-max="16"><symbol src="file:/trailmarks/0x3530.svg" scale="1.6" /></rule>
-<rule e="node" k="Type" v="0x3530-17" zoom-min="17" zoom-max="17"><symbol src="file:/trailmarks/0x3530.svg" scale="1.6" /></rule>
-<rule e="node" k="Type" v="0x3530-18" zoom-min="18"><symbol src="file:/trailmarks/0x3530.svg" scale="1.6" /></rule>
-<rule e="node" k="Type" v="0x3531-14" zoom-min="14" zoom-max="14"><symbol src="file:/trailmarks/0x3531.svg" scale="1.6" /></rule>
-<rule e="node" k="Type" v="0x3531-15" zoom-min="15" zoom-max="15"><symbol src="file:/trailmarks/0x3531.svg" scale="1.6" /></rule>
-<rule e="node" k="Type" v="0x3531-16" zoom-min="16" zoom-max="16"><symbol src="file:/trailmarks/0x3531.svg" scale="1.6" /></rule>
-<rule e="node" k="Type" v="0x3531-17" zoom-min="17" zoom-max="17"><symbol src="file:/trailmarks/0x3531.svg" scale="1.6" /></rule>
-<rule e="node" k="Type" v="0x3531-18" zoom-min="18"><symbol src="file:/trailmarks/0x3531.svg" scale="1.6" /></rule>
-<rule e="node" k="Type" v="0x3532-14" zoom-min="14" zoom-max="14"><symbol src="file:/trailmarks/0x3532.svg" scale="1.6" /></rule>
-<rule e="node" k="Type" v="0x3532-15" zoom-min="15" zoom-max="15"><symbol src="file:/trailmarks/0x3532.svg" scale="1.6" /></rule>
-<rule e="node" k="Type" v="0x3532-16" zoom-min="16" zoom-max="16"><symbol src="file:/trailmarks/0x3532.svg" scale="1.6" /></rule>
-<rule e="node" k="Type" v="0x3532-17" zoom-min="17" zoom-max="17"><symbol src="file:/trailmarks/0x3532.svg" scale="1.6" /></rule>
-<rule e="node" k="Type" v="0x3532-18" zoom-min="18"><symbol src="file:/trailmarks/0x3532.svg" scale="1.6" /></rule>
-<rule e="node" k="Type" v="0x3533-14" zoom-min="14" zoom-max="14"><symbol src="file:/trailmarks/0x3533.svg" scale="1.6" /></rule>
-<rule e="node" k="Type" v="0x3533-15" zoom-min="15" zoom-max="15"><symbol src="file:/trailmarks/0x3533.svg" scale="1.6" /></rule>
-<rule e="node" k="Type" v="0x3533-16" zoom-min="16" zoom-max="16"><symbol src="file:/trailmarks/0x3533.svg" scale="1.6" /></rule>
-<rule e="node" k="Type" v="0x3533-17" zoom-min="17" zoom-max="17"><symbol src="file:/trailmarks/0x3533.svg" scale="1.6" /></rule>
-<rule e="node" k="Type" v="0x3533-18" zoom-min="18"><symbol src="file:/trailmarks/0x3533.svg" scale="1.6" /></rule>
-<rule e="node" k="Type" v="0x3534-14" zoom-min="14" zoom-max="14"><symbol src="file:/trailmarks/0x3534.svg" scale="1.6" /></rule>
-<rule e="node" k="Type" v="0x3534-15" zoom-min="15" zoom-max="15"><symbol src="file:/trailmarks/0x3534.svg" scale="1.6" /></rule>
-<rule e="node" k="Type" v="0x3534-16" zoom-min="16" zoom-max="16"><symbol src="file:/trailmarks/0x3534.svg" scale="1.6" /></rule>
-<rule e="node" k="Type" v="0x3534-17" zoom-min="17" zoom-max="17"><symbol src="file:/trailmarks/0x3534.svg" scale="1.6" /></rule>
-<rule e="node" k="Type" v="0x3534-18" zoom-min="18"><symbol src="file:/trailmarks/0x3534.svg" scale="1.6" /></rule>
-<rule e="node" k="Type" v="0x3535-14" zoom-min="14" zoom-max="14"><symbol src="file:/trailmarks/0x3535.svg" scale="1.6" /></rule>
-<rule e="node" k="Type" v="0x3535-15" zoom-min="15" zoom-max="15"><symbol src="file:/trailmarks/0x3535.svg" scale="1.6" /></rule>
-<rule e="node" k="Type" v="0x3535-16" zoom-min="16" zoom-max="16"><symbol src="file:/trailmarks/0x3535.svg" scale="1.6" /></rule>
-<rule e="node" k="Type" v="0x3535-17" zoom-min="17" zoom-max="17"><symbol src="file:/trailmarks/0x3535.svg" scale="1.6" /></rule>
-<rule e="node" k="Type" v="0x3535-18" zoom-min="18"><symbol src="file:/trailmarks/0x3535.svg" scale="1.6" /></rule>
-<rule e="node" k="Type" v="0x3536-14" zoom-min="14" zoom-max="14"><symbol src="file:/trailmarks/0x3536.svg" scale="1.6" /></rule>
-<rule e="node" k="Type" v="0x3536-15" zoom-min="15" zoom-max="15"><symbol src="file:/trailmarks/0x3536.svg" scale="1.6" /></rule>
-<rule e="node" k="Type" v="0x3536-16" zoom-min="16" zoom-max="16"><symbol src="file:/trailmarks/0x3536.svg" scale="1.6" /></rule>
-<rule e="node" k="Type" v="0x3536-17" zoom-min="17" zoom-max="17"><symbol src="file:/trailmarks/0x3536.svg" scale="1.6" /></rule>
-<rule e="node" k="Type" v="0x3536-18" zoom-min="18"><symbol src="file:/trailmarks/0x3536.svg" scale="1.6" /></rule>
-<rule e="node" k="Type" v="0x3537-14" zoom-min="14" zoom-max="14"><symbol src="file:/trailmarks/0x3537.svg" scale="1.6" /></rule>
-<rule e="node" k="Type" v="0x3537-15" zoom-min="15" zoom-max="15"><symbol src="file:/trailmarks/0x3537.svg" scale="1.6" /></rule>
-<rule e="node" k="Type" v="0x3537-16" zoom-min="16" zoom-max="16"><symbol src="file:/trailmarks/0x3537.svg" scale="1.6" /></rule>
-<rule e="node" k="Type" v="0x3537-17" zoom-min="17" zoom-max="17"><symbol src="file:/trailmarks/0x3537.svg" scale="1.6" /></rule>
-<rule e="node" k="Type" v="0x3537-18" zoom-min="18"><symbol src="file:/trailmarks/0x3537.svg" scale="1.6" /></rule>
-<rule e="node" k="Type" v="0x3538-14" zoom-min="14" zoom-max="14"><symbol src="file:/trailmarks/0x3538.svg" scale="1.6" /></rule>
-<rule e="node" k="Type" v="0x3538-15" zoom-min="15" zoom-max="15"><symbol src="file:/trailmarks/0x3538.svg" scale="1.6" /></rule>
-<rule e="node" k="Type" v="0x3538-16" zoom-min="16" zoom-max="16"><symbol src="file:/trailmarks/0x3538.svg" scale="1.6" /></rule>
-<rule e="node" k="Type" v="0x3538-17" zoom-min="17" zoom-max="17"><symbol src="file:/trailmarks/0x3538.svg" scale="1.6" /></rule>
-<rule e="node" k="Type" v="0x3538-18" zoom-min="18"><symbol src="file:/trailmarks/0x3538.svg" scale="1.6" /></rule>
-<rule e="node" k="Type" v="0x3539-14" zoom-min="14" zoom-max="14"><symbol src="file:/trailmarks/0x3539.svg" scale="1.6" /></rule>
-<rule e="node" k="Type" v="0x3539-15" zoom-min="15" zoom-max="15"><symbol src="file:/trailmarks/0x3539.svg" scale="1.6" /></rule>
-<rule e="node" k="Type" v="0x3539-16" zoom-min="16" zoom-max="16"><symbol src="file:/trailmarks/0x3539.svg" scale="1.6" /></rule>
-<rule e="node" k="Type" v="0x3539-17" zoom-min="17" zoom-max="17"><symbol src="file:/trailmarks/0x3539.svg" scale="1.6" /></rule>
-<rule e="node" k="Type" v="0x3539-18" zoom-min="18"><symbol src="file:/trailmarks/0x3539.svg" scale="1.6" /></rule>
-<rule e="node" k="Type" v="0x353a-14" zoom-min="14" zoom-max="14"><symbol src="file:/trailmarks/0x353a.svg" scale="1.6" /></rule>
-<rule e="node" k="Type" v="0x353a-15" zoom-min="15" zoom-max="15"><symbol src="file:/trailmarks/0x353a.svg" scale="1.6" /></rule>
-<rule e="node" k="Type" v="0x353a-16" zoom-min="16" zoom-max="16"><symbol src="file:/trailmarks/0x353a.svg" scale="1.6" /></rule>
-<rule e="node" k="Type" v="0x353a-17" zoom-min="17" zoom-max="17"><symbol src="file:/trailmarks/0x353a.svg" scale="1.6" /></rule>
-<rule e="node" k="Type" v="0x353a-18" zoom-min="18"><symbol src="file:/trailmarks/0x353a.svg" scale="1.6" /></rule>
-<rule e="node" k="Type" v="0x353b-14" zoom-min="14" zoom-max="14"><symbol src="file:/trailmarks/0x353b.svg" scale="1.6" /></rule>
-<rule e="node" k="Type" v="0x353b-15" zoom-min="15" zoom-max="15"><symbol src="file:/trailmarks/0x353b.svg" scale="1.6" /></rule>
-<rule e="node" k="Type" v="0x353b-16" zoom-min="16" zoom-max="16"><symbol src="file:/trailmarks/0x353b.svg" scale="1.6" /></rule>
-<rule e="node" k="Type" v="0x353b-17" zoom-min="17" zoom-max="17"><symbol src="file:/trailmarks/0x353b.svg" scale="1.6" /></rule>
-<rule e="node" k="Type" v="0x353b-18" zoom-min="18"><symbol src="file:/trailmarks/0x353b.svg" scale="1.6" /></rule>
-<rule e="node" k="Type" v="0x353c-14" zoom-min="14" zoom-max="14"><symbol src="file:/trailmarks/0x353c.svg" scale="1.6" /></rule>
-<rule e="node" k="Type" v="0x353c-15" zoom-min="15" zoom-max="15"><symbol src="file:/trailmarks/0x353c.svg" scale="1.6" /></rule>
-<rule e="node" k="Type" v="0x353c-16" zoom-min="16" zoom-max="16"><symbol src="file:/trailmarks/0x353c.svg" scale="1.6" /></rule>
-<rule e="node" k="Type" v="0x353c-17" zoom-min="17" zoom-max="17"><symbol src="file:/trailmarks/0x353c.svg" scale="1.6" /></rule>
-<rule e="node" k="Type" v="0x353c-18" zoom-min="18"><symbol src="file:/trailmarks/0x353c.svg" scale="1.6" /></rule>
-<rule e="node" k="Type" v="0x353d-14" zoom-min="14" zoom-max="14"><symbol src="file:/trailmarks/0x353d.svg" scale="1.6" /></rule>
-<rule e="node" k="Type" v="0x353d-15" zoom-min="15" zoom-max="15"><symbol src="file:/trailmarks/0x353d.svg" scale="1.6" /></rule>
-<rule e="node" k="Type" v="0x353d-16" zoom-min="16" zoom-max="16"><symbol src="file:/trailmarks/0x353d.svg" scale="1.6" /></rule>
-<rule e="node" k="Type" v="0x353d-17" zoom-min="17" zoom-max="17"><symbol src="file:/trailmarks/0x353d.svg" scale="1.6" /></rule>
-<rule e="node" k="Type" v="0x353d-18" zoom-min="18"><symbol src="file:/trailmarks/0x353d.svg" scale="1.6" /></rule>
-<rule e="node" k="Type" v="0x353e-14" zoom-min="14" zoom-max="14"><symbol src="file:/trailmarks/0x353e.svg" scale="1.6" /></rule>
-<rule e="node" k="Type" v="0x353e-15" zoom-min="15" zoom-max="15"><symbol src="file:/trailmarks/0x353e.svg" scale="1.6" /></rule>
-<rule e="node" k="Type" v="0x353e-16" zoom-min="16" zoom-max="16"><symbol src="file:/trailmarks/0x353e.svg" scale="1.6" /></rule>
-<rule e="node" k="Type" v="0x353e-17" zoom-min="17" zoom-max="17"><symbol src="file:/trailmarks/0x353e.svg" scale="1.6" /></rule>
-<rule e="node" k="Type" v="0x353e-18" zoom-min="18"><symbol src="file:/trailmarks/0x353e.svg" scale="1.6" /></rule>
-<rule e="node" k="Type" v="0x353f-14" zoom-min="14" zoom-max="14"><symbol src="file:/trailmarks/0x353f.svg" scale="1.6" /></rule>
-<rule e="node" k="Type" v="0x353f-15" zoom-min="15" zoom-max="15"><symbol src="file:/trailmarks/0x353f.svg" scale="1.6" /></rule>
-<rule e="node" k="Type" v="0x353f-16" zoom-min="16" zoom-max="16"><symbol src="file:/trailmarks/0x353f.svg" scale="1.6" /></rule>
-<rule e="node" k="Type" v="0x353f-17" zoom-min="17" zoom-max="17"><symbol src="file:/trailmarks/0x353f.svg" scale="1.6" /></rule>
-<rule e="node" k="Type" v="0x353f-18" zoom-min="18"><symbol src="file:/trailmarks/0x353f.svg" scale="1.6" /></rule>
-<rule e="node" k="Type" v="0x3720-14" zoom-min="14" zoom-max="14"><symbol src="file:/trailmarks/0x3720.svg" scale="1.6" /></rule>
-<rule e="node" k="Type" v="0x3720-15" zoom-min="15" zoom-max="15"><symbol src="file:/trailmarks/0x3720.svg" scale="1.6" /></rule>
-<rule e="node" k="Type" v="0x3720-16" zoom-min="16" zoom-max="16"><symbol src="file:/trailmarks/0x3720.svg" scale="1.6" /></rule>
-<rule e="node" k="Type" v="0x3720-17" zoom-min="17" zoom-max="17"><symbol src="file:/trailmarks/0x3720.svg" scale="1.6" /></rule>
-<rule e="node" k="Type" v="0x3720-18" zoom-min="18"><symbol src="file:/trailmarks/0x3720.svg" scale="1.6" /></rule>
-<rule e="node" k="Type" v="0x3721-14" zoom-min="14" zoom-max="14"><symbol src="file:/trailmarks/0x3721.svg" scale="1.6" /></rule>
-<rule e="node" k="Type" v="0x3721-15" zoom-min="15" zoom-max="15"><symbol src="file:/trailmarks/0x3721.svg" scale="1.6" /></rule>
-<rule e="node" k="Type" v="0x3721-16" zoom-min="16" zoom-max="16"><symbol src="file:/trailmarks/0x3721.svg" scale="1.6" /></rule>
-<rule e="node" k="Type" v="0x3721-17" zoom-min="17" zoom-max="17"><symbol src="file:/trailmarks/0x3721.svg" scale="1.6" /></rule>
-<rule e="node" k="Type" v="0x3721-18" zoom-min="18"><symbol src="file:/trailmarks/0x3721.svg" scale="1.6" /></rule>
-<rule e="node" k="Type" v="0x3723-14" zoom-min="14" zoom-max="14"><symbol src="file:/trailmarks/0x3723.svg" scale="1.6" /></rule>
-<rule e="node" k="Type" v="0x3723-15" zoom-min="15" zoom-max="15"><symbol src="file:/trailmarks/0x3723.svg" scale="1.6" /></rule>
-<rule e="node" k="Type" v="0x3723-16" zoom-min="16" zoom-max="16"><symbol src="file:/trailmarks/0x3723.svg" scale="1.6" /></rule>
-<rule e="node" k="Type" v="0x3723-17" zoom-min="17" zoom-max="17"><symbol src="file:/trailmarks/0x3723.svg" scale="1.6" /></rule>
-<rule e="node" k="Type" v="0x3723-18" zoom-min="18"><symbol src="file:/trailmarks/0x3723.svg" scale="1.6" /></rule>
-<rule e="node" k="Type" v="0x3724-14" zoom-min="14" zoom-max="14"><symbol src="file:/trailmarks/0x3724.svg" scale="1.6" /></rule>
-<rule e="node" k="Type" v="0x3724-15" zoom-min="15" zoom-max="15"><symbol src="file:/trailmarks/0x3724.svg" scale="1.6" /></rule>
-<rule e="node" k="Type" v="0x3724-16" zoom-min="16" zoom-max="16"><symbol src="file:/trailmarks/0x3724.svg" scale="1.6" /></rule>
-<rule e="node" k="Type" v="0x3724-17" zoom-min="17" zoom-max="17"><symbol src="file:/trailmarks/0x3724.svg" scale="1.6" /></rule>
-<rule e="node" k="Type" v="0x3724-18" zoom-min="18"><symbol src="file:/trailmarks/0x3724.svg" scale="1.6" /></rule>
-<rule e="node" k="Type" v="0x3725-14" zoom-min="14" zoom-max="14"><symbol src="file:/trailmarks/0x3725.svg" scale="1.6" /></rule>
-<rule e="node" k="Type" v="0x3725-15" zoom-min="15" zoom-max="15"><symbol src="file:/trailmarks/0x3725.svg" scale="1.6" /></rule>
-<rule e="node" k="Type" v="0x3725-16" zoom-min="16" zoom-max="16"><symbol src="file:/trailmarks/0x3725.svg" scale="1.6" /></rule>
-<rule e="node" k="Type" v="0x3725-17" zoom-min="17" zoom-max="17"><symbol src="file:/trailmarks/0x3725.svg" scale="1.6" /></rule>
-<rule e="node" k="Type" v="0x3725-18" zoom-min="18"><symbol src="file:/trailmarks/0x3725.svg" scale="1.6" /></rule>
-<rule e="node" k="Type" v="0x3727-14" zoom-min="14" zoom-max="14"><symbol src="file:/trailmarks/0x3727.svg" scale="1.6" /></rule>
-<rule e="node" k="Type" v="0x3727-15" zoom-min="15" zoom-max="15"><symbol src="file:/trailmarks/0x3727.svg" scale="1.6" /></rule>
-<rule e="node" k="Type" v="0x3727-16" zoom-min="16" zoom-max="16"><symbol src="file:/trailmarks/0x3727.svg" scale="1.6" /></rule>
-<rule e="node" k="Type" v="0x3727-17" zoom-min="17" zoom-max="17"><symbol src="file:/trailmarks/0x3727.svg" scale="1.6" /></rule>
-<rule e="node" k="Type" v="0x3727-18" zoom-min="18"><symbol src="file:/trailmarks/0x3727.svg" scale="1.6" /></rule>
-<rule e="node" k="Type" v="0x3728-14" zoom-min="14" zoom-max="14"><symbol src="file:/trailmarks/0x3728.svg" scale="1.6" /></rule>
-<rule e="node" k="Type" v="0x3728-15" zoom-min="15" zoom-max="15"><symbol src="file:/trailmarks/0x3728.svg" scale="1.6" /></rule>
-<rule e="node" k="Type" v="0x3728-16" zoom-min="16" zoom-max="16"><symbol src="file:/trailmarks/0x3728.svg" scale="1.6" /></rule>
-<rule e="node" k="Type" v="0x3728-17" zoom-min="17" zoom-max="17"><symbol src="file:/trailmarks/0x3728.svg" scale="1.6" /></rule>
-<rule e="node" k="Type" v="0x3728-18" zoom-min="18"><symbol src="file:/trailmarks/0x3728.svg" scale="1.6" /></rule>
-<rule e="node" k="Type" v="0x3729-14" zoom-min="14" zoom-max="14"><symbol src="file:/trailmarks/0x3729.svg" scale="1.6" /></rule>
-<rule e="node" k="Type" v="0x3729-15" zoom-min="15" zoom-max="15"><symbol src="file:/trailmarks/0x3729.svg" scale="1.6" /></rule>
-<rule e="node" k="Type" v="0x3729-16" zoom-min="16" zoom-max="16"><symbol src="file:/trailmarks/0x3729.svg" scale="1.6" /></rule>
-<rule e="node" k="Type" v="0x3729-17" zoom-min="17" zoom-max="17"><symbol src="file:/trailmarks/0x3729.svg" scale="1.6" /></rule>
-<rule e="node" k="Type" v="0x3729-18" zoom-min="18"><symbol src="file:/trailmarks/0x3729.svg" scale="1.6" /></rule>
-<rule e="node" k="Type" v="0x372b-14" zoom-min="14" zoom-max="14"><symbol src="file:/trailmarks/0x372b.svg" scale="1.6" /></rule>
-<rule e="node" k="Type" v="0x372b-15" zoom-min="15" zoom-max="15"><symbol src="file:/trailmarks/0x372b.svg" scale="1.6" /></rule>
-<rule e="node" k="Type" v="0x372b-16" zoom-min="16" zoom-max="16"><symbol src="file:/trailmarks/0x372b.svg" scale="1.6" /></rule>
-<rule e="node" k="Type" v="0x372b-17" zoom-min="17" zoom-max="17"><symbol src="file:/trailmarks/0x372b.svg" scale="1.6" /></rule>
-<rule e="node" k="Type" v="0x372b-18" zoom-min="18"><symbol src="file:/trailmarks/0x372b.svg" scale="1.6" /></rule>
-<rule e="node" k="Type" v="0x372c-14" zoom-min="14" zoom-max="14"><symbol src="file:/trailmarks/0x372c.svg" scale="1.6" /></rule>
-<rule e="node" k="Type" v="0x372c-15" zoom-min="15" zoom-max="15"><symbol src="file:/trailmarks/0x372c.svg" scale="1.6" /></rule>
-<rule e="node" k="Type" v="0x372c-16" zoom-min="16" zoom-max="16"><symbol src="file:/trailmarks/0x372c.svg" scale="1.6" /></rule>
-<rule e="node" k="Type" v="0x372c-17" zoom-min="17" zoom-max="17"><symbol src="file:/trailmarks/0x372c.svg" scale="1.6" /></rule>
-<rule e="node" k="Type" v="0x372c-18" zoom-min="18"><symbol src="file:/trailmarks/0x372c.svg" scale="1.6" /></rule>
-<rule e="node" k="Type" v="0x372d-14" zoom-min="14" zoom-max="14"><symbol src="file:/trailmarks/0x372d.svg" scale="1.6" /></rule>
-<rule e="node" k="Type" v="0x372d-15" zoom-min="15" zoom-max="15"><symbol src="file:/trailmarks/0x372d.svg" scale="1.6" /></rule>
-<rule e="node" k="Type" v="0x372d-16" zoom-min="16" zoom-max="16"><symbol src="file:/trailmarks/0x372d.svg" scale="1.6" /></rule>
-<rule e="node" k="Type" v="0x372d-17" zoom-min="17" zoom-max="17"><symbol src="file:/trailmarks/0x372d.svg" scale="1.6" /></rule>
-<rule e="node" k="Type" v="0x372d-18" zoom-min="18"><symbol src="file:/trailmarks/0x372d.svg" scale="1.6" /></rule>
-<rule e="node" k="Type" v="0x372f-14" zoom-min="14" zoom-max="14"><symbol src="file:/trailmarks/0x372f.svg" scale="1.6" /></rule>
-<rule e="node" k="Type" v="0x372f-15" zoom-min="15" zoom-max="15"><symbol src="file:/trailmarks/0x372f.svg" scale="1.6" /></rule>
-<rule e="node" k="Type" v="0x372f-16" zoom-min="16" zoom-max="16"><symbol src="file:/trailmarks/0x372f.svg" scale="1.6" /></rule>
-<rule e="node" k="Type" v="0x372f-17" zoom-min="17" zoom-max="17"><symbol src="file:/trailmarks/0x372f.svg" scale="1.6" /></rule>
-<rule e="node" k="Type" v="0x372f-18" zoom-min="18"><symbol src="file:/trailmarks/0x372F.svg" scale="1.6" /></rule>
-<rule e="node" k="Type" v="0x3730-14" zoom-min="14" zoom-max="14"><symbol src="file:/trailmarks/0x3730.svg" scale="1.6" /></rule>
-<rule e="node" k="Type" v="0x3730-15" zoom-min="15" zoom-max="15"><symbol src="file:/trailmarks/0x3730.svg" scale="1.6" /></rule>
-<rule e="node" k="Type" v="0x3730-16" zoom-min="16" zoom-max="16"><symbol src="file:/trailmarks/0x3730.svg" scale="1.6" /></rule>
-<rule e="node" k="Type" v="0x3730-17" zoom-min="17" zoom-max="17"><symbol src="file:/trailmarks/0x3730.svg" scale="1.6" /></rule>
-<rule e="node" k="Type" v="0x3730-18" zoom-min="18"><symbol src="file:/trailmarks/0x3730.svg" scale="1.6" /></rule>
-<rule e="node" k="Type" v="0x3731-14" zoom-min="14" zoom-max="14"><symbol src="file:/trailmarks/0x3731.svg" scale="1.6" /></rule>
-<rule e="node" k="Type" v="0x3731-15" zoom-min="15" zoom-max="15"><symbol src="file:/trailmarks/0x3731.svg" scale="1.6" /></rule>
-<rule e="node" k="Type" v="0x3731-16" zoom-min="16" zoom-max="16"><symbol src="file:/trailmarks/0x3731.svg" scale="1.6" /></rule>
-<rule e="node" k="Type" v="0x3731-17" zoom-min="17" zoom-max="17"><symbol src="file:/trailmarks/0x3731.svg" scale="1.6" /></rule>
-<rule e="node" k="Type" v="0x3731-18" zoom-min="18"><symbol src="file:/trailmarks/0x3731.svg" scale="1.6" /></rule>
-<rule e="node" k="Type" v="0x3733-14" zoom-min="14" zoom-max="14"><symbol src="file:/trailmarks/0x3733.svg" scale="1.6" /></rule>
-<rule e="node" k="Type" v="0x3733-15" zoom-min="15" zoom-max="15"><symbol src="file:/trailmarks/0x3733.svg" scale="1.6" /></rule>
-<rule e="node" k="Type" v="0x3733-16" zoom-min="16" zoom-max="16"><symbol src="file:/trailmarks/0x3733.svg" scale="1.6" /></rule>
-<rule e="node" k="Type" v="0x3733-17" zoom-min="17" zoom-max="17"><symbol src="file:/trailmarks/0x3733.svg" scale="1.6" /></rule>
-<rule e="node" k="Type" v="0x3733-18" zoom-min="18"><symbol src="file:/trailmarks/0x3733.svg" scale="1.6" /></rule>
-<rule e="node" k="Type" v="0x373f-14" zoom-min="14" zoom-max="14"><symbol src="file:/trailmarks/0x373f.svg" scale="1.6" /></rule>
-<rule e="node" k="Type" v="0x373f-15" zoom-min="15" zoom-max="15"><symbol src="file:/trailmarks/0x373f.svg" scale="1.6" /></rule>
-<rule e="node" k="Type" v="0x373f-16" zoom-min="16" zoom-max="16"><symbol src="file:/trailmarks/0x373f.svg" scale="1.6" /></rule>
-<rule e="node" k="Type" v="0x373f-17" zoom-min="17" zoom-max="17"><symbol src="file:/trailmarks/0x373f.svg" scale="1.6" /></rule>
-<rule e="node" k="Type" v="0x373f-18" zoom-min="18"><symbol src="file:/trailmarks/0x373f.svg" scale="1.6" /></rule>
-<rule e="node" k="Type" v="0x373e-14" zoom-min="14" zoom-max="14"><symbol src="file:/trailmarks/0x373e.svg" scale="1.6" /></rule>
-<rule e="node" k="Type" v="0x373e-15" zoom-min="15" zoom-max="15"><symbol src="file:/trailmarks/0x373e.svg" scale="1.6" /></rule>
-<rule e="node" k="Type" v="0x373e-16" zoom-min="16" zoom-max="16"><symbol src="file:/trailmarks/0x373e.svg" scale="1.6" /></rule>
-<rule e="node" k="Type" v="0x373e-17" zoom-min="17" zoom-max="17"><symbol src="file:/trailmarks/0x373e.svg" scale="1.6" /></rule>
-<rule e="node" k="Type" v="0x373e-18" zoom-min="18"><symbol src="file:/trailmarks/0x373e.svg" scale="1.6" /></rule>
-</rule>
- -->
+
+		</rule>
+
 
 		<!-- amenity -->
 		<rule e="node" k="amenity" v="*">

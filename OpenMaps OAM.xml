@@ -33,13 +33,13 @@ Magellan changes:
 			<cat id="colored_hiking" />
 		</layer>
 
-		<layer id="hiking_trailmarks_t" enabled="true">
+<!-- 		<layer id="hiking_trailmarks_t" enabled="true">
 			<name lang="hu" value="Turistajelzések" />
 			<name lang="de" value="Wandermarkierungen" />
 			<name lang="en" value="Hiking path symbol" />
 			<name lang="ru" value="Маркер пути(тропы)" />
 			<cat id="omp_tm" />
-		</layer>
+		</layer> -->
 
 		<layer id="viaferrata_t" enabled="true">
 			<name lang="hu" value="Alpin utak, via ferrata" />
