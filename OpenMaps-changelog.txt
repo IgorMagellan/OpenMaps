@@ -53,4 +53,5 @@
 выключил в меню hiking_trailmarks_t, access_vehicle
 глобальное изменение правил для POI: node -> any
 глобальное изменение font-family=serif -> sans_serif
-новый пункт меню - номера домов
+новые пункты меню - номера домов, POI включены
+
