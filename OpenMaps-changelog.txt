@@ -50,5 +50,7 @@
 13/09/2023
 Изменил farmland на z13 + цвет светлее, grassland разделил area fill и stroke - устранение швов на z12,13
 ремонт colored_hiking
-выключил в меню hiking_trailmarks_t
-глобальное изменение правил для POI: node->any
+выключил в меню hiking_trailmarks_t, access_vehicle
+глобальное изменение правил для POI: node -> any
+глобальное изменение font-family=serif -> sans_serif
+новый пункт меню - номера домов
