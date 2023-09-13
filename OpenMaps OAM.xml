@@ -114,12 +114,12 @@ Magellan changes:
 			<cat id="pub_transp" />
 		</layer>
 
-		<layer id="housenumb_z16" enabled="true">
+		<layer id="housenumb" enabled="false">
 			<name lang="hu" value="Jármű korlátozás" />
 			<name lang="de" value="Fahrverbote" />
-			<name lang="en" value="Номера домов пораньше нахх - House№ at ZL14" />
-			<name lang="ru" value="Номера домов пораньше нахх" />
-			<cat id="housenumb_z16" />
+			<name lang="en" value="House№ at ZL15" />
+			<name lang="ru" value="Номера домов пораньше" />
+			<cat id="housenumb" />
 		</layer>
 
 		<layer id="poi_enable" enabled="true">
@@ -136,6 +136,8 @@ Magellan changes:
 			<name lang="de" value="OpenMaps Schichten" />
 			<name lang="en" value="OpenMaps layers" />
 			<name lang="ru" value="Cлои OpenMaps" />
+			<overlay id="contour_lines_t" />
+			<overlay id="poi_enable" />
 			<overlay id="hiking_routes_t" />
 			<overlay id="hiking_colored_routes_t" />
 			<!-- <overlay id="hiking_trailmarks_t" /> -->
@@ -144,12 +146,10 @@ Magellan changes:
 			<overlay id="mtb_t" />
 			<overlay id="standard_bc_t" />
 			<overlay id="winter_t" />
-			<overlay id="contour_lines_t" />
-			<overlay id="poi_enable" />
 			<overlay id="tollroads_t" />		
 			<!-- <overlay id="access_vehicle_t" /> -->
 			<overlay id="publictransport_t" />
-			<overlay id="housenumb_z16" />
+			<overlay id="housenumb" />
 		</layer>
 
 		<!-- Menu -->
@@ -1880,7 +1880,7 @@ Magellan changes:
 		<rule e="way" k="*" v="*" zoom-min="17" zoom-max="17">	<area fill="#ecad90" stroke="#b8795d" stroke-width="0.09" /> </rule>
 		<rule e="way" k="*" v="*" zoom-min="18">				<area fill="#fcb492" stroke="#ac7c68" stroke-width="0.08" /> </rule>
 
-		<!-- <rule cat="housenumb_z16" e="way" k="*" v="*" zoom-min="16"> -->
+		<!-- <rule cat="housenumb" e="way" k="*" v="*" zoom-min="16"> -->
 			<!-- <caption k="name" font-style="bold" font-size="10" fill="#000000" stroke="#ffffff" stroke-width="2.00" /> -->
 			<!-- <caption k="addr:housenumber" font-style="bold" font-size="10" fill="#606060" stroke="#ffffff" stroke-width="2.00" /> -->
 		<!-- </rule> -->
@@ -1888,11 +1888,11 @@ Magellan changes:
 
 
 	<!-- housenumbers -->
-	<rule e="any" k="addr:housenumber" v="*" zoom-min="14">
-		<rule cat="housenumb_z16" e="way" k="addr:housenumber" v="*" zoom-max="17">
+	<rule e="any" k="addr:housenumber" v="*" zoom-min="15">
+		<rule cat="housenumb" e="way" k="addr:housenumber" v="*" zoom-max="17">
 			<caption k="addr:housenumber" font-style="bold" font-size="9" fill="#000000" stroke="#ffffff" stroke-width="2.7" />
 		</rule>
-		<!-- Для показа №домов с z19 независимо от вкл или выкл "Поднять №" . Должна быть вкл "Местность" -->
+		<!-- Для показа №домов с z18 независимо от вкл или выкл "Поднять №" -->
 		<rule e="any" k="addr:housenumber" v="*" zoom-min="18">
 			<caption k="addr:housenumber" font-style="bold" font-size="11" fill="#000000" stroke="#FFFFFF" stroke-width="3.2" />
 		</rule>
