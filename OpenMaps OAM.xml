@@ -164,7 +164,7 @@ Magellan changes:
 				<area src="file:/patterns/wood-mixed.svg" symbol-percent="250" />
 			</rule>
 			<rule e="way" k="*" v="*" zoom-min="14">
-				<caption k="name" font-style="italic" font-family="serif" font-size="10"
+				<caption k="name" font-style="italic" font-family="sans_serif" font-size="10"
 					fill="#609348" />
 			</rule>
 		</rule>
@@ -173,7 +173,7 @@ Magellan changes:
 			<area fill="#dbf9b7" />
 			<area src="file:/patterns/fell.svg" symbol-percent="250" />
 			<rule e="way" k="*" v="*" zoom-min="14">
-				<caption k="name" font-style="bold_italic" font-family="serif" font-size="10"
+				<caption k="name" font-style="bold_italic" font-family="sans_serif" font-size="10"
 					fill="#6E6E6E" stroke="#ffffff" stroke-width="2.00" />
 			</rule>
 		</rule>
@@ -182,7 +182,7 @@ Magellan changes:
 			<area fill="#d1f0ad" />
 			<area src="file:/patterns/scrub.svg" symbol-percent="250" />
 			<rule e="way" k="*" v="*" zoom-min="14">
-				<caption k="name" font-style="bold_italic" font-family="serif" font-size="10"
+				<caption k="name" font-style="bold_italic" font-family="sans_serif" font-size="10"
 					fill="#6E6E6E" stroke="#ffffff" stroke-width="2.00" />
 			</rule>
 		</rule>
@@ -190,7 +190,7 @@ Magellan changes:
 		<rule e="way" k="natural" v="rock|stone|bare_rock|bedrock">
 			<area src="file:/patterns/bare_rock-128.png" />
 			<rule e="way" k="*" v="*" zoom-min="14">
-				<caption k="name" font-style="bold_italic" font-family="serif" font-size="10"
+				<caption k="name" font-style="bold_italic" font-family="sans_serif" font-size="10"
 					fill="#6E6E6E" stroke="#ffffff" stroke-width="2.00" />
 			</rule>
 		</rule>
@@ -198,7 +198,7 @@ Magellan changes:
 		<rule e="way" k="natural" v="scree">
 			<area src="file:/patterns/scree.svg" symbol-percent="250" />
 			<rule e="way" k="*" v="*" zoom-min="14">
-				<caption k="name" font-style="bold_italic" font-family="serif" font-size="10"
+				<caption k="name" font-style="bold_italic" font-family="sans_serif" font-size="10"
 					fill="#6E6E6E" stroke="#ffffff" stroke-width="2.00" />
 			</rule>
 		</rule>
@@ -207,7 +207,7 @@ Magellan changes:
 			<area fill="#e0e56a" />
 			<area src="file:/patterns/vineyard.svg" symbol-percent="250" />
 			<rule e="way" k="*" v="*" zoom-min="14">
-				<caption k="name" font-style="bold_italic" font-family="serif" font-size="10"
+				<caption k="name" font-style="bold_italic" font-family="sans_serif" font-size="10"
 					fill="#6E6E6E" stroke="#ffffff" stroke-width="2.00" />
 			</rule>
 		</rule>
@@ -216,7 +216,7 @@ Magellan changes:
 			<area fill="#e0e56a" />
 			<area src="file:/patterns/orchard.svg" symbol-percent="250" />
 			<rule e="way" k="*" v="*" zoom-min="14">
-				<caption k="name" font-style="bold_italic" font-family="serif" font-size="10"
+				<caption k="name" font-style="bold_italic" font-family="sans_serif" font-size="10"
 					fill="#6E6E6E" stroke="#ffffff" stroke-width="2.00" />
 			</rule>
 		</rule>
@@ -728,7 +728,7 @@ Magellan changes:
 				<line stroke="#77dd66" stroke-width="0.1" />
 				<area fill="#eeffbb" />
 				<rule e="way" k="*" v="*" zoom-min="14">
-					<caption k="name" font-style="italic" font-family="serif" font-size="10" fill="#609348" />
+					<caption k="name" font-style="italic" font-family="sans_serif" font-size="10" fill="#609348" />
 				</rule>
 			</rule>
 
@@ -755,7 +755,7 @@ Magellan changes:
 					stroke-linecap="butt" />
 				<line stroke="#606060" stroke-width="0.42" stroke-linecap="butt" />
 				<rule e="way" k="*" v="*" zoom-min="15">
-					<pathText k="name" font-style="italic" font-family="serif" font-size="10"
+					<pathText k="name" font-style="italic" font-family="sans_serif" font-size="10"
 						fill="#20202F" stroke="#ffffff" stroke-width="2.00" />
 				</rule>
 			</rule>
@@ -763,20 +763,20 @@ Magellan changes:
 			<rule e="way" k="barrier|natural" v="ditch|gully" zoom-min="14">
 				<line stroke="#80555555" stroke-width="0.50" />
 				<rule e="way" k="*" v="*">
-					<caption k="name" dy="-15" font-style="italic" font-family="serif"
+					<caption k="name" dy="-15" font-style="italic" font-family="sans_serif"
 						font-size="10" fill="#BF111111" stroke="#ffffff" stroke-width="2" />
 				</rule>
 			</rule>
 
 			<rule e="way" k="natural" v="valley" zoom-min="15">
-				<pathText k="name" font-style="bold_italic" font-family="serif" font-size="10"
+				<pathText k="name" font-style="bold_italic" font-family="sans_serif" font-size="10"
 					fill="#6E6E6E" stroke="#ffffff" stroke-width="2.00" />
 			</rule>
 
 			<rule e="way" k="*" v="ridge|arete" zoom-min="13">
 				<line stroke="#80606060" stroke-width="0.4" stroke-dasharray="1,2"
 					stroke-linecap="round" scale="all" />
-				<pathText k="name" dy="2" font-style="italic" font-family="serif" font-size="12"
+				<pathText k="name" dy="2" font-style="italic" font-family="sans_serif" font-size="12"
 					fill="#888888" stroke="#888888" stroke-width="0.1" display="always"
 					priority="-20" repeat-start="50" repeat-gap="300" />
 				<lineSymbol src="file:symbols/s_ridge.svg" align-center="true" repeat="true"
@@ -897,7 +897,7 @@ Magellan changes:
 					stroke-linecap="butt" />
 				<lineSymbol src="file:/symbols/bluearrow.svg" align-center="true" repeat="true" />
 				<rule e="way" k="*" v="*" zoom-min="14">
-					<pathText k="name" font-style="bold_italic" font-family="serif" font-size="10"
+					<pathText k="name" font-style="bold_italic" font-family="sans_serif" font-size="10"
 						fill="#1A8DFF" stroke="#ffffff" stroke-width="2.00" />
 				</rule>
 			</rule>
@@ -910,7 +910,7 @@ Magellan changes:
 				<line stroke="#b5d6f1" stroke-width="0.80" />
 				<lineSymbol src="file:/symbols/bluearrow.svg" align-center="true" repeat="true" />
 				<rule e="way" k="*" v="*" zoom-min="14">
-					<pathText k="name" font-style="bold_italic" font-family="serif" font-size="10"
+					<pathText k="name" font-style="bold_italic" font-family="sans_serif" font-size="10"
 						fill="#1A8DFF" stroke="#ffffff" stroke-width="2.00" />
 				</rule>
 			</rule>
@@ -919,7 +919,7 @@ Magellan changes:
 				<line stroke="#b5d6f1" stroke-width="0.80" />
 				<lineSymbol src="file:/symbols/bluearrow.svg" align-center="true" repeat="true" />
 				<rule e="way" k="*" v="*" zoom-min="14">
-					<pathText k="name" font-style="bold_italic" font-family="serif" font-size="10"
+					<pathText k="name" font-style="bold_italic" font-family="sans_serif" font-size="10"
 						fill="#1A8DFF" stroke="#ffffff" stroke-width="2.00" />
 				</rule>
 			</rule>
@@ -928,7 +928,7 @@ Magellan changes:
 				<line stroke="#b5d6f1" stroke-width="2.00" />
 				<lineSymbol src="file:/symbols/bluearrow.svg" align-center="true" repeat="true" />
 				<rule e="way" k="*" v="*" zoom-min="12">
-					<pathText k="name" font-style="bold_italic" font-family="serif" font-size="13"
+					<pathText k="name" font-style="bold_italic" font-family="sans_serif" font-size="13"
 						fill="#1A8DFF" stroke="#ffffff" stroke-width="2.00" />
 				</rule>
 			</rule>
@@ -3057,7 +3057,7 @@ Magellan changes:
 			</rule>
 			<rule e="node" k="natural" v="peak" zoom-min="12">
 				<symbol id="peak" src="file:/symbols/peak.svg" symbol-percent="40" />
-				<caption k="name" symbol-id="peak" position="above" font-style="bold" font-size="9" fill="#000000" stroke="#ffffff" stroke-width="2.00" />
+				<caption k="name" symbol-id="peak" position="above" font-style="bold" font-family="sans_serif" font-size="9" fill="#000000" stroke="#ffffff" stroke-width="2.00" />
 				<caption k="ele" symbol-id="peak" position="below" font-style="bold" font-size="9" fill="#000000" stroke="#ffffff" stroke-width="2.00" />
 			</rule>
 			<rule e="node" k="natural" v="cliff" zoom-min="12">
@@ -3180,7 +3180,7 @@ Magellan changes:
 			</rule>
 			<rule e="any" k="shop" v="convenience" zoom-min="16">
 				<symbol id="convenience" src="file:/symbols/convenience.svg" />
-				<caption k="name" symbol-id="convenience" position="auto" font-style="bold" font-size="9" fill="#000000" stroke="#ffffff" stroke-width="2.00" />
+				<caption k="name" symbol-id="convenience" position="auto" font-style="bold" font-family="sans_serif" font-size="9" fill="#000000" stroke="#ffffff" stroke-width="2.00" />
 			</rule>
 			<rule e="any" k="shop" v="clothes" zoom-min="17">
 				<symbol id="clothes" src="file:/symbols/clothes.svg" />
