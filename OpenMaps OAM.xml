@@ -3060,7 +3060,7 @@ Magellan changes:
 				<caption k="name" symbol-id="peak" position="above" font-style="bold" font-size="9" fill="#000000" stroke="#ffffff" stroke-width="2.00" />
 				<caption k="ele" symbol-id="peak" position="below" font-style="bold" font-size="9" fill="#000000" stroke="#ffffff" stroke-width="2.00" />
 			</rule>
-			<rule e="any" k="natural" v="cliff" zoom-min="12">
+			<rule e="node" k="natural" v="cliff" zoom-min="12">
 				<symbol id="cliff" src="file:/symbols/cliff.svg" symbol-percent="90" />
 				<caption k="name" symbol-id="cliff" position="auto" font-style="bold" font-size="9" fill="#000000" stroke="#ffffff" stroke-width="2.00" />
 			</rule>
