@@ -256,8 +256,10 @@ Magellan changes:
 
 		<rule e="way" k="landuse|man_made" v="*">
 			<rule cat ="om_tmilitary" e="way" k="landuse" v="military">
-				<area fill="#c3c346" />
-				<area src="file:/patterns/military.svg" stroke="#e4e4e4" stroke-width="0.20" symbol-percent="250" />
+				<area fill="#27ff0f0f" />
+				<!-- <area fill="#c3c346" /> -->
+				<area src="file:/patterns/p_military-var1opt.svg" stroke="#e4e4e4" stroke-width="0.20" symbol-percent="400" />
+				<!-- <area src="file:/patterns/military.svg" stroke="#e4e4e4" stroke-width="0.20" symbol-percent="250" /> -->
 				<rule e="way" k="*" v="*" zoom-min="10">
 					<caption k="name" font-style="bold_italic" font-family="sans_serif" font-size="10"
 						fill="#798630" stroke="#ffffff" stroke-width="2.00" text-wrap-width="120" />
