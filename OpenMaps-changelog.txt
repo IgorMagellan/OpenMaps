@@ -61,3 +61,4 @@ text-wrap-width для некоторых площадных заливок, pea
 добавил площадные captions для orchard|forest|wood
 Новый пункт меню ООПТ+военка
 разделил stroke и area у landfill|quarry
+другая заливка military
