@@ -2376,6 +2376,12 @@ Magellan changes:
 				<line stroke="#252525" stroke-width="0.60" stroke-dasharray="7.0,5.0" stroke-linecap="butt" />
 				<pathText k="name" font-style="bold" font-size="9" stroke="#ffffff" stroke-width="2.00" />
 			</rule>
+			<rule e="way" k="railway" v="disused|abandoned">
+				<line stroke="#555555" stroke-width="0.80" stroke-linecap="butt" />
+				<line stroke="#FFFFFF" stroke-width="0.60" stroke-linecap="butt" />
+				<line stroke="#cccccc" stroke-width="0.60" stroke-dasharray="7.0,5.0" stroke-linecap="butt" />
+				<pathText cat="tms_landnames" k="name" font-style="bold" font-size="9" stroke="#ffffff" stroke-width="3.00" repeat="true" repeat-start="10" repeat-gap="450" />
+			</rule>			
 		</rule>
 	</rule>
 
@@ -2675,7 +2681,7 @@ Magellan changes:
 		</rule>
 	</rule>
 
-	<!-- Площадные captions -->
+	<!-- Площадные captions  (polylabels)-->
 	<rule cat="om_oopt" e="node" k="boundary|leisure" v="protected_area|national_park|nature_reserve">
 		<rule e="node" k="protect_class" v="pr_1|pr_2|pr_3|pr_4|pr_7|pr_97|pr_98|pr_99|~">
 			<caption k="name" font-style="bold" font-size="10" fill="#111111" stroke="#E5FFFFFF" stroke-width="2.00" text-wrap-width="120" />
@@ -3113,10 +3119,11 @@ Magellan changes:
 			<rule e="any" k="natural" v="bay" zoom-min="12">
 				<caption k="name" position="auto" font-style="bold_italic" font-size="9" fill="#1A8DFF" stroke="#ffffff" stroke-width="2.00" />
 			</rule>
-			<rule e="any" k="natural" v="water" zoom-min="12">
+			<!-- добавлено в polylabels -->
+<!-- 			<rule e="any" k="natural" v="water" zoom-min="12">
 				<circle radius="4.00" fill="#b5d6f1" stroke="#1A8DFF" stroke-width="1.00" />
 				<caption k="name" dy="13" font-style="bold_italic" font-size="9" fill="#1A8DFF" stroke="#ffffff" stroke-width="2.00" />
-			</rule>
+			</rule> -->
 			<rule e="any" k="natural" v="wetland" zoom-min="16">
 				<symbol id="wetland" src="file:/symbols/wetland.svg" />
 				<caption k="name" symbol-id="wetland" position="auto" font-style="bold_italic" font-size="9" fill="#115DFF" stroke="#ffffff" stroke-width="2.00" text-wrap-width="140" />
