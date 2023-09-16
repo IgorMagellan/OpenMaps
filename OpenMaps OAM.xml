@@ -106,7 +106,7 @@ Magellan changes:
 			<!-- <cat id="access_vehicle" /> -->
 		<!-- </layer> -->
 
-		<layer id="publictransport_t" enabled="true">
+		<layer id="publictransport_t" enabled="false">
 			<name lang="hu" value="Tömegközlekedés" />
 			<name lang="de" value="Öffentlicher Verkehr" />
 			<name lang="en" value="Public transport" />
@@ -192,10 +192,6 @@ Magellan changes:
 				<area fill="#acc684" />
 				<area src="file:/patterns/wood-mixed.svg" symbol-percent="250" />
 			</rule>
-<!-- 			<rule e="way" k="*" v="*" zoom-min="14">
-				<caption k="name" font-style="italic" font-family="sans_serif" font-size="20"
-					fill="#609348" text-wrap-width="120" />
-			</rule> -->
 		</rule>
 
 		<rule e="way" k="natural" v="fell">
@@ -367,7 +363,7 @@ Magellan changes:
 			</rule>
 		</rule>
 	
-		<!-- MTB route OMP tunnel -->
+		<!-- MTB route tunnel -->
 		<rule cat="omp_mtb" e="way" k="mtbnetwork" v="imn|nmn|rmn|lmn|omn">
 			<rule e="way" k="tunnel" v="true|yes">
 				<rule e="way" k="highway" v="steps|footway|path|track|cycleway|bridleway|platform|pedestrian">
@@ -430,7 +426,7 @@ Magellan changes:
 
 
 		<!-- Hiking network OMP tunnel -->
-		<rule cat="omp_hiking" e="way" k="network" v="omp">
+		<rule cat="omp_hiking" e="way" k="hknetwork|network" v="iwn|nwn|rwn|lwn|own">
 			<rule e="way" k="tunnel" v="true|yes">
 				<rule e="way" k="highway" v="steps|footway|path|track|cycleway|bridleway|platform|pedestrian">
 					<line stroke="#fd1725" stroke-width="1.80" stroke-dasharray="5.0,5.0"
@@ -736,10 +732,6 @@ Magellan changes:
 			</rule>
 			<rule e="way" k="natural" v="water">
 				<area fill="#b5d6f1" />
-				<!-- 				<rule e="way" k="*" v="*" zoom-min="12">
-					<caption k="name" font-style="bold_italic" font-size="10" fill="#1A8DFF" stroke="#ffffff" stroke-width="2.00" />
-				</rule> -->
-
 			</rule>
 			<rule e="way" k="natural" v="glacier">
 				<area fill="#ddecec" />
@@ -1379,7 +1371,7 @@ Magellan changes:
 		</rule>
 	</rule>
 
-	<rule cat="omp_mtb" e="way" k="BC" v="G2" zoom-min="15">
+<!-- 	<rule cat="omp_mtb" e="way" k="BC" v="G2" zoom-min="15">
 		<lineSymbol src="file:/trailmarks/0x373b.svg" align-center="true" repeat="true"
 			rotate="false" repeat-gap="100" repeat-start="0" symbol-percent="80" />
 	</rule>
@@ -1410,7 +1402,7 @@ Magellan changes:
 	<rule cat="omp_mtb" e="way" k="BC" v="B2/G2/R2" zoom-min="15">
 		<lineSymbol src="file:/trailmarks/0x373abc.svg" align-center="true" repeat="true"
 			rotate="false" repeat-gap="100" repeat-start="0" symbol-percent="140" />
-	</rule>
+	</rule> -->
 
 
 	<!-- Bicycle route OMP no tunnel -->
@@ -1892,11 +1884,6 @@ Magellan changes:
 		<rule e="way" k="*" v="*" zoom-min="16" zoom-max="16">	<area fill="#c48f76" stroke="#7c523e" stroke-width="0.1" /> </rule>
 		<rule e="way" k="*" v="*" zoom-min="17" zoom-max="17">	<area fill="#ecad90" stroke="#b8795d" stroke-width="0.09" /> </rule>
 		<rule e="way" k="*" v="*" zoom-min="18">				<area fill="#fcb492" stroke="#ac7c68" stroke-width="0.08" /> </rule>
-
-		<!-- <rule cat="housenumb" e="way" k="*" v="*" zoom-min="16"> -->
-			<!-- <caption k="name" font-style="bold" font-size="10" fill="#000000" stroke="#ffffff" stroke-width="2.00" /> -->
-			<!-- <caption k="addr:housenumber" font-style="bold" font-size="10" fill="#606060" stroke="#ffffff" stroke-width="2.00" /> -->
-		<!-- </rule> -->
 	</rule>
 
 
@@ -3004,13 +2991,6 @@ Magellan changes:
 			<caption k="name" symbol-id="wayside_cross" position="auto" font-style="bold" font-size="9" fill="#000000" stroke="#ffffff" stroke-width="2.0" />
 		</rule>
 
-
-		<!-- house numbers -->
-		<rule e="node" k="addr:housenumber" v="*" zoom-min="18">
-			<caption k="addr:housenumber" position="auto" font-style="bold" font-size="10" fill="#606060" stroke="#ffffff" stroke-width="2.00" />
-		</rule>
-
-
 		<!-- leisure, office -->
 		<rule e="any" k="leisure" v="playground" zoom-min="17">
 			<symbol id="playground" src="file:/symbols/playground.svg" symbol-percent="110" />
@@ -3324,7 +3304,5 @@ Magellan changes:
 				<caption k="name" position="auto" font-style="bold" font-size="24" fill="#000000" stroke="#ffffff" stroke-width="2.00" />
 			</rule>
 		</rule>
-
-
 
 </rendertheme>

@@ -68,3 +68,4 @@ text-wrap-width для некоторых площадных заливок, pea
 16/09/2023
 закомментил пока caption на natural=water - есть в polylabels
 добавлен railway=disused|abandoned
+поправил ~ Hiking network OMP tunnel ~
