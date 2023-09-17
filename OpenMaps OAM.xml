@@ -798,10 +798,16 @@ Magellan changes:
 					repeat-gap="75" repeat-start="0" display="always" priority="-20"
 					symbol-height="16" />
 			</rule>
-
+			<rule e="way" k="natural" v="gully" zoom-min="14">
+				<line stroke="#99855C" dy="0.25" stroke-width="0.4" stroke-dasharray="0,1,1,7" stroke-linecap="butt" />
+				<line stroke="#99855C" dy="0.4" stroke-width="0.1" stroke-dasharray="4,4,1,0" stroke-linecap="butt" />
+				<line stroke="#99855C" dy="-0.25" stroke-width="0.4" stroke-dasharray="1,8" stroke-linecap="butt" />
+				<line stroke="#99855C" dy="-0.4" stroke-width="0.1" stroke-dasharray="3,4,2,0" stroke-linecap="butt" />
+				<pathText k="name" dy="-1.2" font-style="bold_italic" font-family="serif" font-size="10" fill="#666666" stroke="#E5FFFFFF" stroke-width="2" repeat-start="80" repeat-gap="200" />
+			</rule>
 		</rule>
 
-		<rule e="way" k="barrier|natural" v="ditch|gully" zoom-min="14">
+		<rule e="way" k="barrier|natural" v="ditch" zoom-min="14">
 			<line stroke="#80555555" stroke-width="0.50" />
 			<rule e="way" k="*" v="*">
 				<caption k="name" dy="-15" font-style="italic" font-family="sans_serif"
