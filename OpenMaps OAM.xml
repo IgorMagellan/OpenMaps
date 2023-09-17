@@ -789,7 +789,7 @@ Magellan changes:
 			</rule>
 
 			<rule e="way" k="*" v="ridge|arete" zoom-min="12">
-				<line stroke="#927253" stroke-width="0.4" stroke-dasharray="1,2"
+				<line stroke="#80927253" stroke-width="0.4" stroke-dasharray="1,2"
 					stroke-linecap="round" scale="all" />
 				<pathText k="name" dy="2" font-style="italic" font-family="sans_serif" font-size="12"
 					fill="#927253" stroke="#bebebe" stroke-width="0.8" display="always" priority="-20" repeat-start="50" repeat-gap="300" />
@@ -801,11 +801,11 @@ Magellan changes:
 				<line stroke="#99855C" dy="0.4" stroke-width="0.1" stroke-dasharray="4,4,1,0" stroke-linecap="butt" />
 				<line stroke="#99855C" dy="-0.25" stroke-width="0.4" stroke-dasharray="1,8" stroke-linecap="butt" />
 				<line stroke="#99855C" dy="-0.4" stroke-width="0.1" stroke-dasharray="3,4,2,0" stroke-linecap="butt" />
-				<pathText k="name" dy="-1.8" font-style="bold_italic" font-family="serif" font-size="10" fill="#666666" stroke="#E5FFFFFF" stroke-width="2" repeat-start="80" repeat-gap="200" />
+				<pathText k="name" dy="-1.8" font-style="bold_italic" font-family="sans_serif" font-size="10" fill="#666666" stroke="#E5FFFFFF" stroke-width="2" repeat-start="80" repeat-gap="200" />
 			</rule>
 		</rule>
 
-		<rule e="way" k="barrier|natural" v="ditch" zoom-min="14">
+		<rule e="way" k="barrier" v="ditch" zoom-min="14">
 			<line stroke="#80555555" stroke-width="0.50" />
 			<rule e="way" k="*" v="*">
 				<caption k="name" dy="-15" font-style="italic" font-family="sans_serif"
