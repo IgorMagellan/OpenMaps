@@ -69,3 +69,7 @@ text-wrap-width для некоторых площадных заливок, pea
 закомментил пока caption на natural=water - есть в polylabels
 добавлен railway=disused|abandoned
 поправил ~ Hiking network OMP tunnel ~
+17/09/2023
+выключил пока bridge.svg
+text-wrap-width для aerodrome|airport
+

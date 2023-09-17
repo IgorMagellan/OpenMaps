@@ -2776,10 +2776,9 @@ Magellan changes:
 			</rule>
 			<rule e="any" k="aeroway" v="aerodrome|airport" zoom-min="13">
 				<symbol id="airport" src="file:/symbols/airport.svg" />
-			</rule>
-			<rule e="any" k="*" v="*">
-				<caption k="name" symbol-id="airport" position="above" font-style="bold"
-					font-size="9" fill="#000000" stroke="#ffffff" stroke-width="2.00" />
+				<rule e="any" k="*" v="*">
+					<caption k="name" symbol-id="airport" position="above" font-style="bold" font-size="9" fill="#000000" stroke="#ffffff" stroke-width="2.00" text-wrap-width="140"  />
+				</rule>
 			</rule>
 		</rule>
 
@@ -3173,7 +3172,7 @@ Magellan changes:
 
 		<!-- bridge -->
 		<rule e="any" k="bridge" v="*" zoom-min="15">
-			<symbol id="bridge" src="file:/symbols/bridge.svg" />
+<!-- 			<symbol id="bridge" src="file:/symbols/bridge.svg" /> -->
 			<caption k="name" symbol-id="bridge" position="auto" font-style="bold" font-size="9" fill="#000000" stroke="#ffffff" stroke-width="2.00" />
 		</rule>
 
