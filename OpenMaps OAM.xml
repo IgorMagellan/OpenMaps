@@ -713,11 +713,12 @@ Magellan changes:
 				<pathText k="name" dy="2" font-style="italic" font-family="sans_serif" font-size="12" fill="#927253" stroke="#bebebe" stroke-width="0.8" display="always" priority="-20" repeat-start="50" repeat-gap="300" />
 				<lineSymbol src="file:symbols/s_ridge.svg" align-center="true" repeat="true" repeat-gap="75" repeat-start="0" display="always" priority="-20" symbol-height="18" />
 			</rule>
+			<!-- Оригинальный цвет #99855C -->
 			<rule e="way" k="natural" v="gully" zoom-min="14">
-				<line stroke="#99855C" dy="0.25" stroke-width="0.4" stroke-dasharray="0,1,1,7" stroke-linecap="butt" />
-				<line stroke="#99855C" dy="0.4" stroke-width="0.1" stroke-dasharray="4,4,1,0" stroke-linecap="butt" />
-				<line stroke="#99855C" dy="-0.25" stroke-width="0.4" stroke-dasharray="1,8" stroke-linecap="butt" />
-				<line stroke="#99855C" dy="-0.4" stroke-width="0.1" stroke-dasharray="3,4,2,0" stroke-linecap="butt" />
+				<line stroke="#77643d" dy="0.25" stroke-width="0.4" stroke-dasharray="0,1,1,7" stroke-linecap="butt" />
+				<line stroke="#77643d" dy="0.4" stroke-width="0.1" stroke-dasharray="4,4,1,0" stroke-linecap="butt" />
+				<line stroke="#77643d" dy="-0.25" stroke-width="0.4" stroke-dasharray="1,8" stroke-linecap="butt" />
+				<line stroke="#77643d" dy="-0.4" stroke-width="0.1" stroke-dasharray="3,4,2,0" stroke-linecap="butt" />
 				<pathText k="name" dy="-1.8" font-style="bold_italic" font-family="sans_serif" font-size="10" fill="#666666" stroke="#E5FFFFFF" stroke-width="2" repeat-start="80" repeat-gap="200" />
 			</rule>
 		</rule>
