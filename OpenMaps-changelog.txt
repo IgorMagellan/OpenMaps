@@ -72,4 +72,7 @@ text-wrap-width для некоторых площадных заливок, pea
 17/09/2023
 выключил пока bridge.svg
 text-wrap-width для aerodrome|airport
-
+gully отдельно от ditch
+изменил ridge|arete
+18/09/2023
+цвет gully потемнее
