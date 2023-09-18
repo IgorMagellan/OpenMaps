@@ -76,3 +76,4 @@ gully отдельно от ditch
 изменил ridge|arete
 18/09/2023
 цвет gully потемнее
+изменил residential|farmyard
