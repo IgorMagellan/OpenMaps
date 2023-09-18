@@ -256,9 +256,12 @@ Magellan changes:
 			<rule e="way" k="landuse" v="residential|farmyard">
 				<!-- <area fill="#f4cd9f" /> оригинал z16 -->
 				<rule e="way" k="*" v="*" zoom-min="9" zoom-max="12">
-					<area fill="#c59d6f" stroke="#997245" stroke-width="0.2" />
+					<area fill="#6c5b47" stroke="#997245" stroke-width="0.2" />
 				</rule>
-				<rule e="way" k="*" v="*" zoom-min="13" zoom-max="15">
+				<rule e="way" k="*" v="*" zoom-min="13" zoom-max="13">
+					<area fill="#aa8f70" />
+				</rule>	
+				<rule e="way" k="*" v="*" zoom-min="14" zoom-max="15">
 					<area fill="#f0c798" />
 				</rule>
 				<rule e="way" k="*" v="*" zoom-min="16" zoom-max="16">
