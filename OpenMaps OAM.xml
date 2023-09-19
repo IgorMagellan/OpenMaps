@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <!--
-Version 8.2
+Version 8.3
 
 Mapsforge rendertheme for OpenAndroMaps V5+ and Locus LoMaps V3 (limited)
 Originally by Davidovits for OpenMapsEU project, now discontinuied. Currently maintained and supported by Magellan.
@@ -14,7 +14,7 @@ see OpenMaps-changelog.txt
 <rendertheme xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xmlns="http://mapsforge.org/renderTheme" xsi:schemaLocation="http://mapsforge.org/renderTheme https://raw.githubusercontent.com/mapsforge/mapsforge/master/resources/renderTheme.xsd" version="5" map-background="#ffffea">
 
-	<stylemenu id="om_menu_8_2" defaultvalue="turista" defaultlang="en">
+	<stylemenu id="om_menu_8_3" defaultvalue="turista" defaultlang="en">
 
 		<layer id="hiking_routes_t" enabled="true">
 			<name lang="hu" value="Turistaút kiemelés (piros)" />
@@ -2006,8 +2006,8 @@ see OpenMaps-changelog.txt
 							<pathText k="ref" font-style="bold" font-size="10" fill="#ffffff" stroke="#0000ff" stroke-width="2.00" />
 						</rule> -->
 						<rule e="way" k="*" v="*" zoom-min="14">
-							<pathText k="ref" font-style="bold" font-size="10" fill="#ffffff" stroke="#0000ff" stroke-width="2.00" />						
-							<pathText k="name" font-style="bold" font-size="10" stroke="#ffffff" stroke-width="2.00" repeat-start="50" />
+							<pathText k="ref" font-style="bold" font-size="10" fill="#ffffff" stroke="#0000ff" stroke-width="2.00" repeat-start="50" repeat-gap="300" />						
+							<pathText k="name" font-style="bold" font-size="10" stroke="#ffffff" stroke-width="2.00" />
 						</rule>
 					</rule>
 					<rule e="way" k="highway" v="primary|trunk">
@@ -2469,7 +2469,7 @@ see OpenMaps-changelog.txt
 								<pathText k="ref" font-style="bold" font-size="10" fill="#ffffff" stroke="#0000ff" stroke-width="2.00" />
 							</rule> -->
 							<rule e="way" k="*" v="*" zoom-min="14">
-								<pathText k="ref" font-style="bold" font-size="10" fill="#ffffff" stroke="#0000ff" stroke-width="2.00" />							
+								<pathText k="ref" font-style="bold" font-size="10" fill="#ffffff" stroke="#0000ff" stroke-width="2.00" repeat-start="50" repeat-gap="300" />							
 								<pathText k="name" font-style="bold" font-size="10" stroke="#ffffff" stroke-width="2.00" />
 							</rule>
 						</rule>
