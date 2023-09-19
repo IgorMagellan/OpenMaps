@@ -77,3 +77,5 @@ gully отдельно от ditch
 18/09/2023
 цвет gully потемнее
 изменил residential|farmyard
+19/09/2023
+обьединил ref и name у highway=secondary и tertiary, с z14 (было ref z14-16, c z17-name)
