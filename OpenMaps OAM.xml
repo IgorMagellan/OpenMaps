@@ -2786,7 +2786,7 @@ see OpenMaps-changelog.txt
 
 		<!-- landuse -->
 		<!-- 		<rule cat ="om_tmilitary" e="any" k="landuse" v="military" zoom-min="16">
-			<symbol id="military" src="file:/symbols/military_v2.svg" symbol-percent="200" />
+			<symbol id="military" src="file:/patterns/military_v2.svg" symbol-percent="200" />
 			<caption k="name" symbol-id="military" position="auto" font-style="bold" font-size="9" fill="#000000" stroke="#ffffff" stroke-width="2.0" text-wrap-width="140" />
 		</rule> -->
 
