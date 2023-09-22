@@ -10,11 +10,8 @@
 -->
 
 # Overview
-
  
 The theme is based on the Mapsforge rendertheme for now descontiued OpenMapsEU project by Davidovits. Since then thoroughly updated and reworked by <a href="https://github.com/IgorMagellan">Magellan</a>. The theme is light, fast and features unobtrusive colors with clear definition between zones.
-
-Licence: [CC BY-NC-SA 3.0 (Creative Commons Attribution-NonCommercial-ShareAlike 3.0 Unported)](http://creativecommons.org/licenses/by-nc-sa/3.0/) 
 
 Legend: [maplegend_EN.pdf](maplegend_EN.pdf)
 
