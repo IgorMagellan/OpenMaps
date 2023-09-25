@@ -79,3 +79,5 @@ gully отдельно от ditch
 изменил residential|farmyard
 19/09/2023
 обьединил ref и name у highway=secondary и tertiary, с z14 (было ref z14-16, c z17-name)
+25/09/2023
+V 8.3 в панели выбора тем Локуса
