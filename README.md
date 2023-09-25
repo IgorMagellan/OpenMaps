@@ -12,7 +12,7 @@ The theme is based on the Mapsforge rendertheme for now descontiued OpenMapsEU p
 
 Legend: [maplegend_EN.pdf](maplegend_EN.pdf)
 
-№# Changelog
+[Changelog](OpenMaps-changelog.txt) (RU)
 
 
 
