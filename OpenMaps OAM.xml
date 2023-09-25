@@ -89,13 +89,13 @@ see OpenMaps-changelog.txt
 			<cat id="omp_contour" />
 		</layer>
 
-		<layer id="tollroads_t" enabled="false">
+<!-- 		<layer id="tollroads_t" enabled="false">
 			<name lang="hu" value="Fizetős utak kiemelés" />
 			<name lang="de" value="Mautstrassen" />
 			<name lang="en" value="Toll roads" />
 			<name lang="ru" value="Платные дороги" />
 			<cat id="toll_roads" />
-		</layer>
+		</layer> -->
 
 		<!-- <layer id="access_vehicle_t" enabled="true"> -->
 		<!-- <name lang="hu" value="Jármű korlátozás" /> -->
@@ -155,7 +155,7 @@ see OpenMaps-changelog.txt
 			<overlay id="mtb_t" />
 			<overlay id="standard_bc_t" />
 			<overlay id="winter_t" />
-			<overlay id="tollroads_t" />
+			<!-- <overlay id="tollroads_t" /> -->
 			<!-- <overlay id="access_vehicle_t" /> -->
 			<overlay id="publictransport_t" />
 			<overlay id="housenumb" />
@@ -246,7 +246,7 @@ see OpenMaps-changelog.txt
 		<rule e="way" k="landuse|man_made" v="*">
 			<rule cat ="om_tmilitary" e="way" k="landuse" v="military">
 				<area fill="#27ff0f0f" />
-				<!-- <area fill="#c3c346" /> -->
+<!-- 				<area fill="#c3c346" />		 -->
 				<area src="file:/patterns/military_v2.svg" stroke="#e4e4e4" stroke-width="0.20" symbol-percent="250" />
 				<rule e="way" k="*" v="*" zoom-min="10">
 					<caption k="name" font-style="bold_italic" font-family="sans_serif" font-size="10" fill="#798630" stroke="#ffffff" stroke-width="2.00" text-wrap-width="120" />
@@ -536,7 +536,8 @@ see OpenMaps-changelog.txt
 		<rule e="way" k="highway" v="*">
 			<rule e="way" k="tunnel" v="true|yes">
 				<!-- Toll -->
-				<rule cat="toll_roads" e="way" k="toll" v="tl_yes">
+				<!-- <rule cat="toll_roads" e="way" k="toll" v="tl_yes"> -->
+				<rule e="way" k="toll" v="tl_yes">
 					<rule e="way" k="highway" v="tertiary">
 						<line stroke="#00f9ff" stroke-width="3.50" />
 					</rule>
@@ -1660,7 +1661,8 @@ see OpenMaps-changelog.txt
 	</rule>
 
 	<!-- Toll highways no tunnel-->
-	<rule cat="toll_roads" e="way" k="highway" v="*">
+	<!-- <rule cat="toll_roads" e="way" k="highway" v="*">	 -->
+	<rule e="way" k="highway" v="*">
 		<rule e="way" k="tunnel" v="~|no|false">
 			<rule e="way" k="toll" v="tl_yes">
 				<rule e="way" k="highway" v="tertiary">
