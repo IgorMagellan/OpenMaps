@@ -1,42 +1,18 @@
-# OpenMaps
- Rendertheme for Locus, OruxMaps, Cruiser and other mapsforge compatible programs
+<p align="center">
+<img style="align:center;" src="OpenMaps OAM.png" alt="OpenMaps Rendertheme" width="100" />
+</p>
+
+<h1 align="center">OpenMaps</h1>
+<h3 align="center">Rendertheme for OpenAndroMaps V4+, Locus LoMaps V3 (limited) and other <a href="https://github.com/mapsforge/mapsforge)">Mapsforge</a> based maps. Works in LocusMap, OruxMap, Cruiser.</h3>
+
+
+## Overview
  
-Based on: Mapsforge rendertheme for Openmaps by Davidovits
-
-Contact: http://www.openmaps.eu
-
-Source: https://openmaps.eu/mapsforgedownload 
-
-Licence: [CC BY-NC-SA 3.0 (Creative Commons Attribution-NonCommercial-ShareAlike 3.0 Unported)](http://creativecommons.org/licenses/by-nc-sa/3.0/) 
-
-
-Magellan's changes are listed in the header of the xml files.
+The theme is based on the Mapsforge rendertheme for now descontiued OpenMapsEU project by Davidovits. Since then thoroughly updated and reworked by <a href="https://github.com/IgorMagellan">Magellan</a>. The theme is light, fast and features unobtrusive colors with clear definition between zones.
 
 Legend: [maplegend_EN.pdf](maplegend_EN.pdf)
 
-The resources are the same, but in the process of modification, smartphones with different DPI were used.
-
-<div align="center">
-
-![OpenMaps LE.png](OpenMaps%20LE.png) 
-
-</div>
-
-_**OpenMaps LE.xml**_ - (Locus Edition) Only for the Locus program, some specific features of the vector engine are used there. **dpi=240.. 320**
-
-<div align="center">
-
-![OpenMaps Mapsforge.png](OpenMaps%20Mapsforge.png) 
-
-</div>
-
-_**OpenMaps mapsforge.xml**_ - For other mapsforge compatible programs.  **dpi=480**
+№# Changelog
 
 
-Screenshots:
 
-<div align="center">
-
-[![Screenshot 1](http://images.vfl.ru/ii/1615117911/f1a5a0a3/33587923_s.jpg)](screenshots/1-Screenshot_20210307.jpg) [![Screenshot 2](http://images.vfl.ru/ii/1615117935/07d53a87/33587927_s.jpg)](screenshots/2-Screenshot_20210307.jpg) [![Screenshot 3](http://images.vfl.ru/ii/1615118018/a3f50190/33587936_s.jpg)](screenshots/4-Screenshot_20210307.jpg)
-
-</div>

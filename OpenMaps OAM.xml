@@ -439,13 +439,13 @@ see OpenMaps-changelog.txt
 			<rule cat="colored_hiking" e="way" k="osmc_color" v="wmco_blue">
 				<rule e="way" k="tunnel" v="true|yes">
 					<rule e="way" k="highway" v="steps|footway|path|track|cycleway|bridleway|platform|pedestrian">
-						<line stroke="#006EFF" stroke-width="1.80" stroke-dasharray="5.0,5.0" stroke-linecap="butt" />
+						<line stroke="#006eff" stroke-width="1.80" stroke-dasharray="5.0,5.0" stroke-linecap="butt" />
 					</rule>
 					<rule e="way" k="highway" v="unclassified|residential|living_street|service|road">
-						<line stroke="#006EFF" stroke-width="2.60" stroke-dasharray="5.0,5.0" stroke-linecap="butt" />
+						<line stroke="#006eff" stroke-width="2.60" stroke-dasharray="5.0,5.0" stroke-linecap="butt" />
 					</rule>
 					<rule e="way" k="highway" v="construction">
-						<line stroke="#006EFF" stroke-width="2.25" stroke-dasharray="5.0,5.0" stroke-linecap="butt" />
+						<line stroke="#006eff" stroke-width="2.25" stroke-dasharray="5.0,5.0" stroke-linecap="butt" />
 					</rule>
 					<rule e="way" k="highway" v="byway">
 						<line stroke="#006EFF" stroke-width="2.10" stroke-dasharray="5.0,5.0" stroke-linecap="butt" />
