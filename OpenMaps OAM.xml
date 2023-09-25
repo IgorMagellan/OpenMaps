@@ -14,7 +14,7 @@ see OpenMaps-changelog.txt
 <rendertheme xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xmlns="http://mapsforge.org/renderTheme" xsi:schemaLocation="http://mapsforge.org/renderTheme https://raw.githubusercontent.com/mapsforge/mapsforge/master/resources/renderTheme.xsd" version="5" map-background="#ffffea">
 
-	<stylemenu id="om_menu_8_3" defaultvalue="turista" defaultlang="en">
+	<stylemenu id="om_menu_8_3" defaultvalue="defval_om" defaultlang="en">
 
 		<layer id="hiking_routes_t" enabled="true">
 			<name lang="hu" value="Turistaút kiemelés (piros)" />
@@ -139,11 +139,11 @@ see OpenMaps-changelog.txt
 		</layer>
 
 		<!-- mapstyles -->
-		<layer id="turista" visible="true">
-			<name lang="hu" value="OpenMaps rétegek" />
-			<name lang="de" value="OpenMaps Schichten" />
-			<name lang="en" value="OpenMaps layers" />
-			<name lang="ru" value="Cлои OpenMaps" />
+		<layer id="defval_om" visible="true">
+			<name lang="hu" value="V 8.3" />
+			<name lang="de" value="V 8.3" />
+			<name lang="en" value="V 8.3" />
+			<name lang="ru" value="V 8.3" />
 			<overlay id="contour_lines_t" />
 			<overlay id="poi_enable" />
 			<overlay id="oopt_t" />
