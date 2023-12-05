@@ -12,7 +12,9 @@ see OpenMaps-changelog.txt
 -->
 
 <rendertheme xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-	xmlns="http://mapsforge.org/renderTheme" xsi:schemaLocation="http://mapsforge.org/renderTheme https://raw.githubusercontent.com/mapsforge/mapsforge/master/resources/renderTheme.xsd" version="5" map-background="#ffffea">
+	xmlns="http://mapsforge.org/renderTheme" xsi:schemaLocation="http://mapsforge.org/renderTheme 
+	https://github.com/mapsforge/mapsforge/raw/master/resources/renderTheme.xsd"
+	version="5" map-background="#ffffea">
 
 	<stylemenu id="om_menu_8_3" defaultvalue="defval_om" defaultlang="en">
 
@@ -140,10 +142,10 @@ see OpenMaps-changelog.txt
 
 		<!-- mapstyles -->
 		<layer id="defval_om" visible="true">
-			<name lang="hu" value="V 8.3" />
-			<name lang="de" value="V 8.3" />
-			<name lang="en" value="V 8.3" />
-			<name lang="ru" value="V 8.3" />
+			<name lang="hu" value="Ver 8.3" />
+			<name lang="de" value="Ver 8.3" />
+			<name lang="en" value="Ver 8.3" />
+			<name lang="ru" value="Версия 8.3" />
 			<overlay id="contour_lines_t" />
 			<overlay id="poi_enable" />
 			<overlay id="oopt_t" />
@@ -1685,7 +1687,7 @@ see OpenMaps-changelog.txt
 	</rule>
 
 	<!-- Töltés no tunnel -->
-	<rule e="way" k="embankment" v="emb_yes" zoom-min="16">
+	<rule e="way" k="embankment" v="emb_yes|yes" zoom-min="16">
 		<rule e="way" k="highway" v="footway">
 			<line stroke="#000000" stroke-width="1.80" stroke-dasharray="1.0,10.0" stroke-linecap="butt" />
 		</rule>
@@ -1811,8 +1813,8 @@ see OpenMaps-changelog.txt
 
 					<rule e="way" k="highway" v="construction">
 						<line stroke="#121212" stroke-width="1.25" />
-
 					</rule>
+
 					<rule e="way" k="highway" v="steps">
 						<line stroke="#FFFFFF" stroke-width="0.80" />
 					</rule>
@@ -1983,6 +1985,7 @@ see OpenMaps-changelog.txt
 							<pathText k="name" font-style="bold" font-size="10" stroke="#ffffff" stroke-width="2.00" />
 						</rule>
 					</rule>
+					
 					<rule e="way" k="highway" v="byway">
 						<line stroke="#ffffff" stroke-width="0.65" />
 						<rule e="way" k="*" v="*" zoom-min="15">
@@ -2951,7 +2954,7 @@ see OpenMaps-changelog.txt
 			</rule>
 			<rule e="node" k="natural" v="spring" zoom-min="12">
 				<symbol id="spring" src="file:/symbols/spring.svg" />
-				<caption k="name" symbol-id="spring" position="auto" font-style="bold" font-size="9" fill="#000000" stroke="#ffffff" stroke-width="2.0" text-wrap-width="120" text-wrap-width="120" />
+				<caption k="name" symbol-id="spring" position="auto" font-style="bold" font-size="9" fill="#000000" stroke="#ffffff" stroke-width="2.0" text-wrap-width="120" />
 			</rule>
 			<rule e="any" k="natural" v="bay" zoom-min="12">
 				<caption k="name" position="auto" font-style="bold_italic" font-size="9" fill="#1A8DFF" stroke="#ffffff" stroke-width="2.00" />
@@ -3095,15 +3098,15 @@ see OpenMaps-changelog.txt
 		<rule e="any" k="tourism" v="*">
 			<rule e="any" k="tourism" v="information" zoom-min="15">
 				<symbol id="information" src="file:/symbols/information.svg" />
-				<caption k="name" symbol-id="information" position="auto" font-style="bold" font-size="9" fill="#000000" stroke="#ffffff" stroke-width="2.00" />
+				<caption k="name" symbol-id="information" position="auto" font-style="bold" font-size="9" fill="#000000" stroke="#ffffff" stroke-width="2.00" text-wrap-width="120" />
 			</rule>
 			<rule e="any" k="tourism" v="viewpoint" zoom-min="16">
 				<symbol id="viewpoint" src="file:/symbols/viewpoint.svg" />
-				<caption k="name" symbol-id="viewpoint" position="auto" font-style="bold" font-size="9" fill="#000000" stroke="#ffffff" stroke-width="2.00" />
+				<caption k="name" symbol-id="viewpoint" position="auto" font-style="bold" font-size="9" fill="#000000" stroke="#ffffff" stroke-width="2.00" text-wrap-width="120" />
 			</rule>
 			<rule e="any" k="tourism" v="alpine_hut" zoom-min="14">
 				<symbol id="alpine_hut" src="file:/symbols/alpine_hut.svg" />
-				<caption k="name" symbol-id="alpine_hut" position="auto" priority="50" font-style="bold" font-size="9" fill="#000000" stroke="#ffffff" stroke-width="2.00" />
+				<caption k="name" symbol-id="alpine_hut" position="auto" priority="50" font-style="bold" font-size="9" fill="#000000" stroke="#ffffff" stroke-width="2.00" text-wrap-width="120" />
 			</rule>
 			<rule e="any" k="tourism" v="chalet|wilderness_hut" zoom-min="14">
 				<symbol id="chalet" src="file:/symbols/chalet.svg" />
