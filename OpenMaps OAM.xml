@@ -362,6 +362,9 @@ see OpenMaps-changelog.txt
 			</rule>
 		</rule>
 
+		<!-- Hillshading -->
+		<hillshading zoom-min="8" zoom-max="18" magnitude="64"/>
+
 		<!-- MTB route tunnel -->
 		<rule cat="omp_mtb" e="way" k="mtbnetwork" v="imn|nmn|rmn|lmn|omn">
 			<rule e="way" k="tunnel" v="true|yes">
