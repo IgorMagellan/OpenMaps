@@ -2884,7 +2884,7 @@ see OpenMaps-changelog.txt
 			<caption k="name" symbol-id="museum" position="auto" font-style="bold" font-size="9" fill="#000000" stroke="#ffffff" stroke-width="2.00" />
 		</rule>
 
-		<rule e="any" k="tower" v="observation" zoom-min="15">
+		<rule e="any" k="tower" v="observation|watchtower" zoom-min="15">
 			<symbol id="observation" src="file:/symbols/observation.svg" symbol-height="16" />
 			<caption k="name" symbol-id="observation" dy="-14" font-style="bold" font-size="9" fill="#000000" stroke="#ffffff" stroke-width="2.00" />
 		</rule>

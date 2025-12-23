@@ -87,3 +87,7 @@ Release 8.2
 05/12/2023
 поправил ссылку на актуальную xsi:schemaLocation
 embankment emb_yes|yes для совместим.с LoMaps
+21/12/2025
+hillshading для Cruiser, Orux,..
+23/12/2025
+Добавлен tower=watchtower
