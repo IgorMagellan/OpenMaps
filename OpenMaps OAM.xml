@@ -363,7 +363,7 @@ see OpenMaps-changelog.txt
 		</rule>
 
 		<!-- Hillshading -->
-		<hillshading zoom-min="8" zoom-max="18" magnitude="64"/>
+		<hillshading zoom-min="9" zoom-max="17" magnitude="64"/>
 
 		<!-- MTB route tunnel -->
 		<rule cat="omp_mtb" e="way" k="mtbnetwork" v="imn|nmn|rmn|lmn|omn">
