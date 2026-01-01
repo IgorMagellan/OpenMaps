@@ -719,7 +719,7 @@ see OpenMaps-changelog.txt
 			<rule e="way" k="*" v="ridge|arete" zoom-min="12">
 				<line stroke="#80927253" stroke-width="0.4" stroke-dasharray="1,2" stroke-linecap="round" scale="all" />
 				<pathText k="name" dy="2" font-style="italic" font-family="sans_serif" font-size="12" fill="#927253" stroke="#bebebe" stroke-width="0.8" display="always" priority="-20" repeat-start="50" repeat-gap="300" />
-				<lineSymbol src="file:symbols/s_ridge.svg" align-center="true" repeat="true" repeat-gap="75" repeat-start="0" display="always" priority="-20" symbol-height="18" />
+				<lineSymbol src="file:symbols/s_ridge.svg" position="center" repeat="true" repeat-gap="75" repeat-start="0" display="always" priority="-20" symbol-height="18" />
 			</rule>
 			<!-- Оригинальный цвет #99855C -->
 			<rule e="way" k="natural" v="gully" zoom-min="14">
@@ -831,19 +831,19 @@ see OpenMaps-changelog.txt
 			<rule e="way" k="waterway" v="ditch">
 				<line stroke="#1A8DFF" stroke-width="0.60" stroke-dasharray="10.0,5.0" stroke-linecap="butt" />
 				<line stroke="#b5d6f1" stroke-width="0.40" stroke-dasharray="10.0,5.0" stroke-linecap="butt" />
-				<lineSymbol src="file:/symbols/bluearrow.svg" align-center="true" repeat="true" />
+				<lineSymbol src="file:/symbols/bluearrow.svg" position="center" repeat="true" />
 				<rule e="way" k="*" v="*" zoom-min="14">
 					<pathText k="name" font-style="bold_italic" font-family="sans_serif" font-size="10" fill="#1A8DFF" stroke="#ffffff" stroke-width="2.00" />
 				</rule>
 			</rule>
 			<rule e="way" k="waterway" v="drain">
 				<line stroke="#b5d6f1" stroke-width="0.80" />
-				<lineSymbol src="file:/symbols/bluearrow.svg" align-center="true" repeat="true" />
+				<lineSymbol src="file:/symbols/bluearrow.svg" position="center" repeat="true" />
 			</rule>
 			<rule e="way" k="waterway" v="canal">
 				<line stroke="#1A8DFF" stroke-width="1.00" />
 				<line stroke="#b5d6f1" stroke-width="0.80" />
-				<lineSymbol src="file:/symbols/bluearrow.svg" align-center="true" repeat="true" />
+				<lineSymbol src="file:/symbols/bluearrow.svg" position="center" repeat="true" />
 				<rule e="way" k="*" v="*" zoom-min="14">
 					<pathText k="name" font-style="bold_italic" font-family="sans_serif" font-size="10" fill="#1A8DFF" stroke="#ffffff" stroke-width="2.00" />
 				</rule>
@@ -851,7 +851,7 @@ see OpenMaps-changelog.txt
 			<rule e="way" k="waterway" v="stream">
 				<line stroke="#1A8DFF" stroke-width="1.00" />
 				<line stroke="#b5d6f1" stroke-width="0.80" />
-				<lineSymbol src="file:/symbols/bluearrow.svg" align-center="true" repeat="true" />
+				<lineSymbol src="file:/symbols/bluearrow.svg" position="center" repeat="true" />
 				<rule e="way" k="*" v="*" zoom-min="14">
 					<pathText k="name" font-style="bold_italic" font-family="sans_serif" font-size="10" fill="#1A8DFF" stroke="#ffffff" stroke-width="2.00" />
 				</rule>
@@ -859,7 +859,7 @@ see OpenMaps-changelog.txt
 			<rule e="way" k="waterway" v="river">
 				<line stroke="#1A8DFF" stroke-width="2.20" />
 				<line stroke="#b5d6f1" stroke-width="2.00" />
-				<lineSymbol src="file:/symbols/bluearrow.svg" align-center="true" repeat="true" />
+				<lineSymbol src="file:/symbols/bluearrow.svg" position="center" repeat="true" />
 				<rule e="way" k="*" v="*" zoom-min="12">
 					<pathText k="name" font-style="bold_italic" font-family="sans_serif" font-size="11" fill="#1A8DFF" stroke="#ffffff" stroke-width="2.00" />
 				</rule>
@@ -2037,7 +2037,7 @@ see OpenMaps-changelog.txt
 					<rule e="way" k="highway" v="cycleway" zoom-min="14">
 						<line stroke="#000000" stroke-width="0.20" stroke-dasharray="4.0,6.0" />
 						<rule e="way" k="*" v="*" zoom-min="16">
-							<lineSymbol src="file:/trailmarks/cycle.svg" align-center="true" repeat="true" />
+							<lineSymbol src="file:/trailmarks/cycle.svg" position="center" repeat="true" />
 							<pathText k="name" font-style="bold" font-size="10" stroke="#ffffff" stroke-width="2.00" />
 						</rule>
 					</rule>
@@ -2091,7 +2091,7 @@ see OpenMaps-changelog.txt
 		<rule e="way" k="area" v="~|false|no">
 			<rule e="way" k="highway" v="*">
 				<rule e="way" k="oneway" v="yes|true" zoom-min="16">
-					<lineSymbol src="file:/symbols/oneway.svg" align-center="true" repeat="true" />
+					<lineSymbol src="file:/symbols/oneway.svg" position="center" repeat="true" />
 				</rule>
 			</rule>
 		</rule>
@@ -2118,13 +2118,13 @@ see OpenMaps-changelog.txt
 	<rule cat="omp_winter" e="way" k="piste:type" v="sled" zoom-min="14">
 		<line stroke="#70fa41fa" stroke-width="2.00" />
 		<rule e="way" k="*" v="*" zoom-min="16">
-			<lineSymbol src="file:/symbols/sled.svg" align-center="true" rotate="false" repeat="true" repeat-start="0" repeat-gap="60" />
+			<lineSymbol src="file:/symbols/sled.svg" position="center" rotate="false" repeat="true" repeat-start="0" repeat-gap="60" />
 		</rule>
 	</rule>
 	<rule cat="omp_winter" e="way" k="piste:type" v="skitour|nordic" zoom-min="14">
 		<line stroke="#70fa41fa" stroke-width="2.00" />
 		<rule e="way" k="*" v="*" zoom-min="16">
-			<lineSymbol src="file:/symbols/skitour.svg" align-center="true" rotate="false" repeat="true" repeat-start="0" repeat-gap="80" />
+			<lineSymbol src="file:/symbols/skitour.svg" position="center" rotate="false" repeat="true" repeat-start="0" repeat-gap="80" />
 		</rule>
 	</rule>
 
@@ -2340,7 +2340,7 @@ see OpenMaps-changelog.txt
 						<rule e="way" k="highway" v="cycleway" zoom-min="14">
 							<line stroke="#000000" stroke-width="0.20" stroke-dasharray="4.0,6.0" stroke-linecap="butt" />
 							<rule e="way" k="*" v="*" zoom-min="16">
-								<lineSymbol src="file:/trailmarks/cycle.svg" align-center="true" repeat="true" />
+								<lineSymbol src="file:/trailmarks/cycle.svg" position="center" repeat="true" />
 								<pathText k="name" font-style="bold" font-size="10" stroke="#ffffff" stroke-width="2.00" />
 							</rule>
 						</rule>

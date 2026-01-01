@@ -91,3 +91,6 @@ embankment emb_yes|yes для совместим.с LoMaps
 hillshading для Cruiser, Orux,..
 23/12/2025
 Добавлен tower=watchtower
+01/01/2026
+Замена атрибута align-center="true" на position="center" для lineSymbol oneway.svg, ridge|arete, 
+bluearrow.svg, cycle.svg, piste:type=skitour|nordic и sled
