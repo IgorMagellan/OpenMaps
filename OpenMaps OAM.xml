@@ -338,7 +338,7 @@ see OpenMaps-changelog.txt
 
 
 		<!-- MTB route tunnel -->
-		<rule cat="omp_mtb" e="way" k="mtbnetwork" v="imn|nmn|rmn|lmn|omn">
+		<rule cat="omp_mtb" e="way" k="mtbnetwork" v="imn|nmn|rmn|lmn|omn|pmn">
 			<rule e="way" k="tunnel" v="true|yes">
 				<rule e="way" k="highway" v="steps|footway|path|track|cycleway|bridleway|platform|pedestrian">
 					<line stroke="#FDB3FD" stroke-width="2.80" stroke-dasharray="5.0,5.0" stroke-linecap="butt" />
@@ -1180,7 +1180,7 @@ see OpenMaps-changelog.txt
 
 
 	<!-- MTB route OMP no tunnel -->
-	<rule cat="omp_mtb" e="way" k="mtbnetwork|network" v="imn|nmn|rmn|lmn|omn">
+	<rule cat="omp_mtb" e="way" k="mtbnetwork|network" v="imn|nmn|rmn|lmn|omn|pmn">
 		<rule e="way" k="tunnel" v="~|no|false">
 			<rule e="way" k="highway" v="footway">
 				<line stroke="#FFA8FF" stroke-width="2.80" />
@@ -1894,32 +1894,32 @@ see OpenMaps-changelog.txt
 	</rule>
 
 	<!-- pistes -->
-	<rule cat="omp_winter" e="way" k="piste:type" v="downhill" closed="no" zoom-min="14">
+	<rule cat="omp_winter" e="way" k="piste:type" v="downhill" closed="no" zoom-min="13">
 		<rule e="way" k="piste:difficulty" v="expert|freeride">
 			<line stroke="#70ff8c00" stroke-width="2.00" />
 		</rule>
-		<rule e="way" k="piste:difficulty" v="advanced" zoom-min="14">
+		<rule e="way" k="piste:difficulty" v="advanced">
 			<line stroke="#70000000" stroke-width="2.00" />
 		</rule>
-		<rule e="way" k="piste:difficulty" v="intermediate" zoom-min="14">
+		<rule e="way" k="piste:difficulty" v="intermediate">
 			<line stroke="#70ff0000" stroke-width="2.00" />
 		</rule>
-		<rule e="way" k="piste:difficulty" v="easy" zoom-min="14">
+		<rule e="way" k="piste:difficulty" v="easy" >
 			<line stroke="#700054ff" stroke-width="2.00" />
 		</rule>
-		<rule e="way" k="piste:difficulty" v="novice" zoom-min="14">
+		<rule e="way" k="piste:difficulty" v="novice" >
 			<line stroke="#700dbd00" stroke-width="2.00" />
 		</rule>
 	</rule>
-	<rule cat="omp_winter" e="way" k="piste:type" v="sled" zoom-min="14">
-		<line stroke="#70fa41fa" stroke-width="2.00" />
-		<rule e="way" k="*" v="*" zoom-min="16">
+	<rule cat="omp_winter" e="way" k="piste:type" v="sled">
+		<line stroke="#8313e3ff" stroke-width="2.00" />   <!-- #70fa41fa" -->
+		<rule e="way" k="*" v="*" zoom-min="14">
 			<lineSymbol src="file:/symbols/sled.svg" position="center" rotate="false" repeat="true" repeat-start="0" repeat-gap="60" />
 		</rule>
 	</rule>
-	<rule cat="omp_winter" e="way" k="piste:type" v="skitour|nordic" zoom-min="14">
-		<line stroke="#70fa41fa" stroke-width="2.00" />
-		<rule e="way" k="*" v="*" zoom-min="16">
+	<rule cat="omp_winter" e="way" k="piste:type" v="skitour|nordic" > <!-- #70fa41fa" -->
+		<line stroke="#481f35fc" stroke-width="2.00" />
+		<rule e="way" k="*" v="*" zoom-min="14">
 			<lineSymbol src="file:/symbols/skitour.svg" position="center" rotate="false" repeat="true" repeat-start="0" repeat-gap="80" />
 		</rule>
 	</rule>
