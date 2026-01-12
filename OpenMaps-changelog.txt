@@ -103,3 +103,7 @@ hillshading в правильное место - после глобальног
 12/01/2026
 ✏️ велосипедный транспорт standard_bc, пути MTB (omp_mtb), велодорожки (omp_bc), 
 Переделан Viaferrata (omp_vf)
+Исправлен ls_track
+Убрал остатки \Trailmarks\ изо всех версий, папку с svg тоже
+Почистил корневой каталог.
+Версия Locus Edition  (LE для карт V3) - ушла в архив (есть в релизе https://github.com/IgorMagellan/OpenMaps/releases/tag/8.2 )

@@ -316,11 +316,11 @@ see OpenMaps-changelog.txt
 				<area fill="#1a11b44f" stroke="#6fc18e" stroke-width="0.20" />
 			</rule>
 
-			<rule e="way" k="leisure" v="track|byway|ls_track">
-				<rule e="way" k="area" v="yes|true">
+			<rule e="way" k="leisure" v="track|byway|ls_track" closed="yes"> 
+				<rule e="way" k="area|based_on_rel" v="yes|true|mp">
 					<area fill="#80d39f" stroke="#23412e" stroke-width="0.025" />
 				</rule>
-				<rule e="way" k="area" v="~|no|false">
+				<rule e="way" k="area|based_on_rel" v="area_no|no|false|~">
 					<line stroke="#6fc18e" stroke-width="0.75" />
 					<line stroke="#7dc095" stroke-width="0.70" />
 				</rule>
@@ -1745,7 +1745,7 @@ see OpenMaps-changelog.txt
 					<rule e="way" k="highway" v="cycleway" zoom-min="14">
 						<line stroke="#000000" stroke-width="0.20" stroke-dasharray="4.0,6.0" />
 						<rule e="way" k="*" v="*" zoom-min="16">
-							<lineSymbol src="file:/trailmarks/cycle.svg" position="center" repeat="true" />
+							<lineSymbol src="file:/symbols/cycle.svg" position="center" repeat="true" />
 							<pathText k="name" font-style="bold" font-size="10" stroke="#ffffff" stroke-width="2.00" />
 						</rule>
 					</rule>
@@ -2048,7 +2048,7 @@ see OpenMaps-changelog.txt
 						<rule e="way" k="highway" v="cycleway" zoom-min="14">
 							<line stroke="#000000" stroke-width="0.20" stroke-dasharray="4.0,6.0" stroke-linecap="butt" />
 							<rule e="way" k="*" v="*" zoom-min="16">
-								<lineSymbol src="file:/trailmarks/cycle.svg" position="center" repeat="true" />
+								<lineSymbol src="file:/symbols/cycle.svg" position="center" repeat="true" />
 								<pathText k="name" font-style="bold" font-size="10" stroke="#ffffff" stroke-width="2.00" />
 							</rule>
 						</rule>
