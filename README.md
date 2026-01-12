@@ -3,7 +3,7 @@
 </p>
 
 <h1 align="center">OpenMaps</h1>
-<h3 align="center">Rendertheme for OpenAndroMaps V4+, Locus LoMaps V3 (limited) and other <a href="https://github.com/mapsforge/mapsforge)">Mapsforge</a> based maps. Works in LocusMap, OruxMap, Cruiser.</h3>
+<h3 align="center">Rendertheme for OpenAndroMaps V4 +<s>, 	Locus LoMaps V3 (limited)</s> and other <a href="https://github.com/mapsforge/mapsforge)">Mapsforge</a> based maps. Works in LocusMap, OruxMap, Cruiser.</h3>
 
 
 ## Overview
